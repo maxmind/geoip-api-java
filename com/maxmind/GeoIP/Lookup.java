@@ -31,16 +31,24 @@ public class Lookup {
     RandomAccessFile file = null;
     byte databaseType = COUNTRY_EDITION;
     int databaseSegments[];
+    int recordLength;
 
-    private final static int RECORD_LENGTH = 3;
     private final static int COUNTRY_BEGIN = 16776960;
     private final static int STATE_BEGIN   = 16700000;
     private final static int STRUCTURE_INFO_MAX_SIZE = 20;
 
-    private final static int COUNTRY_EDITION = 106;
-    private final static int REGION_EDITION  = 112;
-    private final static int CITY_EDITION    = 111;
+    private final static int COUNTRY_EDITION = 1;
+    private final static int REGION_EDITION  = 7;
+    private final static int CITY_EDITION    = 6;
+    private final static int ORG_EDITION     = 5;
+    private final static int ISP_EDITION     = 4;
 
+    private final static int SEGMENT_RECORD_LENGTH = 3;
+    private final static int STANDARD_RECORD_LENGTH = 3;
+    private final static int ORG_RECORD_LENGTH = 4;
+    private final static int MAX_RECORD_LENGTH = 4;
+
+    private final static int MAX_ORG_RECORD_LENGTH = 300;
     private final static int FULL_RECORD_LENGTH = 50;
 
     private final static String[] countryCode = { "--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR","AS","AT","AU","AW","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ","BM","BN","BO","BR","BS","BT","BV","BW","BY","BZ","CA","CC","CD","CF","CG","CH","CI","CK","CL","CM","CN","CO","CR","CU","CV","CX","CY","CZ","DE","DJ","DK","DM","DO","DZ","EC","EE","EG","EH","ER","ES","ET","FI","FJ","FK","FM","FO","FR","FX","GA","GB","GD","GE","GF","GH","GI","GL","GM","GN","GP","GQ","GR","GS","GT","GU","GW","GY","HK","HM","HN","HR","HT","HU","ID","IE","IL","IN","IO","IQ","IR","IS","IT","JM","JO","JP","KE","KG","KH","KI","KM","KN","KP","KR","KW","KY","KZ","LA","LB","LC","LI","LK","LR","LS","LT","LU","LV","LY","MA","MC","MD","MG","MH","MK","ML","MM","MN","MO","MP","MQ","MR","MS","MT","MU","MV","MW","MX","MY","MZ","NA","NC","NE","NF","NG","NI","NL","NO","NP","NR","NU","NZ","OM","PA","PE","PF","PG","PH","PK","PL","PM","PN","PR","PS","PT","PW","PY","QA","RE","RO","RU","RW","SA","SB","SC","SD","SE","SG","SH","SI","SJ","SK","SL","SM","SN","SO","SR","ST","SV","SY","SZ","TC","TD","TF","TG","TH","TJ","TK","TM","TN","TO","TP","TR","TT","TV","TW","TZ","UA","UG","UM","US","UY","UZ","VA","VC","VE","VG","VI","VN","VU","WF","WS","YE","YT","YU","ZA","ZM","ZR","ZW","A1","A2","O1"};
@@ -54,7 +62,7 @@ public class Lookup {
     private void setupSegments() {
         int i, j;
         byte [] delim = new byte[3];
-        byte [] buf = new byte[RECORD_LENGTH];
+        byte [] buf = new byte[SEGMENT_RECORD_LENGTH];
 
         try {
             file.seek(file.length() - 3);
@@ -62,25 +70,38 @@ public class Lookup {
                 file.read(delim);
                 if (delim[0] == -1 && delim[1] == -1 && delim[2] == -1) {
                     databaseType = file.readByte();
+		    if (databaseType >= 106) {
+			// Backward compatibility with databases from April 2003 and earlier
+			databaseType -= 105;
+		    }
                     if (databaseType == REGION_EDITION) {
                         databaseSegments = new int[1];
                         databaseSegments[0] = STATE_BEGIN;
-                    } else if (databaseType == CITY_EDITION) {
+			recordLength = STANDARD_RECORD_LENGTH;
+                    } else if (databaseType == CITY_EDITION ||
+			       databaseType == ORG_EDITION ||
+			       databaseType == ISP_EDITION) {
                         databaseSegments = new int[1];
                         databaseSegments[0] = 0;
+			if (databaseType == CITY_EDITION) {
+			    recordLength = STANDARD_RECORD_LENGTH;
+			} else {
+			    recordLength = ORG_RECORD_LENGTH;
+			}
                         file.read(buf);
-                        for (j = 0; j < RECORD_LENGTH; j++) {
+                        for (j = 0; j < SEGMENT_RECORD_LENGTH; j++) {
                             databaseSegments[0] += (unsignedByteToInt(buf[j]) << (j * 8));
                         }
                     }
                     break;
-                } else {
+		} else {
                     file.seek(file.getFilePointer() - 4);
                 }
-            }
+	    }
             if (databaseType == COUNTRY_EDITION) {
                 databaseSegments = new int[1];
                 databaseSegments[0] = COUNTRY_BEGIN;
+		recordLength = STANDARD_RECORD_LENGTH;
             }
         }
         catch (IOException e) {
@@ -193,7 +214,7 @@ public class Lookup {
                 return null;
             }
 
-            record_pointer = seek_country + (2 * RECORD_LENGTH - 1) * databaseSegments[0];
+            record_pointer = seek_country + (2 * recordLength - 1) * databaseSegments[0];
 
             file.seek(record_pointer);
             file.read(record_buf);
@@ -247,12 +268,12 @@ public class Lookup {
     }
 
     private int seekCountry(long ipnum) {
-	byte [] buf = new byte[6];
+	byte [] buf = new byte[2 * MAX_RECORD_LENGTH];
 	int [] x = new int[2];
         int offset = 0;
         for (int depth = 31; depth >= 0; depth--) {
             try {
-                file.seek(6 * offset);
+                file.seek(2 * recordLength * offset);
                 file.read(buf);
             }
             catch (IOException e) {
@@ -260,8 +281,8 @@ public class Lookup {
             }
             for (int i = 0; i<2; i++) {
                 x[i] = 0;
-                for (int j = 0; j<3; j++) {
-                    int y = buf[i*3+j];
+                for (int j = 0; j<recordLength; j++) {
+                    int y = buf[i*recordLength+j];
                     if (y < 0) {
                         y+= 256;
                     }
@@ -286,5 +307,49 @@ public class Lookup {
         System.out.println("Error seeking country while seeking " + ipnum);
 	//    throw new Exception("Error reached depth 0");
         return 0;
+    }
+
+    // GeoIP Organization and ISP Edition methods */
+    private String getOrg(long ipnum) {
+	int seek_org;
+	int record_pointer;
+	int str_length = 0;
+	byte [] buf = new byte[MAX_ORG_RECORD_LENGTH];
+	String org_buf;
+
+	try {
+	    seek_org = seekCountry(ipnum);
+	    if (seek_org == databaseSegments[0]) {
+		return null;
+	    }
+
+	    record_pointer = seek_org + (2 * recordLength - 1) * databaseSegments[0];
+	    file.seek(record_pointer);
+	    file.read(buf);
+	    while (buf[str_length] != '\0') {
+		str_length++;
+	    }
+	    org_buf = new String(buf,0,str_length);
+	    return org_buf;
+	}
+	catch (IOException e) {
+	    System.out.println("IO Exception");
+	    return null;
+	}
+    }
+
+    public String lookupOrg(InetAddress addr) {
+	return getOrg(addrToNum(addr));
+    }
+
+    public String lookupOrg(String str) {
+	InetAddress addr;
+	try {
+	    addr = InetAddress.getByName(str);
+	    return getOrg(addrToNum(addr));
+	}
+	catch (UnknownHostException e) {
+	    return null;
+	}
     }
 }
