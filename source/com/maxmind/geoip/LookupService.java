@@ -23,6 +23,13 @@ package com.maxmind.geoip;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.lang.*;
+
+import java.util.*;
+
+import javax.naming.*;
+import javax.naming.directory.*;
+
 
 /**
  * Provides a lookup service for information based on an IP address. The location of
@@ -77,6 +84,9 @@ public class LookupService {
 
     int databaseSegments[];
     int recordLength;
+    
+    String licenseKey;
+    int dnsService = 0;
 
     private final static int COUNTRY_BEGIN = 16776960;
     private final static int STATE_BEGIN   = 16700000;
@@ -93,8 +103,10 @@ public class LookupService {
 
     private static final Country UNKNOWN_COUNTRY = new Country("--", "N/A");
 
+    private final static HashMap hashmapcountryCodetoindex = new HashMap(512);
+    private final static HashMap hashmapcountryNametoindex = new HashMap(512);
     private final static String[] countryCode = {
-            "--","AP","EU","AD","AE","AF","AG","AI", "AL","AM","AN","AO","AQ","AR",
+            "--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR",
             "AS","AT","AU","AW","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ",
             "BM","BN","BO","BR","BS","BT","BV","BW","BY","BZ","CA","CC","CD","CF",
             "CG","CH","CI","CK","CL","CM","CN","CO","CR","CU","CV","CX","CY","CZ",
@@ -165,6 +177,40 @@ public class LookupService {
             "South Africa","Zambia","Zaire","Zimbabwe","Anonymous Proxy",
             "Satellite Provider","Other"};
 
+
+    /**
+     * Create a new distributed lookup service using the license key
+     *
+     * @param databaseFile String representation of the database file.
+     * @param licenseKey license key provided by Maxmind to access distributed service
+     */
+    public LookupService(String databaseFile,String licenseKey) throws IOException {
+        this(new File(databaseFile));
+        this.licenseKey = licenseKey;
+        dnsService = 1;
+    }
+    /**
+     * Create a new distributed lookup service using the license key
+     *
+     * @param databaseFile the database file.
+     * @param licenseKey license key provided by Maxmind to access distributed service
+     */
+    public LookupService(File databaseFile,String licenseKey) throws IOException {
+        this(databaseFile);
+        this.licenseKey = licenseKey;
+        dnsService = 1;
+    }
+    /**
+     * Create a new distributed lookup service using the license key
+     *
+     * @param options  Resevered for future use
+     * @param licenseKey license key provided by Maxmind to access distributed service
+     */
+    public LookupService(int options,String licenseKey) throws IOException {
+        this.licenseKey = licenseKey;
+        dnsService = 1;
+        init();
+    }
     /**
      * Create a new lookup service using the specified database file.
      *
@@ -198,7 +244,15 @@ public class LookupService {
         byte [] delim = new byte[3];
         byte [] buf = new byte[SEGMENT_RECORD_LENGTH];
 
-        file.seek(file.length() - 3);
+	for (i = 0; i < 233;i++){
+	    hashmapcountryCodetoindex.put(countryCode[i],new Integer(i));
+	    hashmapcountryNametoindex.put(countryName[i],new Integer(i));
+	}
+	if (file == null) {
+	    // distributed service only
+	    return;
+	}
+	file.seek(file.length() - 3);
         for (i = 0; i < STRUCTURE_INFO_MAX_SIZE; i++) {
             file.read(delim);
             if (delim[0] == -1 && delim[1] == -1 && delim[2] == -1) {
@@ -359,14 +413,106 @@ public class LookupService {
 
      // for GeoIP City only
     public Location getLocation(String str) {
-        InetAddress addr;
-        try {
-            addr = InetAddress.getByName(str);
+        if (dnsService == 0) {
+            InetAddress addr;
+            try {
+                addr = InetAddress.getByName(str);
+            }
+            catch (UnknownHostException e) {
+                return null;
+            }
+
+            return getLocation(addr);
+        } else {
+            String str2 = getDnsAttributes(str);
+ 	    return getLocationwithdnsservice(str2);
+	    // TODO if DNS is not available, go to local file as backup
+	}
+    }
+
+    String getDnsAttributes(String ip){
+        try{
+            Hashtable env = new Hashtable();
+            env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
+	    // TODO don't specify ws1, instead use ns servers for s.maxmind.com
+            env.put("java.naming.provider.url","dns://ws1.maxmind.com/");
+
+            DirContext ictx = new InitialDirContext(env);
+            Attributes attrs = ictx.getAttributes(licenseKey + "." + ip + ".s.maxmind.com", new String[] {"txt"});
+            //System.out.println(attrs.get("txt").get());
+            String str = attrs.get("txt").get().toString();
+            return str;
         }
-        catch (UnknownHostException e) {
+        catch(NamingException e){
+	    // TODO fix this to handle exceptions
+            System.out.println("DNS error");
             return null;
         }
-        return getLocation(addr);
+
+    }
+
+    public Location getLocationwithdnsservice(String str){
+        Location record = new Location();
+        String key;
+        String value;
+        StringTokenizer st = new StringTokenizer(str,";=\""); 
+        while (st.hasMoreTokens()) {
+	    key = st.nextToken();
+            if (st.hasMoreTokens()) {
+                value = st.nextToken();
+            } else {
+	        value = "";}
+	    if (key.equals("co")) {
+		Integer i = (Integer)hashmapcountryCodetoindex.get(value);
+		record.countryCode = value;
+		record.countryName = countryName[i.intValue()];
+	    }
+	    if (key.equals("ci")) {
+		record.city = value;
+	    }
+	    if (key.equals("re")) {
+		record.region = value;
+	    }
+	    if (key.equals("zi")) {
+	        record.postalCode = value;
+	    }
+	    // TODO, ISP and Organization
+	    //if (key.equals("or")){
+	        //record.org = value;
+	    //}
+	    //if (key.equals("is")){
+	        //record.isp = value;
+	    //}
+	    if (key.equals("la")) {
+		try{
+		    record.latitude = Float.parseFloat(value);
+		} catch(NumberFormatException e) {
+		    record.latitude = 0;
+		}
+	    }
+	    if (key.equals("lo")){
+		try{
+		    record.longitude = Float.parseFloat(value);
+		} catch(NumberFormatException e) {
+		    record.latitude = 0;
+		}
+	    }
+	    if (key.equals("dm")){
+		try{
+		    record.dma_code = Integer.parseInt(value);
+		} catch(NumberFormatException e) {
+		    record.dma_code = 0;
+		}
+	    }
+	    if (key.equals("ac")){
+		try{
+		    record.area_code = Integer.parseInt(value);
+		} catch(NumberFormatException e) {
+		    record.area_code = 0;
+		}
+	    }
+	}
+        return record;
     }
 
     public synchronized Location getLocation(long ipnum) {
@@ -383,7 +529,6 @@ public class LookupService {
             if (seek_country == databaseSegments[0]) {
                 return null;
             }
-
             record_pointer = seek_country + (2 * recordLength - 1) * databaseSegments[0];
 
             file.seek(record_pointer);
