@@ -1,3 +1,5 @@
+	- Added support for GEOIP_MEMORY_CACHE (Frank Mather)
+
 1.1.5  June 3rd 2004
 	- Added support for Maxmind GeoIP Region (Frank Mather)
 	- Windows compatibility fix for CountryLookupTest.java (Hanan Al-Shargi)

@@ -87,7 +87,8 @@ public class LookupService {
     
     String licenseKey;
     int dnsService = 0;
-
+    int dboptions;
+    byte dbbuffer[];
     private final static int US_OFFSET = 1;
     private final static int CANADA_OFFSET = 677;
     private final static int WORLD_OFFSET = 1353;
@@ -97,6 +98,8 @@ public class LookupService {
     private final static int STATE_BEGIN_REV1 = 16000000;
     private final static int STRUCTURE_INFO_MAX_SIZE = 20;
     private final static int DATABASE_INFO_MAX_SIZE = 100;
+    private final static int GEOIP_STANDARD = 0;
+    private final static int GEOIP_MEMORY_CACHE = 1;
 
     private final static int SEGMENT_RECORD_LENGTH = 3;
     private final static int STANDARD_RECORD_LENGTH = 3;
@@ -240,6 +243,35 @@ public class LookupService {
     }
 
     /**
+     * Create a new lookup service using the specified database file.
+     *
+     * @param databaseFile String representation of the database file.
+     * @param options database flags to use when opening the database
+     * GEOIP_STANDARD read database from disk
+     * GEOIP_MEMORY_CACHE cache the database in RAM and read it from RAM
+     * @throws java.io.IOException if an error occured creating the lookup service
+     *      from the database file.
+     */
+    public LookupService(String databaseFile, int options) throws IOException{
+        this(new File(databaseFile),options);
+    }
+
+    /**
+     * Create a new lookup service using the specified database file.
+     *
+     * @param databaseFile the database file.
+     * @param options database flags to use when opening the database
+     * GEOIP_STANDARD read database from disk
+     * GEOIP_MEMORY_CACHE cache the database in RAM and read it from RAM
+     * @throws java.io.IOException if an error occured creating the lookup service
+     *      from the database file.
+     */
+    public LookupService(File databaseFile, int options) throws IOException{
+       this.file = new RandomAccessFile(databaseFile, "r");
+       dboptions = options;
+       init();
+    }
+    /**
      * Reads meta-data from the database file.
      *
      * @throws java.io.IOException if an error occurs reading from the database file.
@@ -306,6 +338,12 @@ public class LookupService {
             databaseSegments[0] = COUNTRY_BEGIN;
             recordLength = STANDARD_RECORD_LENGTH;
         }
+        if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+	    int l = (int) file.length();
+	    dbbuffer = new byte[l];
+	    file.seek(0);
+	    file.read(dbbuffer,0,l);     
+	}
     }
 
     /**
@@ -439,8 +477,8 @@ public class LookupService {
 	}
     }
 
-    String getDnsAttributes(String ip){
-        try{
+    String getDnsAttributes(String ip) {
+        try {
             Hashtable env = new Hashtable();
             env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
 	    // TODO don't specify ws1, instead use ns servers for s.maxmind.com
@@ -452,7 +490,7 @@ public class LookupService {
             String str = attrs.get("txt").get().toString();
             return str;
         }
-        catch(NamingException e){
+        catch(NamingException e) {
 	    // TODO fix this to handle exceptions
             System.out.println("DNS error");
             return null;
@@ -460,7 +498,7 @@ public class LookupService {
 
     }
 
-    public Location getLocationwithdnsservice(String str){
+    public Location getLocationwithdnsservice(String str) {
         Location record = new Location();
         String key;
         String value;
@@ -486,10 +524,10 @@ public class LookupService {
 	        record.postalCode = value;
 	    }
 	    // TODO, ISP and Organization
-	    //if (key.equals("or")){
+	    //if (key.equals("or")) {
 	        //record.org = value;
 	    //}
-	    //if (key.equals("is")){
+	    //if (key.equals("is")) {
 	        //record.isp = value;
 	    //}
 	    if (key.equals("la")) {
@@ -499,21 +537,21 @@ public class LookupService {
 		    record.latitude = 0;
 		}
 	    }
-	    if (key.equals("lo")){
+	    if (key.equals("lo")) {
 		try{
 		    record.longitude = Float.parseFloat(value);
 		} catch(NumberFormatException e) {
 		    record.latitude = 0;
 		}
 	    }
-	    if (key.equals("dm")){
+	    if (key.equals("dm")) {
 		try{
 		    record.dma_code = Integer.parseInt(value);
 		} catch(NumberFormatException e) {
 		    record.dma_code = 0;
 		}
 	    }
-	    if (key.equals("ac")){
+	    if (key.equals("ac")) {
 		try{
 		    record.area_code = Integer.parseInt(value);
 		} catch(NumberFormatException e) {
@@ -524,7 +562,7 @@ public class LookupService {
         return record;
     }
 
-    public synchronized Region getRegion(String str){
+    public synchronized Region getRegion(String str) {
             InetAddress addr;
             try {
                 addr = InetAddress.getByName(str);
@@ -536,13 +574,13 @@ public class LookupService {
             return getRegion(bytesToLong(addr.getAddress()));
     }
 
-    public synchronized Region getRegion(long ipnum){
+    public synchronized Region getRegion(long ipnum) {
         Region record = new Region();
         int seek_region = 0;
         if (databaseType == DatabaseInfo.REGION_EDITION_REV0) {
             seek_region = seekCountry(ipnum) - STATE_BEGIN_REV0;
             char ch[] = new char[2];
-            if (seek_region >= 1000){
+            if (seek_region >= 1000) {
                 record.countryCode = "US";
                 record.countryName = "United States";
                 ch[0] = (char)(((seek_region - 1000)/26) + 65);
@@ -597,8 +635,16 @@ public class LookupService {
             }
             record_pointer = seek_country + (2 * recordLength - 1) * databaseSegments[0];
 
-            file.seek(record_pointer);
-            file.read(record_buf);
+            if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+                //read from memory
+                for (int i = 0; i < FULL_RECORD_LENGTH; i++) {
+                    record_buf[i] = dbbuffer[i+record_pointer];
+	        }
+            } else {
+                //read from disk
+                file.seek(record_pointer);
+                file.read(record_buf);
+            }
 
             // get country
             record.countryCode = countryCode[unsignedByteToInt(record_buf[0])];
@@ -647,7 +693,7 @@ public class LookupService {
 	    if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
 		// get DMA code
 		int dmaarea_combo = 0;
-		if (record.countryCode == "US"){
+		if (record.countryCode == "US") {
 		    record_buf_offset += 3;
 		    for (j = 0; j < 3; j++)
 			dmaarea_combo += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
@@ -692,10 +738,18 @@ public class LookupService {
             }
 
             record_pointer = seek_org + (2 * recordLength - 1) * databaseSegments[0];
-            file.seek(record_pointer);
-            file.read(buf);
+            if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+                //read from memory
+                for (int i = 0;i < FULL_RECORD_LENGTH;i++) {
+                    buf[i] = dbbuffer[i+record_pointer];
+	        }
+            } else {
+		//read from disk
+                file.seek(record_pointer);
+                file.read(buf);
+            }
             while (buf[str_length] != '\0') {
-            str_length++;
+		str_length++;
             }
             org_buf = new String(buf,0,str_length);
             return org_buf;
@@ -717,12 +771,20 @@ public class LookupService {
 	    int [] x = new int[2];
         int offset = 0;
         for (int depth = 31; depth >= 0; depth--) {
-            try {
-                file.seek(2 * recordLength * offset);
-                file.read(buf);
-            }
-            catch (IOException e) {
-                System.out.println("IO Exception");
+            if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+		//read from memory
+                for (int i = 0;i < 2 * MAX_RECORD_LENGTH;i++) {
+		    buf[i] = dbbuffer[(2 * recordLength * offset)+i];
+		}
+            } else {
+	       //read from disk 
+		try {
+                    file.seek(2 * recordLength * offset);
+                    file.read(buf);
+                }
+                catch (IOException e) {
+                    System.out.println("IO Exception");
+                }
             }
             for (int i = 0; i<2; i++) {
                 x[i] = 0;
