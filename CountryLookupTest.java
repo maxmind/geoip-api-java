@@ -9,7 +9,17 @@ import java.io.IOException;
 class CountryLookupTest {
     public static void main(String[] args) {
 	try {
-	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIP.dat");
+	    String sep = System.getProperty("file.separator");
+
+	    // Uncomment for windows
+	    // String dir = System.getProperty("user.dir"); 
+
+	    // Uncomment for Linux
+	    String dir = "/usr/local/share/GeoIP";
+
+	    String dbfile = dir + sep + "GeoIP.dat"; 
+	    LookupService cl = new LookupService(dbfile);
+
 	    System.out.println(cl.getCountry("151.38.39.114").getCode());
 	    System.out.println(cl.getCountry("151.38.39.114").getName());
 	    System.out.println(cl.getCountry("12.25.205.51").getName());

@@ -1,3 +1,11 @@
+To get started, run
+
+cd source/com/maxmind/geoip/
+javac *.java
+cd -
+CLASSPATH=".:source" javac *.java
+CLASSPATH=".:source" java CountryLookupTest
+
 IMPORTANT API Change for 1.1.x users - as of GeoIP 1.1.0 the
 lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
@@ -11,6 +19,8 @@ To get started for GeoIP Country, look at the code in CountryLookupTest.java.
 CityLookupTest.java contains an example for the GeoIP City database.
 OrgLookupTest.java contains examples for the GeoIP Organization and ISP databases.
 
+RegionLookupTest.java contains an example for the Maxmind Region database.
+
 Note that CountryLookupTest assumes that you have the GeoIP Country database
 installed at /usr/local/share/GeoIP/GeoIP.dat
 
@@ -19,3 +29,9 @@ The GeoIP Standard Country database is available from
 http://maxmind.com/download/geoip/database/
 
 Please send any comments to support@maxmind.com
+
+Windows Notes 
+========================
+If it doesn't work on Windows, try to emove or comment all the " package com.maxmind.geoip" lines from all the 
+files.
+
