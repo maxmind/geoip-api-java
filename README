@@ -14,6 +14,8 @@ return value for null !
 This is version 1.1.4 of the Java interface to GeoIP.  For more information
 see http://www.maxmind.com/
 
+As of version 1.1.4 this API is fully thread safe.
+
 To get started for GeoIP Country, look at the code in CountryLookupTest.java.
 
 CityLookupTest.java contains an example for the GeoIP City database.
