@@ -32,6 +32,10 @@ http://maxmind.com/download/geoip/database/
 
 Please send any comments to support@maxmind.com
 
+To generate the JAR file, cd to the source directory and run
+
+jar cf maxmindgeoip.jar com/maxmind/geoip/Country.class com/maxmind/geoip/DatabaseInfo.class com/maxmind/geoip/Location.class com/maxmind/geoip/LookupService.class com/maxmind/geoip/Region.class
+
 Windows Notes 
 ========================
 If it doesn't work on Windows, try to emove or comment all the " package com.maxmind.geoip" lines from all the 
