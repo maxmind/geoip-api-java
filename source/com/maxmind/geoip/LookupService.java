@@ -154,7 +154,7 @@ public class LookupService {
             "Saint Lucia","Liechtenstein","Sri Lanka","Liberia","Lesotho","Lithuania",
             "Luxembourg","Latvia","Libyan Arab Jamahiriya","Morocco","Monaco",
             "Moldova, Republic of","Madagascar","Marshall Islands",
-            "Macedonia, the Former Yugoslav Republic of","Mali","Myanmar","Mongolia",
+            "Macedonia","Mali","Myanmar","Mongolia",
             "Macau","Northern Mariana Islands","Martinique","Mauritania","Montserrat",
             "Malta","Mauritius","Maldives","Malawi","Mexico","Malaysia","Mozambique",
             "Namibia","New Caledonia","Niger","Norfolk Island","Nigeria","Nicaragua",
