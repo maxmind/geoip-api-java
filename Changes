@@ -1,0 +1,25 @@
+1.1.1  Oct 31st 2002
+	- Added support for GeoIP Full Edition, remaned CountryLookup class
+	to Lookup
+
+1.1.0  Oct 28th 2002
+	- API Change!!! Return null instead of '--' if country can not be found
+	- rewrote seekCountry to use loop instead of recursion for faster performance
+	- Fixed error when looking Anonymous Proxies
+
+1.0.4  Sep 11th 2002
+	- Added close method to clean up filehandles
+	(Jeroen Nijenhuis)
+
+0.3.0  Aug  4th 2002
+	- Added support for satellite providers
+
+0.2.1  July 3rd 2002
+	- Added support for anonymous proxies
+
+0.1.2  Apr 14th 2002
+	- Added public to CountryLookup class (Noel Bergman), should
+	now be accessible outside of GeoIP package.
+
+0.1.1  Apr 9th 2002
+	- Initial Release

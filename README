@@ -1,0 +1,19 @@
+IMPORTANT API Change for 1.1.x users - as of GeoIP 1.1.0 the
+lookupCountryXxxx methods return null if a country can not
+be found (it used to return '--' or 'N/A'.  Be sure to check the
+return value for null !
+
+This is version 1.1.0 of the Java interface to GeoIP.  For more information
+see http://maxmind.com/geoip
+
+To get started, look at the code in CountryLookupTest.java.
+
+Note that this example program assumes that you have the GeoIP database
+installed at /usr/local/share/GeoIP/GeoIP.dat .
+
+If you haven't installed the GeoIP C library, you'll need to download the
+database from
+
+http://maxmind.com/download/geoip/database/
+
+Please send any comments to support@maxmind.com
