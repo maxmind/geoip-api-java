@@ -1,5 +1,8 @@
 /* CountryLookupTest.java */
 
+/* Only works with GeoIP Country Edition */
+/* For Geoip City Edition, use CityLookupTest.java */
+
 import com.maxmind.GeoIP.*;
 import java.io.IOException;
 
