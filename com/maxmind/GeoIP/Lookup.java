@@ -219,6 +219,15 @@ public class Lookup {
                 record.city = new String(record_buf, record_buf_offset, str_length+1);
             }
             record_buf_offset += (str_length + 1);
+            str_length = 0;
+
+            // get postal code
+            while (record_buf[record_buf_offset + str_length] != '\0')
+                str_length++;
+            if (str_length > 0) {
+                record.postalCode = new String(record_buf, record_buf_offset, str_length+1);
+            }
+            record_buf_offset += (str_length + 1);
 
             // get latitude
             for (j = 0; j < 3; j++)

@@ -20,12 +20,13 @@
 package com.maxmind.GeoIP;
 
 public class Location {
-    String countryCode;
-    String countryName;
-    String region;
-    String city;
-    float latitude;
-    float longitude;
+    public String countryCode;
+    public String countryName;
+    public String region;
+    public String city;
+    public String postalCode;
+    public float latitude;
+    public float longitude;
 
     private final static double EARTH_DIAMETER = 2 * 6378.2;
     private final static double PI = 3.14159265;

@@ -1,3 +1,6 @@
+1.1.2  December 16th 2002
+	- Added support for postal codes in GeoIP City (beta)
+
 1.1.1  Oct 31st 2002
 	- Added support for GeoIP Full Edition, remaned CountryLookup class
 	to Lookup

@@ -3,6 +3,9 @@
 import com.maxmind.GeoIP.*;
 import java.io.IOException;
 
+/* sample of how to use the GeoIP Java API */
+/* Usage: java CityLookupTest 64.4.4.4
+
 class CityLookupTest {
     public static void main(String[] args) {
 	try {
@@ -12,6 +15,7 @@ class CityLookupTest {
 	    System.out.println("countryCode: " + l2.countryCode +
                                " countryName: " + l2.countryName +
                                " city: " + l2.city +
+                               " postalCode: " + l2.postalCode +
                                " latitude: " + l2.latitude +
                                " longitude: " + l2.longitude +
                                " distance: " + l2.distance(l1) +
