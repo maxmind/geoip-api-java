@@ -160,7 +160,7 @@ public class LookupService {
             "Namibia","New Caledonia","Niger","Norfolk Island","Nigeria","Nicaragua",
             "Netherlands","Norway","Nepal","Nauru","Niue","New Zealand","Oman","Panama",
             "Peru","French Polynesia","Papua New Guinea","Philippines","Pakistan",
-            "Poland","Saint Pierre and Miquelon","Pitcairn","Puerto Rico","" +
+            "Poland","Saint Pierre and Miquelon","Pitcairn Islands","Puerto Rico","" +
             "Palestinian Territory, Occupied","Portugal","Palau","Paraguay","Qatar",
             "Reunion","Romania","Russian Federation","Rwanda","Saudi Arabia",
             "Solomon Islands","Seychelles","Sudan","Sweden","Singapore","Saint Helena",
