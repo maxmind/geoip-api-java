@@ -48,7 +48,8 @@ public class DatabaseInfo {
 
     public final static int COUNTRY_EDITION = 1;
     public final static int REGION_EDITION = 7;
-    public final static int CITY_EDITION = 6;
+    public final static int CITY_EDITION_REV0 = 6;
+    public final static int CITY_EDITION_REV1 = 2;
     public final static int ORG_EDITION = 5;
     public final static int ISP_EDITION = 4;
 
