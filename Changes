@@ -1,4 +1,6 @@
 	- Added support for Maxmind GeoIP Region (Frank Mather)
+	- Windows compatibility fix for CountryLookupTest.java (Hanan Al-Shargi)
+	- Country name fixes
 
 1.1.4  October 21st 2003
 	- Added support for distributed queries (Frank Mather)
