@@ -1,3 +1,5 @@
+1.1.4  October 21st 2003
+	- Added support for distributed queries
 	- Massive code cleanup (Matt Tucker)
 	- Added support for DMA code and Area codes
 
