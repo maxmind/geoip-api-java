@@ -1,6 +1,6 @@
 /* CityLookupTest.java */
 
-import com.maxmind.GeoIP.*;
+import com.maxmind.geoip.*;
 import java.io.IOException;
 
 /* sample of how to use the GeoIP Java API with GeoIP City database */
@@ -9,9 +9,9 @@ import java.io.IOException;
 class CityLookupTest {
     public static void main(String[] args) {
 	try {
-	    Lookup cl = new Lookup("/usr/local/share/GeoIP/GeoIPCity.dat");
-            Location l1 = cl.lookupLocation("213.52.50.8");
-            Location l2 = cl.lookupLocation(args[0]);
+	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPCity.dat");
+            Location l1 = cl.getLocation("213.52.50.8");
+            Location l2 = cl.getLocation(args[0]);
 	    System.out.println("countryCode: " + l2.countryCode +
                                " countryName: " + l2.countryName +
                                " city: " + l2.city +
@@ -19,7 +19,9 @@ class CityLookupTest {
                                " latitude: " + l2.latitude +
                                " longitude: " + l2.longitude +
                                " distance: " + l2.distance(l1) +
-                               " distance: " + l1.distance(l2));
+                               " distance: " + l1.distance(l2) + 
+ 			       " dma code: " + l2.dma_code +
+ 			       " area code: " + l2.area_code);
 
 	    cl.close();
 	}
