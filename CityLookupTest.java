@@ -3,7 +3,7 @@
 import com.maxmind.GeoIP.*;
 import java.io.IOException;
 
-/* sample of how to use the GeoIP Java API */
+/* sample of how to use the GeoIP Java API with GeoIP City database */
 /* Usage: java CityLookupTest 64.4.4.4 */
 
 class CityLookupTest {
