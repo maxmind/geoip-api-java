@@ -30,6 +30,11 @@ The GeoIP Free Country database is available from
 
 http://maxmind.com/download/geoip/database/
 
+MaxMind GeoIP Country offers greater accuracy over the free database.
+MaxMind GeoIP Country, Region, City, ISP, and Organization are available
+for purchase from here:
+http://www.maxmind.com/app/products
+
 Please send any comments to support@maxmind.com
 
 To generate the JAR file, cd to the source directory and run
