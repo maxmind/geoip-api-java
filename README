@@ -11,7 +11,7 @@ lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
 return value for null !
 
-This is version 1.1.4 of the Java interface to GeoIP.  For more information
+This is version 1.1.5 of the Java interface to GeoIP.  For more information
 see http://www.maxmind.com/
 
 As of version 1.1.4 this API is fully thread safe.
@@ -26,7 +26,7 @@ RegionLookupTest.java contains an example for the Maxmind Region database.
 Note that CountryLookupTest assumes that you have the GeoIP Country database
 installed at /usr/local/share/GeoIP/GeoIP.dat
 
-The GeoIP Standard Country database is available from
+The GeoIP Free Country database is available from
 
 http://maxmind.com/download/geoip/database/
 
