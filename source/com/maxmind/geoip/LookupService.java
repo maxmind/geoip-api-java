@@ -781,7 +781,7 @@ public class LookupService {
             while (buf[str_length] != '\0') {
 		str_length++;
             }
-            org_buf = new String(buf,0,str_length);
+            org_buf = new String(buf, 0, str_length, "ISO-8859-1");
             return org_buf;
         }
         catch (IOException e) {

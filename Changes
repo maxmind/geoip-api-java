@@ -1,4 +1,5 @@
-	- Specified ISO-8859-1 encoding for City field string
+1.1.7  October 6th 2004
+	- Specified ISO-8859-1 encoding for City, ISP and Organization field string
 		(Yan Zhang Chen)
 
 1.1.6  September 9th 2004
