@@ -88,8 +88,13 @@ public class LookupService {
     String licenseKey;
     int dnsService = 0;
 
+    private final static int US_OFFSET = 1;
+    private final static int CANADA_OFFSET = 677;
+    private final static int WORLD_OFFSET = 1353;
+    private final static int FIPS_RANGE = 360;
     private final static int COUNTRY_BEGIN = 16776960;
-    private final static int STATE_BEGIN   = 16700000;
+    private final static int STATE_BEGIN_REV0 = 16700000;
+    private final static int STATE_BEGIN_REV1 = 16000000;
     private final static int STRUCTURE_INFO_MAX_SIZE = 20;
     private final static int DATABASE_INFO_MAX_SIZE = 100;
 
@@ -262,11 +267,15 @@ public class LookupService {
                     databaseType -= 105;
                 }
                 // Determine the database type.
-                if (databaseType == DatabaseInfo.REGION_EDITION) {
+                if (databaseType == DatabaseInfo.REGION_EDITION_REV0) {
                     databaseSegments = new int[1];
-                    databaseSegments[0] = STATE_BEGIN;
+                    databaseSegments[0] = STATE_BEGIN_REV0;
                     recordLength = STANDARD_RECORD_LENGTH;
-                }
+                }else if (databaseType == DatabaseInfo.REGION_EDITION_REV1){
+                    databaseSegments = new int[1];
+                    databaseSegments[0] = STATE_BEGIN_REV1;
+                    recordLength = STANDARD_RECORD_LENGTH;
+		}
                 else if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
                         databaseType == DatabaseInfo.CITY_EDITION_REV1 ||
                         databaseType == DatabaseInfo.ORG_EDITION ||
@@ -513,6 +522,63 @@ public class LookupService {
 	    }
 	}
         return record;
+    }
+
+    public synchronized Region getRegion(String str){
+            InetAddress addr;
+            try {
+                addr = InetAddress.getByName(str);
+            }
+            catch (UnknownHostException e) {
+                return null;
+            }
+
+            return getRegion(bytesToLong(addr.getAddress()));
+    }
+
+    public synchronized Region getRegion(long ipnum){
+        Region record = new Region();
+        int seek_region = 0;
+        if (databaseType == DatabaseInfo.REGION_EDITION_REV0) {
+            seek_region = seekCountry(ipnum) - STATE_BEGIN_REV0;
+            char ch[] = new char[2];
+            if (seek_region >= 1000){
+                record.countryCode = "US";
+                record.countryName = "United States";
+                ch[0] = (char)(((seek_region - 1000)/26) + 65);
+                ch[1] = (char)(((seek_region - 1000)%26) + 65);
+	        record.region = new String(ch);
+            } else {
+                record.countryCode = countryCode[seek_region];
+                record.countryName = countryName[seek_region];
+                record.region = "";
+            }
+        } else if (databaseType == DatabaseInfo.REGION_EDITION_REV1) {
+            seek_region = seekCountry(ipnum) - STATE_BEGIN_REV1;
+            char ch[] = new char[2];
+            if (seek_region < US_OFFSET) {
+                record.countryCode = "";
+                record.countryName = "";
+	        record.region = "";
+            } else if (seek_region < CANADA_OFFSET) {
+                record.countryCode = "US";
+                record.countryName = "United States";
+                ch[0] = (char)(((seek_region - US_OFFSET)/26) + 65);
+                ch[1] = (char)(((seek_region - US_OFFSET)%26) + 65);
+	        record.region = new String(ch);
+            } else if (seek_region < WORLD_OFFSET) {
+                record.countryCode = "CA";
+                record.countryName = "Canada";
+                ch[0] = (char)(((seek_region - CANADA_OFFSET)/26) + 65);
+                ch[1] = (char)(((seek_region - CANADA_OFFSET)%26) + 65);
+	        record.region = new String(ch);
+            } else {
+                record.countryCode = countryCode[(seek_region - WORLD_OFFSET) / FIPS_RANGE];
+                record.countryName = countryName[(seek_region - WORLD_OFFSET) / FIPS_RANGE];
+                record.region = "";
+            }
+	}
+	return record;
     }
 
     public synchronized Location getLocation(long ipnum) {
