@@ -13,15 +13,16 @@ class CityLookupTest {
             Location l1 = cl.getLocation("213.52.50.8");
             Location l2 = cl.getLocation(args[0]);
 	    System.out.println("countryCode: " + l2.countryCode +
-                               " countryName: " + l2.countryName +
-                               " city: " + l2.city +
-                               " postalCode: " + l2.postalCode +
-                               " latitude: " + l2.latitude +
-                               " longitude: " + l2.longitude +
-                               " distance: " + l2.distance(l1) +
-                               " distance: " + l1.distance(l2) + 
- 			       " dma code: " + l2.dma_code +
- 			       " area code: " + l2.area_code);
+                               "\n countryName: " + l2.countryName +
+                               "\n region: " + l2.region +
+                               "\n city: " + l2.city +
+                               "\n postalCode: " + l2.postalCode +
+                               "\n latitude: " + l2.latitude +
+                               "\n longitude: " + l2.longitude +
+                               "\n distance: " + l2.distance(l1) +
+                               "\n distance: " + l1.distance(l2) + 
+ 			       "\n dma code: " + l2.dma_code +
+ 			       "\n area code: " + l2.area_code);
 
 	    cl.close();
 	}

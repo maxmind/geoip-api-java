@@ -1,3 +1,5 @@
+        - Fixed problem with postalCode, city and region fields 
+	  returning null char (Frank Mather) 
 	- Added support for GeoIP Netspeed Database (Frank Mather)
 	- Added support for GEOIP_MEMORY_CACHE (Frank Mather)
 
