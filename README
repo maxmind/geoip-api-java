@@ -3,7 +3,7 @@ lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
 return value for null !
 
-This is version 1.1.3 of the Java interface to GeoIP.  For more information
+This is version 1.1.4 of the Java interface to GeoIP.  For more information
 see http://www.maxmind.com/
 
 To get started for GeoIP Country, look at the code in CountryLookupTest.java.
@@ -11,11 +11,10 @@ To get started for GeoIP Country, look at the code in CountryLookupTest.java.
 CityLookupTest.java contains an example for the GeoIP City database.
 OrgLookupTest.java contains examples for the GeoIP Organization and ISP databases.
 
-Note that this example program assumes that you have the GeoIP database
-installed at /usr/local/share/GeoIP/GeoIP.dat .
+Note that CountryLookupTest assumes that you have the GeoIP Country database
+installed at /usr/local/share/GeoIP/GeoIP.dat
 
-If you haven't installed the GeoIP C library, you'll need to download the
-GeoIP Standard Country database from
+The GeoIP Standard Country database is available from
 
 http://maxmind.com/download/geoip/database/
 
