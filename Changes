@@ -1,3 +1,4 @@
+	- Added support for GeoIP Netspeed Database (Frank Mather)
 	- Added support for GEOIP_MEMORY_CACHE (Frank Mather)
 
 1.1.5  June 3rd 2004

@@ -18,10 +18,10 @@ As of version 1.1.4 this API is fully thread safe.
 
 To get started for GeoIP Country, look at the code in CountryLookupTest.java.
 
-CityLookupTest.java contains an example for the GeoIP City database.
+CityLookupTest.java contains an example for the MaxMind GeoIP City database.
 OrgLookupTest.java contains examples for the GeoIP Organization and ISP databases.
-
-RegionLookupTest.java contains an example for the Maxmind Region database.
+RegionLookupTest.java contains an example for the MaxMind GeoIP Region database.
+NetspeedLookupTest.java contains an example for the MaxMind GeoIP Netspeed database.
 
 Note that CountryLookupTest assumes that you have the GeoIP Country database
 installed at /usr/local/share/GeoIP/GeoIP.dat

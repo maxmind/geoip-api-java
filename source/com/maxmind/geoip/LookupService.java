@@ -98,8 +98,13 @@ public class LookupService {
     private final static int STATE_BEGIN_REV1 = 16000000;
     private final static int STRUCTURE_INFO_MAX_SIZE = 20;
     private final static int DATABASE_INFO_MAX_SIZE = 100;
-    private final static int GEOIP_STANDARD = 0;
-    private final static int GEOIP_MEMORY_CACHE = 1;
+    public final static int GEOIP_STANDARD = 0;
+    public final static int GEOIP_MEMORY_CACHE = 1;
+    public final static int GEOIP_UNKNOWN_SPEED = 0;
+    public final static int GEOIP_DIALUP_SPEED = 1;
+    public final static int GEOIP_CABLEDSL_SPEED = 2;
+    public final static int GEOIP_CORPORATE_SPEED = 3;
+
 
     private final static int SEGMENT_RECORD_LENGTH = 3;
     private final static int STANDARD_RECORD_LENGTH = 3;
@@ -311,8 +316,8 @@ public class LookupService {
                 else if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
 			 databaseType == DatabaseInfo.CITY_EDITION_REV1 ||
 			 databaseType == DatabaseInfo.ORG_EDITION ||
-			 databaseType == DatabaseInfo.ISP_EDITION)
-		    {
+			 databaseType == DatabaseInfo.ISP_EDITION ||
+			 databaseType == DatabaseInfo.ASNUM_EDITION) {
 			databaseSegments = new int[1];
 			databaseSegments[0] = 0;
 			if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
@@ -333,7 +338,9 @@ public class LookupService {
                 file.seek(file.getFilePointer() - 4);
             }
         }
-        if (databaseType == DatabaseInfo.COUNTRY_EDITION) {
+        if ((databaseType == DatabaseInfo.COUNTRY_EDITION) | 
+	    (databaseType == DatabaseInfo.PROXY_EDITION) |
+	    (databaseType == DatabaseInfo.NETSPEED_EDITION)) {
             databaseSegments = new int[1];
             databaseSegments[0] = COUNTRY_BEGIN;
             recordLength = STANDARD_RECORD_LENGTH;
@@ -401,6 +408,29 @@ public class LookupService {
         else {
             return new Country(countryCode[ret], countryName[ret]);
         }
+    }
+
+    public int getID(String ipAddress) {
+        InetAddress addr;
+        try {
+            addr = InetAddress.getByName(ipAddress);
+        }
+        catch (UnknownHostException e) {
+            return 0;
+        }
+        return getID(bytesToLong(addr.getAddress()));
+    }
+
+    public int getID(InetAddress ipAddress) {
+        return getID(bytesToLong(ipAddress.getAddress()));
+    }
+
+    public int getID(long ipAddress) {
+        if (file == null) {
+            throw new IllegalStateException("Database has been closed.");
+        }
+	int ret = seekCountry(ipAddress) - databaseSegments[0];
+	return ret;
     }
 
     /**
