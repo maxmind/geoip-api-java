@@ -1,3 +1,6 @@
+	- Specified ISO-8859-1 encoding for City field string
+		(Yan Zhang Chen)
+
 1.1.6  September 9th 2004
         - Fixed problem with postalCode, city and region fields 
 	  returning null char (Frank Mather) 
