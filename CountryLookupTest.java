@@ -18,7 +18,8 @@ class CountryLookupTest {
 	    String dir = "/usr/local/share/GeoIP";
 
 	    String dbfile = dir + sep + "GeoIP.dat"; 
-	    LookupService cl = new LookupService(dbfile);
+	    //LookupService cl = new LookupService(dbfile,LookupService.GEOIP_STANDARD);
+	    LookupService cl = new LookupService(dbfile,LookupService.GEOIP_MEMORY_CACHE);
 
 	    System.out.println(cl.getCountry("151.38.39.114").getCode());
 	    System.out.println(cl.getCountry("151.38.39.114").getName());
