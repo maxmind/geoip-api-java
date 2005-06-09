@@ -174,7 +174,7 @@ public class LookupService {
 	"Netherlands","Norway","Nepal","Nauru","Niue","New Zealand","Oman","Panama",
 	"Peru","French Polynesia","Papua New Guinea","Philippines","Pakistan",
 	"Poland","Saint Pierre and Miquelon","Pitcairn Islands","Puerto Rico","" +
-	"Palestinian Territory, Occupied","Portugal","Palau","Paraguay","Qatar",
+	"Palestinian Territory","Portugal","Palau","Paraguay","Qatar",
 	"Reunion","Romania","Russian Federation","Rwanda","Saudi Arabia",
 	"Solomon Islands","Seychelles","Sudan","Sweden","Singapore","Saint Helena",
 	"Slovenia","Svalbard and Jan Mayen","Slovakia","Sierra Leone","San Marino",
