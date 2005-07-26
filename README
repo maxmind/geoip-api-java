@@ -6,6 +6,9 @@ cd -
 CLASSPATH=".:source" javac *.java
 CLASSPATH=".:source" java CountryLookupTest
 
+By default, CountryLookupTest expects to find the
+GeoIP Country database in /usr/local/share/GeoIP/GeoIP.dat
+
 IMPORTANT API Change for 1.1.x users - as of GeoIP 1.1.0 the
 lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
@@ -43,6 +46,6 @@ jar cf maxmindgeoip.jar com/maxmind/geoip/Country.class com/maxmind/geoip/Databa
 
 Windows Notes 
 ========================
-If it doesn't work on Windows, try to emove or comment all the " package com.maxmind.geoip" lines from all the 
-files.
+If it doesn't work on Windows, try to remove or comment all the " package com.maxmind.geoip" lines 
+from all the files.
 
