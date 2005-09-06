@@ -286,12 +286,12 @@ public class LookupService {
         byte [] delim = new byte[3];
         byte [] buf = new byte[SEGMENT_RECORD_LENGTH];
 
-	for (i = 0; i < 233;i++){
-	    hashmapcountryCodetoindex.put(countryCode[i],new Integer(i));
-	    hashmapcountryNametoindex.put(countryName[i],new Integer(i));
-	}
 	if (file == null) {
 	    // distributed service only
+	    for (i = 0; i < 233;i++){
+		hashmapcountryCodetoindex.put(countryCode[i],new Integer(i));
+		hashmapcountryNametoindex.put(countryName[i],new Integer(i));
+	    }
 	    return;
 	}
 	file.seek(file.length() - 3);
