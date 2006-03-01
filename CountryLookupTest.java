@@ -18,6 +18,9 @@ class CountryLookupTest {
 	    String dir = "/usr/local/share/GeoIP";
 
 	    String dbfile = dir + sep + "GeoIP.dat"; 
+	    // You should only call LookupService once, especially if you use
+	    // GEOIP_MEMORY_CACHE mode, since the LookupService constructor takes up
+	    // resources to load the GeoIP.dat file into memory
 	    //LookupService cl = new LookupService(dbfile,LookupService.GEOIP_STANDARD);
 	    LookupService cl = new LookupService(dbfile,LookupService.GEOIP_MEMORY_CACHE);
 
