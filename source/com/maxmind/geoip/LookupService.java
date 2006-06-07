@@ -112,7 +112,7 @@ public class LookupService {
     private final static int MAX_RECORD_LENGTH = 4;
 
     private final static int MAX_ORG_RECORD_LENGTH = 300;
-    private final static int FULL_RECORD_LENGTH = 50;
+    private final static int FULL_RECORD_LENGTH = 60;
 
     private static final Country UNKNOWN_COUNTRY = new Country("--", "N/A");
 
@@ -134,7 +134,7 @@ public class LookupService {
 	"PA","PE","PF","PG","PH","PK","PL","PM","PN","PR","PS","PT","PW","PY",
 	"QA","RE","RO","RU","RW","SA","SB","SC","SD","SE","SG","SH","SI","SJ",
 	"SK","SL","SM","SN","SO","SR","ST","SV","SY","SZ","TC","TD","TF","TG",
-	"TH","TJ","TK","TM","TN","TO","TP","TR","TT","TV","TW","TZ","UA","UG",
+	"TH","TJ","TK","TM","TN","TO","TL","TR","TT","TV","TW","TZ","UA","UG",
 	"UM","US","UY","UZ","VA","VC","VE","VG","VI","VN","VU","WF","WS","YE",
 	"YT","CS","ZA","ZM","ZR","ZW","A1","A2","O1"};
 
@@ -181,7 +181,7 @@ public class LookupService {
 	"Senegal","Somalia","Suriname","Sao Tome and Principe","El Salvador",
 	"Syrian Arab Republic","Swaziland","Turks and Caicos Islands","Chad",
 	"French Southern Territories","Togo","Thailand","Tajikistan","Tokelau",
-	"Turkmenistan","Tunisia","Tonga","East Timor","Turkey","Trinidad and Tobago",
+	"Turkmenistan","Tunisia","Tonga","Timor-Leste","Turkey","Trinidad and Tobago",
 	"Tuvalu","Taiwan","Tanzania, United Republic of","Ukraine","Uganda",
 	"United States Minor Outlying Islands","United States","Uruguay","Uzbekistan",
 	"Holy See (Vatican City State)","Saint Vincent and the Grenadines",
