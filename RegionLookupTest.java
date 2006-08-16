@@ -1,5 +1,7 @@
 /* RegionLookupTest.java */
 
+/* Requires subscription to MaxMind GeoIP Region database */
+
 import com.maxmind.geoip.*;
 import java.io.IOException;
 

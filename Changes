@@ -1,3 +1,4 @@
+1.1.8  August 18th 2006
 	- Increased FULL_RECORD_LENGTH from 50 to 60, fixes Array out ArrayOutOfBounds=50
 		for long city names in GeoIP City databases before July 2006
 	- TP/East Timor changed to TL/Timor-Leste, reflecting changes in ISO-3166

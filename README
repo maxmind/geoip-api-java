@@ -14,7 +14,7 @@ lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
 return value for null !
 
-This is version 1.1.7 of the Java interface to GeoIP.  For more information
+This is version 1.1.8 of the Java interface to GeoIP.  For more information
 see http://www.maxmind.com/
 
 As of version 1.1.4 this API is fully thread safe.
