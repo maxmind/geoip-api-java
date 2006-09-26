@@ -26,6 +26,8 @@ OrgLookupTest.java contains examples for the GeoIP Organization and ISP database
 RegionLookupTest.java contains an example for the MaxMind GeoIP Region database.
 NetspeedLookupTest.java contains an example for the MaxMind GeoIP Netspeed database.
 
+BenchmarkGeoIP.java contains benchmarks for various databases using various options.
+
 Note that CountryLookupTest assumes that you have the GeoIP Country database
 installed at /usr/local/share/GeoIP/GeoIP.dat
 
