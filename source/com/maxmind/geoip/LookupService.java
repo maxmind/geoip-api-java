@@ -338,7 +338,7 @@ public class LookupService {
                 file.seek(file.getFilePointer() - 4);
             }
         }
-        if ((databaseType == DatabaseInfo.COUNTRY_EDITION) | 
+        if ((databaseType == DatabaseInfo.COUNTRY_EDITION) |
 	    (databaseType == DatabaseInfo.PROXY_EDITION) |
 	    (databaseType == DatabaseInfo.NETSPEED_EDITION)) {
             databaseSegments = new int[1];
@@ -349,7 +349,9 @@ public class LookupService {
 	    int l = (int) file.length();
 	    dbbuffer = new byte[l];
 	    file.seek(0);
-	    file.read(dbbuffer,0,l);     
+	    file.read(dbbuffer,0,l);
+	    databaseInfo = this.getDatabaseInfo();
+	    file.close();
 	}
     }
 
@@ -358,7 +360,9 @@ public class LookupService {
      */
     public void close() {
 	try {
-            file.close();
+	    if (file != null){
+		file.close();
+	    }
             file = null;
         }
         catch (Exception e) { }
