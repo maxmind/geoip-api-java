@@ -71,6 +71,7 @@ public class LookupService {
      * Database file.
      */
     private RandomAccessFile file = null;
+    private File databaseFile = null;
 
     /**
      * Information about the database.
@@ -89,6 +90,8 @@ public class LookupService {
     int dnsService = 0;
     int dboptions;
     byte dbbuffer[];
+    byte index_cache[];
+    long mtime;
     private final static int US_OFFSET = 1;
     private final static int CANADA_OFFSET = 677;
     private final static int WORLD_OFFSET = 1353;
@@ -100,6 +103,8 @@ public class LookupService {
     private final static int DATABASE_INFO_MAX_SIZE = 100;
     public final static int GEOIP_STANDARD = 0;
     public final static int GEOIP_MEMORY_CACHE = 1;
+    public final static int GEOIP_CHECK_CACHE = 2;
+    public final static int GEOIP_INDEX_CACHE = 4;
     public final static int GEOIP_UNKNOWN_SPEED = 0;
     public final static int GEOIP_DIALUP_SPEED = 1;
     public final static int GEOIP_CABLEDSL_SPEED = 2;
@@ -243,6 +248,7 @@ public class LookupService {
      *      from the database file.
      */
     public LookupService(File databaseFile) throws IOException {
+        this.databaseFile = databaseFile;
         this.file = new RandomAccessFile(databaseFile, "r");
         init();
     }
@@ -272,9 +278,13 @@ public class LookupService {
      *      from the database file.
      */
     public LookupService(File databaseFile, int options) throws IOException{
+        this.databaseFile = databaseFile;
 	this.file = new RandomAccessFile(databaseFile, "r");
 	dboptions = options;
 	init();
+        if ((dboptions & GEOIP_CHECK_CACHE) != 0) {
+          mtime = databaseFile.lastModified();
+        }
     }
     /**
      * Reads meta-data from the database file.
@@ -353,7 +363,18 @@ public class LookupService {
 	    databaseInfo = this.getDatabaseInfo();
 	    file.close();
 	}
-    }
+        if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
+          int l = databaseSegments[0] * recordLength * 2;
+          System.out.println("len " + l);
+          index_cache = new byte[l];
+          if (index_cache != null){
+            file.seek(0);
+            file.read(index_cache,0,l);     
+          }          
+        } else {
+          index_cache = null;
+        }
+     }
 
     /**
      * Closes the lookup service.
@@ -449,6 +470,7 @@ public class LookupService {
         try {
             // Synchronize since we're accessing the database file.
             synchronized (this) {
+            _check_mtime();
                 boolean hasStructureInfo = false;
                 byte [] delim = new byte[3];
                 // Advance to part of file where database info is stored.
@@ -485,6 +507,40 @@ public class LookupService {
             e.printStackTrace();
         }
         return new DatabaseInfo("");
+    }
+
+    synchronized void _check_mtime(){
+      try {
+        if ((dboptions & GEOIP_CHECK_CACHE) != 0){
+          long t = databaseFile.lastModified();
+          if (t != mtime){
+            System.out.println(" database changed ");
+            /* GeoIP Database file updated */
+            /* refresh filehandle */
+            file.close();
+            file = new RandomAccessFile(databaseFile,"r");
+            mtime = t;
+            if ((dboptions & GEOIP_MEMORY_CACHE) != 0){
+              /* reload database into memory cache */
+              int l = (int) file.length();
+              dbbuffer = new byte[l];
+              file.seek(0);
+              file.read(dbbuffer,0,l);     
+            }         
+            if ((dboptions & GEOIP_INDEX_CACHE) != 0){
+              int l = databaseSegments[0] * recordLength * 2;
+              index_cache = new byte[l];
+              if (index_cache != null){
+                file.seek(0);
+                file.read(index_cache,0,l);     
+              }
+            }
+            //return true;
+          }
+        }
+      } catch (IOException e) {
+        System.out.println("file not found");
+      }
     }
 
     // for GeoIP City only
@@ -804,12 +860,18 @@ public class LookupService {
 	byte [] buf = new byte[2 * MAX_RECORD_LENGTH];
 	int [] x = new int[2];
         int offset = 0;
+        _check_mtime();
         for (int depth = 31; depth >= 0; depth--) {
             if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
 		//read from memory
                 for (int i = 0;i < 2 * MAX_RECORD_LENGTH;i++) {
 		    buf[i] = dbbuffer[(2 * recordLength * offset)+i];
 		}
+            } else if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
+                //read from index cache
+                for (int i = 0;i < 2 * MAX_RECORD_LENGTH;i++) {
+		    buf[i] = index_cache[(2 * recordLength * offset)+i];
+		}            
             } else {
 		//read from disk 
 		try {
