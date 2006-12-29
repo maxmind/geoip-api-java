@@ -141,7 +141,7 @@ public class LookupService {
 	"SK","SL","SM","SN","SO","SR","ST","SV","SY","SZ","TC","TD","TF","TG",
 	"TH","TJ","TK","TM","TN","TO","TL","TR","TT","TV","TW","TZ","UA","UG",
 	"UM","US","UY","UZ","VA","VC","VE","VG","VI","VN","VU","WF","WS","YE",
-	"YT","CS","ZA","ZM","ZR","ZW","A1","A2","O1"};
+	"YT","RS","ZA","ZM","ME","ZW","A1","A2","O1","AX","GG","IM","JE"};
 
     private final static String[] countryName = {
 	"N/A","Asia/Pacific Region","Europe","Andorra","United Arab Emirates",
@@ -191,9 +191,9 @@ public class LookupService {
 	"United States Minor Outlying Islands","United States","Uruguay","Uzbekistan",
 	"Holy See (Vatican City State)","Saint Vincent and the Grenadines",
 	"Venezuela","Virgin Islands, British","Virgin Islands, U.S.","Vietnam",
-	"Vanuatu","Wallis and Futuna","Samoa","Yemen","Mayotte","Serbia and Montenegro",
-	"South Africa","Zambia","Zaire","Zimbabwe","Anonymous Proxy",
-	"Satellite Provider","Other"};
+	"Vanuatu","Wallis and Futuna","Samoa","Yemen","Mayotte","Serbia",
+	"South Africa","Zambia","Montenegro","Zimbabwe","Anonymous Proxy",
+	"Satellite Provider","Other","Aland Islands","Guernsey","Isle of Man","Jersey"};
 
 
     /**
