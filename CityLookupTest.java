@@ -9,7 +9,8 @@ import java.io.IOException;
 class CityLookupTest {
     public static void main(String[] args) {
 	try {
-	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPCity.dat");
+	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPCity.dat",
+					LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE );
             Location l1 = cl.getLocation("213.52.50.8");
             Location l2 = cl.getLocation(args[0]);
 	    System.out.println("countryCode: " + l2.countryCode +

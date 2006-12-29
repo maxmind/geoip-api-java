@@ -1,3 +1,5 @@
+	- Added support for GEOIP_INDEX_CACHE (Frank Mather)
+	- close filehandle after data is read into memory for MemoryCache mode
 	- Added BenchmarkGeoIP.java (Frank Mather)
 
 1.1.8  August 18th 2006
