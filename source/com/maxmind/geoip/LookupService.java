@@ -282,9 +282,6 @@ public class LookupService {
 	this.file = new RandomAccessFile(databaseFile, "r");
 	dboptions = options;
 	init();
-        if ((dboptions & GEOIP_CHECK_CACHE) != 0) {
-          mtime = databaseFile.lastModified();
-        }
     }
     /**
      * Reads meta-data from the database file.
@@ -303,6 +300,9 @@ public class LookupService {
 		hashmapcountryNametoindex.put(countryName[i],new Integer(i));
 	    }
 	    return;
+	}
+	if ((dboptions & GEOIP_CHECK_CACHE) != 0) {
+            mtime = databaseFile.lastModified();
 	}
 	file.seek(file.length() - 3);
         for (i = 0; i < STRUCTURE_INFO_MAX_SIZE; i++) {
@@ -365,7 +365,6 @@ public class LookupService {
 	}
         if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
           int l = databaseSegments[0] * recordLength * 2;
-          System.out.println("len " + l);
           index_cache = new byte[l];
           if (index_cache != null){
             file.seek(0);
@@ -514,28 +513,11 @@ public class LookupService {
         if ((dboptions & GEOIP_CHECK_CACHE) != 0){
           long t = databaseFile.lastModified();
           if (t != mtime){
-            System.out.println(" database changed ");
             /* GeoIP Database file updated */
             /* refresh filehandle */
             file.close();
             file = new RandomAccessFile(databaseFile,"r");
-            mtime = t;
-            if ((dboptions & GEOIP_MEMORY_CACHE) != 0){
-              /* reload database into memory cache */
-              int l = (int) file.length();
-              dbbuffer = new byte[l];
-              file.seek(0);
-              file.read(dbbuffer,0,l);     
-            }         
-            if ((dboptions & GEOIP_INDEX_CACHE) != 0){
-              int l = databaseSegments[0] * recordLength * 2;
-              index_cache = new byte[l];
-              if (index_cache != null){
-                file.seek(0);
-                file.read(index_cache,0,l);     
-              }
-            }
-            //return true;
+	    init();
           }
         }
       } catch (IOException e) {
