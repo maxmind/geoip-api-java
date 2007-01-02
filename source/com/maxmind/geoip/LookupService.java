@@ -422,7 +422,7 @@ public class LookupService {
      * @return the country the IP address is from.
      */
     public Country getCountry(long ipAddress) {
-        if (file == null) {
+        if (file == null && (dboptions & GEOIP_MEMORY_CACHE) == 0) {
             throw new IllegalStateException("Database has been closed.");
         }
         int ret = seekCountry(ipAddress) - COUNTRY_BEGIN;
@@ -450,7 +450,7 @@ public class LookupService {
     }
 
     public int getID(long ipAddress) {
-        if (file == null) {
+        if (file == null && (dboptions & GEOIP_MEMORY_CACHE) == 0) {
             throw new IllegalStateException("Database has been closed.");
         }
 	int ret = seekCountry(ipAddress) - databaseSegments[0];
