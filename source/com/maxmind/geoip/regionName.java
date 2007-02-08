@@ -1,4 +1,5 @@
-class regionName { 
+package com.maxmind.geoip;
+public class regionName { 
   static public String regionNameByCode(String country_code,String region_code) {
     String name = null;
     int region_code2 = -1;

@@ -1,4 +1,5 @@
-class timeZone { 
+package com.maxmind.geoip;
+public class timeZone { 
   static public String timeZoneByCountryAndRegion(String country,String region) {
     String timezone = null;
     if (country == null) {

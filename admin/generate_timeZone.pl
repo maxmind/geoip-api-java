@@ -12,8 +12,10 @@ my $had_region;
 # Obtain timezone.txt from http://www.maxmind.com/timezone.txt
 open(FILE,"timezone.txt");
 my $str = <FILE>;
-#print "#include <string.h> \n";
-print "class timeZone { \n";
+
+print "package com.maxmind.geoip;\n";
+print "// generated automatically from admin/generate_timeZone.pl";
+print "public class timeZone {\n";
 print "  static public String timeZoneByCountryAndRegion(String country,String region) {\n";
 print "    String timezone = null;\n";
 print <<END;

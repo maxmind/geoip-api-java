@@ -5,11 +5,9 @@
 
 use strict;
 
-#print qq(#include "regionname.h"\n);
-#print qq(#include <string.h>\n);
-#print qq(#include <stdio.h>\n);
-
-print "class regionName { \n";
+print "package com.maxmind.geoip;\n";
+print "// generated automatically from admin/generate_regionName.pl";
+print "public class regionName { \n";
 print "  static public String regionNameByCode(String country_code,String region_code) {\n";
 print "    String name = null;\n";
 print "    int region_code2 = -1;\n";
