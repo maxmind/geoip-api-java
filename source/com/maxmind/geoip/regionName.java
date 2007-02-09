@@ -4,6 +4,7 @@ public class regionName {
     String name = null;
     int region_code2 = -1;
     if (region_code == null) { return null; }
+    if (region_code.equals("")) { return null; }
     if ((region_code.charAt(0) >= 65) & (region_code.charAt(0) < (65 + 26))) {
       if ((region_code.charAt(1) >= 65) & (region_code.charAt(1) < (65 + 26))) {
         if ((country_code.equals("US") == true) | 

@@ -12,6 +12,7 @@ print "  static public String regionNameByCode(String country_code,String region
 print "    String name = null;\n";
 print "    int region_code2 = -1;\n";
 print "    if (region_code == null) { return null; }\n";
+print "    if (region_code.equals("")) { return null; } \n";
 print "    if ((region_code.charAt(0) >= 65) & (region_code.charAt(0) < (65 + 26))) {\n";
 print "      if ((region_code.charAt(1) >= 65) & (region_code.charAt(1) < (65 + 26))) {\n";
 print "        if ((country_code.equals(".qq("US").") == true) | \n";
