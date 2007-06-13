@@ -331,7 +331,8 @@ public class LookupService {
 			databaseSegments = new int[1];
 			databaseSegments[0] = 0;
 			if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
-			    databaseType == DatabaseInfo.CITY_EDITION_REV1) {
+			    databaseType == DatabaseInfo.CITY_EDITION_REV1 ||
+			    databaseType == DatabaseInfo.ASNUM_EDITION) {
 			    recordLength = STANDARD_RECORD_LENGTH;
 			}
 			else {
