@@ -1,4 +1,9 @@
+	- Made GeoIP ASNum database work with Java API
+	- Added timeZone and regionName classes to lookup timezone and region name
+		from country code and region code (Frank Mather)
+
 1.2.0  January 10th 2007
+	- Added support for GEOIP_CHECK_CACHE (Frank Mather)
 	- Allow database to be closed in memory cache mode
 	- Replaced CS/Serbia and Montenegro with RS/Serbia, removed ZR/Zaire, added ME/Montenegro
 	- Added AX/Aland Islands, GG/Guernsey, IM/Isle of Man, JE/Jersey (ISO-3166-1 changes)
