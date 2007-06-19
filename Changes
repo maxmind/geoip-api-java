@@ -1,3 +1,4 @@
+1.2.1  June 19th 2007
 	- Made GeoIP ASNum database work with Java API
 	- Added timeZone and regionName classes to lookup timezone and region name
 		from country code and region code (Frank Mather)

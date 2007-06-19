@@ -74,5 +74,5 @@ LookupService cl = new LookupService(dbfile, LookupService.GEOIP_MEMORY_CACHE | 
 
 Windows Notes 
 ========================
-If it doesn't work on Windows, try to remove or comment all the " package com.maxmind.geoip" lines 
+If it doesn't work on Windows, try to remove or comment out all the "package com.maxmind.geoip" lines 
 from all the files.
