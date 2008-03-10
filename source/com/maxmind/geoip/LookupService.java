@@ -518,6 +518,7 @@ public class LookupService {
             /* refresh filehandle */
             file.close();
             file = new RandomAccessFile(databaseFile,"r");
+	    databaseInfo = null;
 	    init();
           }
         }
