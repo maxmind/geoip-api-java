@@ -1,5 +1,6 @@
 package com.maxmind.geoip;
-public class timeZone { 
+// generated automatically from admin/generate_timeZone.pl
+public class timeZone {
   static public String timeZoneByCountryAndRegion(String country,String region) {
     String timezone = null;
     if (country == null) {
@@ -542,8 +543,74 @@ public class timeZone {
       timezone = "America/Port-au-Prince";
     } else if (country.equals("CH") == true) {
       timezone = "Europe/Zurich";
-    } else if (country.equals("") == true) {
-      timezone = "";
+    } else if (country.equals("AN") == true) {
+      timezone = "America/Curacao";
+    } else if (country.equals("BJ") == true) {
+      timezone = "Africa/Porto-Novo";
+    } else if (country.equals("EH") == true) {
+      timezone = "Africa/El_Aaiun";
+    } else if (country.equals("FK") == true) {
+      timezone = "Atlantic/Stanley";
+    } else if (country.equals("GF") == true) {
+      timezone = "America/Cayenne";
+    } else if (country.equals("IO") == true) {
+      timezone = "Indian/Chagos";
+    } else if (country.equals("MD") == true) {
+      timezone = "Europe/Chisinau";
+    } else if (country.equals("MP") == true) {
+      timezone = "Pacific/Saipan";
+    } else if (country.equals("MW") == true) {
+      timezone = "Africa/Blantyre";
+    } else if (country.equals("NA") == true) {
+      timezone = "Africa/Windhoek";
+    } else if (country.equals("NC") == true) {
+      timezone = "Pacific/Noumea";
+    } else if (country.equals("PG") == true) {
+      timezone = "Pacific/Port_Moresby";
+    } else if (country.equals("PM") == true) {
+      timezone = "America/Miquelon";
+    } else if (country.equals("PS") == true) {
+      timezone = "Asia/Gaza";
+    } else if (country.equals("PY") == true) {
+      timezone = "America/Asuncion";
+    } else if (country.equals("SB") == true) {
+      timezone = "Pacific/Guadalcanal";
+    } else if (country.equals("SC") == true) {
+      timezone = "Indian/Mahe";
+    } else if (country.equals("SJ") == true) {
+      timezone = "Arctic/Longyearbyen";
+    } else if (country.equals("SY") == true) {
+      timezone = "Asia/Damascus";
+    } else if (country.equals("TC") == true) {
+      timezone = "America/Grand_Turk";
+    } else if (country.equals("TF") == true) {
+      timezone = "Indian/Kerguelen";
+    } else if (country.equals("TK") == true) {
+      timezone = "Pacific/Fakaofo";
+    } else if (country.equals("TT") == true) {
+      timezone = "America/Port_of_Spain";
+    } else if (country.equals("VG") == true) {
+      timezone = "America/Tortola";
+    } else if (country.equals("VI") == true) {
+      timezone = "America/St_Thomas";
+    } else if (country.equals("VU") == true) {
+      timezone = "Pacific/Efate";
+    } else if (country.equals("RS") == true) {
+      timezone = "Europe/Belgrade";
+    } else if (country.equals("ME") == true) {
+      timezone = "Europe/Podgorica";
+    } else if (country.equals("AX") == true) {
+      timezone = "Europe/Mariehamn";
+    } else if (country.equals("GG") == true) {
+      timezone = "Europe/Guernsey";
+    } else if (country.equals("IM") == true) {
+      timezone = "Europe/Isle_of_Man";
+    } else if (country.equals("JE") == true) {
+      timezone = "Europe/Jersey";
+    } else if (country.equals("BL") == true) {
+      timezone = "America/St_Barthelemy";
+    } else if (country.equals("MF") == true) {
+      timezone = "America/Marigot";
     }
     return timezone;
   }
