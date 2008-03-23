@@ -1,7 +1,8 @@
-	- Update timeZone.java ( Boris Zentner )
+1.2.2  March 22nd 2008
+	- Added BL/Saint Barthelemy, MF/Saint Martin (ISO-3166-1 additions)
+	- Updated timeZone.java ( Boris Zentner )
 	- Add missing \n to admin/generate_timeZone.pl ( Boris Zentner )
-	- Fix refresh databaseInfo in combination with GEOIP_CHECK_CACHE
-	  ( Boris Zentner, Glenn Pedersen )
+	- Fix refresh databaseInfo in combination with GEOIP_CHECK_CACHE ( Boris Zentner, Glenn Pedersen )
 	- Changed license from GPL to LGPL, to allow commercial programs to include GeoIP API
 
 1.2.1  June 19th 2007
