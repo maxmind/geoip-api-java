@@ -1,3 +1,4 @@
+	- remove dma_code from city records. use  metro_code instead. ( Boris Zentner )
 1.2.2  March 22nd 2008
 	- Added BL/Saint Barthelemy, MF/Saint Martin (ISO-3166-1 additions)
 	- Updated timeZone.java ( Boris Zentner )

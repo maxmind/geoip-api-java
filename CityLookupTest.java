@@ -23,7 +23,7 @@ class CityLookupTest {
                                "\n longitude: " + l2.longitude +
                                "\n distance: " + l2.distance(l1) +
                                "\n distance: " + l1.distance(l2) + 
- 			       "\n dma code: " + l2.dma_code +
+ 			       "\n metro code: " + l2.metro_code +
  			       "\n area code: " + l2.area_code +
                                "\n timezone: " + timeZone.timeZoneByCountryAndRegion(l2.countryCode, l2.region));
 

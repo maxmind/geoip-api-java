@@ -620,11 +620,12 @@ public class LookupService {
 		    record.latitude = 0;
 		}
 	    }
-	    if (key.equals("dm")) {
+	    // dm depreciated use me ( metro_code ) instead
+	    if (key.equals("dm") || key.equals("me")) {
 		try{
-		    record.dma_code = Integer.parseInt(value);
+		    record.metro_code = record.dma_code = Integer.parseInt(value);
 		} catch(NumberFormatException e) {
-		    record.dma_code = 0;
+		    record.metro_code = record.dma_code = 0;
 		}
 	    }
 	    if (key.equals("ac")) {
@@ -764,17 +765,17 @@ public class LookupService {
                 longitude += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
 	    record.longitude = (float) longitude/10000 - 180;
 
-	    record.dma_code = 0;
+	    record.dma_code = record.metro_code = 0;
 	    record.area_code = 0;
 	    if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
 		// get DMA code
-		int dmaarea_combo = 0;
+		int metroarea_combo = 0;
 		if (record.countryCode == "US") {
 		    record_buf_offset += 3;
 		    for (j = 0; j < 3; j++)
-			dmaarea_combo += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
-		    record.dma_code = dmaarea_combo/1000;
-		    record.area_code = dmaarea_combo % 1000;
+			metroarea_combo += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
+		    record.metro_code = record.dma_code = metroarea_combo/1000;
+		    record.area_code = metroarea_combo % 1000;
 		}
             }
 	}
