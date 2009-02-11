@@ -1,3 +1,4 @@
+	- Update timezones for Australia
 	- Remore "\n" from RegionLookupTest.java. println add already a newline ( Boris Zentner )
 	- Change regionName.java and generate_regionName.pl to support FIPS codes with letters ( Boris Zentner ). 
 	- Sync with recent FIPS codes Jan 14th, 2009 ( Boris Zentner )

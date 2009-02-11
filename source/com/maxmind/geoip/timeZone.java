@@ -110,6 +110,8 @@ public class timeZone {
         timezone = "America/New_York";
       } else if (region.equals("WI") == true) {
         timezone = "America/Chicago";
+      } else if (region.equals("WY") == true) {
+        timezone = "America/Denver";
       }
     } else if (country.equals("CA") == true) {
       if (region.equals("AB") == true) {
@@ -120,7 +122,7 @@ public class timeZone {
         timezone = "America/Winnipeg";
       } else if (region.equals("NB") == true) {
         timezone = "America/Halifax";
-      } else if (region.equals("NF") == true) {
+      } else if (region.equals("NL") == true) {
         timezone = "America/St_Johns";
       } else if (region.equals("NT") == true) {
         timezone = "America/Yellowknife";
@@ -136,6 +138,26 @@ public class timeZone {
         timezone = "America/Montreal";
       } else if (region.equals("SK") == true) {
         timezone = "America/Regina";
+      } else if (region.equals("YT") == true) {
+        timezone = "America/Whitehorse";
+      }
+    } else if (country.equals("AU") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Australia/Canberra";
+      } else if (region.equals("02") == true) {
+        timezone = "Australia/NSW";
+      } else if (region.equals("03") == true) {
+        timezone = "Australia/North";
+      } else if (region.equals("04") == true) {
+        timezone = "Australia/Queensland";
+      } else if (region.equals("05") == true) {
+        timezone = "Australia/South";
+      } else if (region.equals("06") == true) {
+        timezone = "Australia/Tasmania";
+      } else if (region.equals("07") == true) {
+        timezone = "Australia/Victoria";
+      } else if (region.equals("08") == true) {
+        timezone = "Australia/West";
       }
     } else if (country.equals("AS") == true) {
       timezone = "US/Samoa";
@@ -391,8 +413,6 @@ public class timeZone {
       timezone = "Atlantic/South_Georgia";
     } else if (country.equals("SH") == true) {
       timezone = "Atlantic/St_Helena";
-    } else if (country.equals("AU") == true) {
-      timezone = "Australia/Queensland";
     } else if (country.equals("BR") == true) {
       timezone = "Brazil/Acre";
     } else if (country.equals("CL") == true) {
