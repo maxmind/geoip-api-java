@@ -714,10 +714,8 @@ public class LookupService {
 
             if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
                 //read from memory
-                for (int i = 0; i < FULL_RECORD_LENGTH; i++) {
-                    record_buf[i] = dbbuffer[i+record_pointer];
-	        }
-            } else {
+		System.arraycopy(dbbuffer, record_pointer, record_buf, 0, Math.min(dbbuffer.length - record_pointer, FULL_RECORD_LENGTH));
+} else {
                 //read from disk
                 file.seek(record_pointer);
                 file.read(record_buf);
@@ -817,9 +815,7 @@ public class LookupService {
             record_pointer = seek_org + (2 * recordLength - 1) * databaseSegments[0];
             if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
                 //read from memory
-                for (int i = 0;i < FULL_RECORD_LENGTH;i++) {
-                    buf[i] = dbbuffer[i+record_pointer];
-	        }
+		System.arraycopy(dbbuffer, record_pointer, buf, 0, Math.min(dbbuffer.length - record_pointer, MAX_ORG_RECORD_LENGTH));
             } else {
 		//read from disk
                 file.seek(record_pointer);
