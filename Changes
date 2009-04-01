@@ -1,4 +1,5 @@
-	- Fix rare out of range error, when the last entry of the Org/ISP/Domain database is copied ( MEMORY_CACHE only ). ( Boris Zentner )
+        - Fixed spelling of Kazakhstan, was Kazakstan ( Boris Zentner )	
+        - Fix rare out of range error, when the last entry of the Org/ISP/Domain database is copied ( MEMORY_CACHE only ). ( Boris Zentner )
 	- Update timezones for Australia
 	- Remore "\n" from RegionLookupTest.java. println add already a newline ( Boris Zentner )
 	- Change regionName.java and generate_regionName.pl to support FIPS codes with letters ( Boris Zentner ). 

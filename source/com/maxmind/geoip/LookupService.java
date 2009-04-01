@@ -169,7 +169,7 @@ public class LookupService {
 	"Iceland","Italy","Jamaica","Jordan","Japan","Kenya","Kyrgyzstan","Cambodia",
 	"Kiribati","Comoros","Saint Kitts and Nevis",
 	"Korea, Democratic People's Republic of","Korea, Republic of","Kuwait",
-	"Cayman Islands","Kazakstan","Lao People's Democratic Republic","Lebanon",
+	"Cayman Islands","Kazakhstan","Lao People's Democratic Republic","Lebanon",
 	"Saint Lucia","Liechtenstein","Sri Lanka","Liberia","Lesotho","Lithuania",
 	"Luxembourg","Latvia","Libyan Arab Jamahiriya","Morocco","Monaco",
 	"Moldova, Republic of","Madagascar","Marshall Islands",
