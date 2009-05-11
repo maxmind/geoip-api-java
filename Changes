@@ -1,3 +1,5 @@
+1.2.3  May 11th 2009 
+        - Sync with recent FIPS codes 20090511 ( Boris Zentner )
         - Fixed spelling of Kazakhstan, was Kazakstan ( Boris Zentner )	
         - Fix rare out of range error, when the last entry of the Org/ISP/Domain database is copied ( MEMORY_CACHE only ). ( Boris Zentner )
 	- Update timezones for Australia

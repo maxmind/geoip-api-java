@@ -258,9 +258,6 @@ static public String regionNameByCode(String country_code,String region_code) {
     }
     if (country_code.equals("AD") == true) {
       switch (region_code2) {
-        case 2:
-        name = "Canillo";
-        break;
         case 3:
         name = "Encamp";
         break;
@@ -7111,14 +7108,32 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 11:
         name = "Grand Bassa";
         break;
+        case 12:
+        name = "Grand Cape Mount";
+        break;
+        case 13:
+        name = "Maryland";
+        break;
         case 14:
         name = "Montserrado";
+        break;
+        case 17:
+        name = "Margibi";
+        break;
+        case 18:
+        name = "River Cess";
         break;
         case 19:
         name = "Grand Gedeh";
         break;
         case 20:
         name = "Lofa";
+        break;
+        case 21:
+        name = "Gbarpolu";
+        break;
+        case 22:
+        name = "River Gee";
         break;
       }
     }
@@ -12079,6 +12094,12 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 78:
         name = "Mukdahan";
         break;
+        case 79:
+        name = "Nong Bua Lamphu";
+        break;
+        case 80:
+        name = "Sa Kaeo";
+        break;
       }
     }
     if (country_code.equals("TJ") == true) {
@@ -12116,22 +12137,19 @@ static public String regionNameByCode(String country_code,String region_code) {
     if (country_code.equals("TN") == true) {
       switch (region_code2) {
         case 2:
-        name = "Al Qasrayn";
+        name = "Kasserine";
         break;
         case 3:
-        name = "Al Qayrawan";
+        name = "Kairouan";
         break;
         case 6:
-        name = "Jundubah";
-        break;
-        case 10:
-        name = "Qafsah";
+        name = "Jendouba";
         break;
         case 14:
-        name = "Kef";
+        name = "El Kef";
         break;
         case 15:
-        name = "Al Mahdiyah";
+        name = "Al Mahdia";
         break;
         case 16:
         name = "Al Munastir";
@@ -12140,58 +12158,52 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Bajah";
         break;
         case 18:
-        name = "Banzart";
+        name = "Bizerte";
         break;
         case 19:
-        name = "Nabul";
+        name = "Nabeul";
         break;
         case 22:
-        name = "Silyanah";
+        name = "Siliana";
         break;
         case 23:
-        name = "Susah";
+        name = "Sousse";
         break;
         case 26:
-        name = "Chaiyaphum Province";
+        name = "Ariana";
         break;
         case 27:
-        name = "Bin";
+        name = "Ben Arous";
         break;
         case 28:
         name = "Madanin";
         break;
         case 29:
-        name = "Qabis";
+        name = "Gabes";
         break;
         case 30:
-        name = "Qafsah";
+        name = "Gafsa";
         break;
         case 31:
-        name = "Qibili";
+        name = "Kebili";
         break;
         case 32:
-        name = "Safaqis";
+        name = "Sfax";
         break;
         case 33:
-        name = "Sidi Bu Zayd";
+        name = "Sidi Bou Zid";
         break;
         case 34:
-        name = "Tatawin";
+        name = "Tataouine";
         break;
         case 35:
-        name = "Tawzar";
+        name = "Tozeur";
         break;
         case 36:
         name = "Tunis";
         break;
         case 37:
-        name = "Zaghwan";
-        break;
-        case 38:
-        name = "Ariana";
-        break;
-        case 39:
-        name = "Manouba";
+        name = "Zaghouan";
         break;
       }
     }
