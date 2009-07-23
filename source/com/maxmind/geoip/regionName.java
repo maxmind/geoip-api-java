@@ -258,6 +258,9 @@ static public String regionNameByCode(String country_code,String region_code) {
     }
     if (country_code.equals("AD") == true) {
       switch (region_code2) {
+        case 2:
+        name = "Canillo";
+        break;
         case 3:
         name = "Encamp";
         break;
@@ -6103,6 +6106,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 29:
         name = "Snafellsnes- og Hnappadalssysla";
         break;
+        case 30:
+        name = "Strandasysla";
+        break;
         case 31:
         name = "Sudur-Mulasysla";
         break;
@@ -6876,6 +6882,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 1:
         name = "Beqaa";
         break;
+        case 2:
+        name = "Al Janub";
+        break;
         case 3:
         name = "Liban-Nord";
         break;
@@ -7092,6 +7101,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 4:
         name = "Grand Cape Mount";
+        break;
+        case 5:
+        name = "Lofa";
         break;
         case 6:
         name = "Maryland";
@@ -8867,11 +8879,17 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 11:
         name = "Federal Capital Territory";
         break;
+        case 12:
+        name = "Gongola";
+        break;
         case 16:
         name = "Ogun";
         break;
         case 17:
         name = "Ondo";
+        break;
+        case 18:
+        name = "Oyo";
         break;
         case 21:
         name = "Akwa Ibom";
@@ -9290,6 +9308,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 1092:
         name = "West Coast";
         break;
+        case 85:
+        name = "Waikato";
+        break;
       }
     }
     if (country_code.equals("OM") == true) {
@@ -9630,6 +9651,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 44:
         name = "Mountain";
+        break;
+        case 45:
+        name = "Negros Occidental";
         break;
         case 46:
         name = "Negros Oriental";
@@ -10730,6 +10754,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 6:
         name = "Gitarama";
         break;
+        case 7:
+        name = "Kibungo";
+        break;
         case 9:
         name = "Kigali";
         break;
@@ -11550,6 +11577,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 7:
         name = "Thies";
+        break;
+        case 8:
+        name = "Louga";
         break;
         case 9:
         name = "Fatick";
@@ -13051,6 +13081,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 5:
         name = "Cao Bang";
         break;
+        case 6:
+        name = "Cuu Long";
+        break;
         case 7:
         name = "Dac Lac";
         break;
@@ -13068,6 +13101,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 14:
         name = "Ha Nam Ninh";
+        break;
+        case 15:
+        name = "Ha Noi";
         break;
         case 16:
         name = "Ha Son Binh";
@@ -13392,6 +13428,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 5:
         name = "Shabwah";
+        break;
+        case 6:
+        name = "Al Ghaydah";
         break;
         case 8:
         name = "Al Hudaydah";

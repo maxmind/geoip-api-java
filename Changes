@@ -1,3 +1,5 @@
+        - Fix array length in distributed service setup ( quarz12h )
+        - Sync with recent FIPS codes 20090723 ( Boris Zentner )
 1.2.3  May 11th 2009 
         - Sync with recent FIPS codes 20090511 ( Boris Zentner )
         - Fixed spelling of Kazakhstan, was Kazakstan ( Boris Zentner )	

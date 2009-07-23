@@ -296,11 +296,15 @@ public class LookupService {
         byte [] buf = new byte[SEGMENT_RECORD_LENGTH];
 
 	if (file == null) {
-	    // distributed service only
-	    for (i = 0; i < 233;i++){
-		hashmapcountryCodetoindex.put(countryCode[i],new Integer(i));
-		hashmapcountryNametoindex.put(countryName[i],new Integer(i));
-	    }
+
+              if(countryCode.length!=countryName.length)
+                throw new AssertionError("countryCode.length!=countryName.length");
+              
+	      // distributed service only
+	      for (i = 0; i < countryCode.length ;i++){
+	  	  hashmapcountryCodetoindex.put(countryCode[i],new Integer(i));
+		  hashmapcountryNametoindex.put(countryName[i],new Integer(i));
+	      }
 	    return;
 	}
 	if ((dboptions & GEOIP_CHECK_CACHE) != 0) {
