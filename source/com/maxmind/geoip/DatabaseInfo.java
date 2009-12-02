@@ -36,9 +36,8 @@ import java.text.ParseException;
  *          is from the U.S. or Canada.
  *      <li>City edition --  includes country, region, city, postal code, latitude, and
  *          longitude information.
- *      <li>Org edition -- includes country and netblock owner.
- *      <li>ISP edition -- includes country, region, city, postal code, latitude, longitude,
- *          ISP, and organization information.
+ *      <li>Org edition -- includes netblock owner.
+ *      <li>ISP edition -- ISP information.
  * </ul>
  *
  * @see com.maxmind.geoip.LookupService#getDatabaseInfo()

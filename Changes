@@ -1,3 +1,8 @@
+        - Remove static keyword from objects that are reinitialized in the init() method. ( Tony Jacobs )
+        - Replace nearly all calls to file.read() with file.readFully() ( Tony Jacobs )
+        - Synchronized 100% of the calls to file ( Tony Jacobs )
+        - Use Integer.valueOf() instead of new Integer() to reduce memory consumption. ( Tony Jacobs )
+        - Use explicit imports instead of import java.io.*; and the like. ( Tony Jacobs )
         - Fix array length in distributed service setup ( quarz12h )
         - Sync with recent FIPS codes 20090723 ( Boris Zentner )
 1.2.3  May 11th 2009 
