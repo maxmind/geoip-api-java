@@ -1,3 +1,5 @@
+        - Fix DatabaseInfo string ( Boris Zentner ) 
+        - Add netmask and last_netmask methods ( Boris Zentner )
         - Remove static keyword from objects that are reinitialized in the init() method. ( Tony Jacobs )
         - Replace nearly all calls to file.read() with file.readFully() ( Tony Jacobs )
         - Synchronized 100% of the calls to file ( Tony Jacobs )

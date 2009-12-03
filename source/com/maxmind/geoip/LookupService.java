@@ -95,6 +95,7 @@ public class LookupService {
     byte dbbuffer[];
     byte index_cache[];
     long mtime;
+    int last_netmask;
     private final static int US_OFFSET = 1;
     private final static int CANADA_OFFSET = 677;
     private final static int WORLD_OFFSET = 1353;
@@ -467,6 +468,14 @@ public class LookupService {
 	return ret;
     }
 
+    public int last_netmask() {
+      return this.last_netmask; 
+    }
+
+    public void netmask(int nm){
+      this.last_netmask = nm;
+    }
+
     /**
      * Returns information about the database.
      *
@@ -478,26 +487,28 @@ public class LookupService {
         }
         try {
             _check_mtime();
-                boolean hasStructureInfo = false;
-                byte [] delim = new byte[3];
-                // Advance to part of file where database info is stored.
-                file.seek(file.length() - 3);
-                for (int i=0; i<STRUCTURE_INFO_MAX_SIZE; i++) {
+            boolean hasStructureInfo = false;
+            byte [] delim = new byte[3];
+            // Advance to part of file where database info is stored.
+            file.seek(file.length() - 3);
+            for (int i=0; i<STRUCTURE_INFO_MAX_SIZE; i++) {
                 int read = file.read( delim );
-                if( read==3 && (delim[0]&0xFF)==255 && (delim[1]&0xFF) == 255 && (delim[2]&0xFF)==255 )
+                if( read==3 && (delim[0]&0xFF)==255 && (delim[1]&0xFF) == 255 && (delim[2]&0xFF)==255 ){
                         hasStructureInfo = true;
                         break;
-                    }
                 }
-                if (hasStructureInfo) {
-                    file.seek(file.getFilePointer() - 3);
-                }
-                else {
-                    // No structure info, must be pre Sep 2002 database, go back to end.
-                    file.seek(file.length() - 3);
-                }
-                // Find the database info string.
-                for (int i=0; i<DATABASE_INFO_MAX_SIZE; i++) {
+                file.seek(file.getFilePointer() - 4);
+
+            }
+            if (hasStructureInfo) {
+                    file.seek(file.getFilePointer() - 6);
+            }
+            else {
+                // No structure info, must be pre Sep 2002 database, go back to end.
+                file.seek(file.length() - 3);
+            }
+            // Find the database info string.
+            for (int i=0; i<DATABASE_INFO_MAX_SIZE; i++) {
                 file.readFully(delim);
                     if (delim[0]==0 && delim[1]==0 && delim[2]==0) {
                         byte[] dbInfo = new byte[i];
@@ -882,12 +893,14 @@ public class LookupService {
 
             if ((ipAddress & (1 << depth)) > 0) {
                 if (x[1] >= databaseSegments[0]) {
+                    last_netmask = 32 - depth;
                     return x[1];
                 }
                 offset = x[1];
             }
             else {
                 if (x[0] >= databaseSegments[0]) {
+                    last_netmask = 32 - depth;
                     return x[0];
                 }
                 offset = x[0];
