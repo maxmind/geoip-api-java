@@ -55,7 +55,9 @@ public class DatabaseInfo {
     public final static int PROXY_EDITION = 8;
     public final static int ASNUM_EDITION = 9;
     public final static int NETSPEED_EDITION = 10;
-    private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+   public final static int COUNTRY_EDITION_V6 = 12;
+
+private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
     private String info;
 

@@ -1,3 +1,5 @@
+        - Add IPv6 support via getCountryV6 ( Boris Zentner )
+        - Add exmaple for IPv6 lookups: CountryLookupTestV6 ( Boris Zentner )
         - Fix DatabaseInfo string ( Boris Zentner ) 
         - Add netmask and last_netmask methods ( Boris Zentner )
         - Remove static keyword from objects that are reinitialized in the init() method. ( Tony Jacobs )
