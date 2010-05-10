@@ -2359,6 +2359,18 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 13:
         name = "Tarapaca";
         break;
+        case 14:
+        name = "Los Lagos";
+        break;
+        case 15:
+        name = "Tarapaca";
+        break;
+        case 16:
+        name = "Arica y Parinacota";
+        break;
+        case 17:
+        name = "Los Rios";
+        break;
       }
     }
     if (country_code.equals("CM") == true) {
@@ -6494,9 +6506,6 @@ static public String regionNameByCode(String country_code,String region_code) {
     }
     if (country_code.equals("KH") == true) {
       switch (region_code2) {
-        case 0:
-        name = "Banteay Meanchey";
-        break;
         case 1:
         name = "Batdambang";
         break;
@@ -6553,6 +6562,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 19:
         name = "Takeo";
+        break;
+        case 25:
+        name = "Banteay Meanchey";
         break;
         case 29:
         name = "Batdambang";
@@ -12328,7 +12340,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Hatay";
         break;
         case 32:
-        name = "Icel";
+        name = "Mersin";
         break;
         case 33:
         name = "Isparta";

@@ -1,3 +1,4 @@
+        - Update FIPS codes 20100510 ( Boris Zentner )
         - Add IPv6 support via getCountryV6 ( Boris Zentner )
         - Add exmaple for IPv6 lookups: CountryLookupTestV6 ( Boris Zentner )
         - Fix DatabaseInfo string ( Boris Zentner ) 
