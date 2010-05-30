@@ -259,8 +259,6 @@ public class timeZone {
       timezone = "America/Caracas";
     } else if (country.equals("KY") == true) {
       timezone = "America/Cayman";
-    } else if (country.equals("MX") == true) {
-      timezone = "America/Chihuahua";
     } else if (country.equals("CR") == true) {
       timezone = "America/Costa_Rica";
     } else if (country.equals("DM") == true) {
@@ -275,8 +273,6 @@ public class timeZone {
       timezone = "America/Guadeloupe";
     } else if (country.equals("GT") == true) {
       timezone = "America/Guatemala";
-    } else if (country.equals("EC") == true) {
-      timezone = "America/Guayaquil";
     } else if (country.equals("GY") == true) {
       timezone = "America/Guyana";
     } else if (country.equals("CU") == true) {
@@ -291,8 +287,6 @@ public class timeZone {
       timezone = "America/Managua";
     } else if (country.equals("MQ") == true) {
       timezone = "America/Martinique";
-    } else if (country.equals("AR") == true) {
-      timezone = "America/Mendoza";
     } else if (country.equals("UY") == true) {
       timezone = "America/Montevideo";
     } else if (country.equals("MS") == true) {
@@ -315,8 +309,6 @@ public class timeZone {
       timezone = "America/Tegucigalpa";
     } else if (country.equals("YE") == true) {
       timezone = "Asia/Aden";
-    } else if (country.equals("KZ") == true) {
-      timezone = "Asia/Almaty";
     } else if (country.equals("JO") == true) {
       timezone = "Asia/Amman";
     } else if (country.equals("TM") == true) {
@@ -339,8 +331,6 @@ public class timeZone {
       timezone = "Asia/Calcutta";
     } else if (country.equals("MN") == true) {
       timezone = "Asia/Choibalsan";
-    } else if (country.equals("CN") == true) {
-      timezone = "Asia/Chongqing";
     } else if (country.equals("LK") == true) {
       timezone = "Asia/Colombo";
     } else if (country.equals("BD") == true) {
@@ -353,8 +343,6 @@ public class timeZone {
       timezone = "Asia/Hong_Kong";
     } else if (country.equals("TR") == true) {
       timezone = "Asia/Istanbul";
-    } else if (country.equals("ID") == true) {
-      timezone = "Asia/Jakarta";
     } else if (country.equals("IL") == true) {
       timezone = "Asia/Jerusalem";
     } else if (country.equals("AF") == true) {
@@ -387,8 +375,6 @@ public class timeZone {
       timezone = "Asia/Singapore";
     } else if (country.equals("TW") == true) {
       timezone = "Asia/Taipei";
-    } else if (country.equals("UZ") == true) {
-      timezone = "Asia/Tashkent";
     } else if (country.equals("GE") == true) {
       timezone = "Asia/Tbilisi";
     } else if (country.equals("BT") == true) {
@@ -399,8 +385,6 @@ public class timeZone {
       timezone = "Asia/Vientiane";
     } else if (country.equals("AM") == true) {
       timezone = "Asia/Yerevan";
-    } else if (country.equals("PT") == true) {
-      timezone = "Atlantic/Azores";
     } else if (country.equals("BM") == true) {
       timezone = "Atlantic/Bermuda";
     } else if (country.equals("CV") == true) {
@@ -413,8 +397,6 @@ public class timeZone {
       timezone = "Atlantic/South_Georgia";
     } else if (country.equals("SH") == true) {
       timezone = "Atlantic/St_Helena";
-    } else if (country.equals("BR") == true) {
-      timezone = "Brazil/Acre";
     } else if (country.equals("CL") == true) {
       timezone = "Chile/Continental";
     } else if (country.equals("NL") == true) {
@@ -443,24 +425,18 @@ public class timeZone {
       timezone = "Europe/Gibraltar";
     } else if (country.equals("FI") == true) {
       timezone = "Europe/Helsinki";
-    } else if (country.equals("UA") == true) {
-      timezone = "Europe/Kiev";
     } else if (country.equals("SI") == true) {
       timezone = "Europe/Ljubljana";
     } else if (country.equals("GB") == true) {
       timezone = "Europe/London";
     } else if (country.equals("LU") == true) {
       timezone = "Europe/Luxembourg";
-    } else if (country.equals("ES") == true) {
-      timezone = "Europe/Madrid";
     } else if (country.equals("MT") == true) {
       timezone = "Europe/Malta";
     } else if (country.equals("BY") == true) {
       timezone = "Europe/Minsk";
     } else if (country.equals("MC") == true) {
       timezone = "Europe/Monaco";
-    } else if (country.equals("RU") == true) {
-      timezone = "Europe/Moscow";
     } else if (country.equals("NO") == true) {
       timezone = "Europe/Oslo";
     } else if (country.equals("CZ") == true) {
@@ -497,8 +473,6 @@ public class timeZone {
       timezone = "Europe/Zagreb";
     } else if (country.equals("IR") == true) {
       timezone = "Asia/Tehran";
-    } else if (country.equals("NZ") == true) {
-      timezone = "Pacific/Auckland";
     } else if (country.equals("MG") == true) {
       timezone = "Indian/Antananarivo";
     } else if (country.equals("CX") == true) {
@@ -551,14 +525,10 @@ public class timeZone {
       timezone = "Africa/Lagos";
     } else if (country.equals("DO") == true) {
       timezone = "America/Santo_Domingo";
-    } else if (country.equals("TL") == true) {
-      timezone = "Asia/Jakarta";
     } else if (country.equals("ET") == true) {
       timezone = "Africa/Addis_Ababa";
     } else if (country.equals("FX") == true) {
       timezone = "Europe/Paris";
-    } else if (country.equals("GL") == true) {
-      timezone = "America/Godthab";
     } else if (country.equals("HT") == true) {
       timezone = "America/Port-au-Prince";
     } else if (country.equals("CH") == true) {
@@ -631,6 +601,802 @@ public class timeZone {
       timezone = "America/St_Barthelemy";
     } else if (country.equals("MF") == true) {
       timezone = "America/Marigot";
+    } else if (country.equals("AR") == true) {
+      if (region.equals("01") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("02") == true) {
+        timezone = "America/Argentina/Catamarca";
+      } else if (region.equals("03") == true) {
+        timezone = "America/Argentina/Tucuman";
+      } else if (region.equals("04") == true) {
+        timezone = "America/Argentina/Rio_Gallegos";
+      } else if (region.equals("05") == true) {
+        timezone = "America/Argentina/Cordoba";
+      } else if (region.equals("06") == true) {
+        timezone = "America/Argentina/Tucuman";
+      } else if (region.equals("07") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("08") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("09") == true) {
+        timezone = "America/Argentina/Tucuman";
+      } else if (region.equals("10") == true) {
+        timezone = "America/Argentina/Jujuy";
+      } else if (region.equals("11") == true) {
+        timezone = "America/Argentina/San_Luis";
+      } else if (region.equals("12") == true) {
+        timezone = "America/Argentina/La_Rioja";
+      } else if (region.equals("13") == true) {
+        timezone = "America/Argentina/Mendoza";
+      } else if (region.equals("14") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("15") == true) {
+        timezone = "America/Argentina/San_Luis";
+      } else if (region.equals("16") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("17") == true) {
+        timezone = "America/Argentina/Salta";
+      } else if (region.equals("18") == true) {
+        timezone = "America/Argentina/San_Juan";
+      } else if (region.equals("19") == true) {
+        timezone = "America/Argentina/San_Luis";
+      } else if (region.equals("20") == true) {
+        timezone = "America/Argentina/Rio_Gallegos";
+      } else if (region.equals("21") == true) {
+        timezone = "America/Argentina/Buenos_Aires";
+      } else if (region.equals("22") == true) {
+        timezone = "America/Argentina/Catamarca";
+      } else if (region.equals("23") == true) {
+        timezone = "America/Argentina/Ushuaia";
+      } else if (region.equals("24") == true) {
+        timezone = "America/Argentina/Tucuman";
+      }
+    } else if (country.equals("BR") == true) {
+      if (region.equals("01") == true) {
+        timezone = "America/Rio_Branco";
+      } else if (region.equals("02") == true) {
+        timezone = "America/Maceio";
+      } else if (region.equals("03") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("04") == true) {
+        timezone = "America/Manaus";
+      } else if (region.equals("05") == true) {
+        timezone = "America/Bahia";
+      } else if (region.equals("06") == true) {
+        timezone = "America/Fortaleza";
+      } else if (region.equals("07") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("08") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("11") == true) {
+        timezone = "America/Campo_Grande";
+      } else if (region.equals("13") == true) {
+        timezone = "America/Belem";
+      } else if (region.equals("14") == true) {
+        timezone = "America/Cuiaba";
+      } else if (region.equals("15") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("16") == true) {
+        timezone = "America/Belem";
+      } else if (region.equals("17") == true) {
+        timezone = "America/Recife";
+      } else if (region.equals("18") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("20") == true) {
+        timezone = "America/Fortaleza";
+      } else if (region.equals("21") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("22") == true) {
+        timezone = "America/Recife";
+      } else if (region.equals("23") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("24") == true) {
+        timezone = "America/Porto_Velho";
+      } else if (region.equals("25") == true) {
+        timezone = "America/Boa_Vista";
+      } else if (region.equals("26") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("27") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("28") == true) {
+        timezone = "America/Maceio";
+      } else if (region.equals("29") == true) {
+        timezone = "America/Sao_Paulo";
+      } else if (region.equals("30") == true) {
+        timezone = "America/Recife";
+      } else if (region.equals("31") == true) {
+        timezone = "America/Araguaina";
+      }
+    } else if (country.equals("CD") == true) {
+      if (region.equals("02") == true) {
+        timezone = "Africa/Kinshasa";
+      } else if (region.equals("05") == true) {
+        timezone = "Africa/Lubumbashi";
+      } else if (region.equals("06") == true) {
+        timezone = "Africa/Kinshasa";
+      } else if (region.equals("08") == true) {
+        timezone = "Africa/Kinshasa";
+      } else if (region.equals("10") == true) {
+        timezone = "Africa/Lubumbashi";
+      } else if (region.equals("11") == true) {
+        timezone = "Africa/Lubumbashi";
+      } else if (region.equals("12") == true) {
+        timezone = "Africa/Lubumbashi";
+      }
+    } else if (country.equals("CN") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("04") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("05") == true) {
+        timezone = "Asia/Harbin";
+      } else if (region.equals("06") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("07") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("08") == true) {
+        timezone = "Asia/Harbin";
+      } else if (region.equals("09") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("10") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("11") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("12") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Urumqi";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("15") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("16") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("18") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("19") == true) {
+        timezone = "Asia/Harbin";
+      } else if (region.equals("20") == true) {
+        timezone = "Asia/Harbin";
+      } else if (region.equals("21") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("22") == true) {
+        timezone = "Asia/Harbin";
+      } else if (region.equals("23") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("24") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("25") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("26") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("28") == true) {
+        timezone = "Asia/Shanghai";
+      } else if (region.equals("29") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("30") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("31") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("32") == true) {
+        timezone = "Asia/Chongqing";
+      } else if (region.equals("33") == true) {
+        timezone = "Asia/Chongqing";
+      }
+    } else if (country.equals("EC") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Pacific/Galapagos";
+      } else if (region.equals("02") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("03") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("04") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("05") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("06") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("07") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("08") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("09") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("10") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("11") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("12") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("13") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("14") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("15") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("17") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("18") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("19") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("20") == true) {
+        timezone = "America/Guayaquil";
+      } else if (region.equals("22") == true) {
+        timezone = "America/Guayaquil";
+      }
+    } else if (country.equals("ES") == true) {
+      if (region.equals("07") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("27") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("29") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("31") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("32") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("34") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("39") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("51") == true) {
+        timezone = "Africa/Ceuta";
+      } else if (region.equals("52") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("53") == true) {
+        timezone = "Atlantic/Canary";
+      } else if (region.equals("54") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("55") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("56") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("57") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("58") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("59") == true) {
+        timezone = "Europe/Madrid";
+      } else if (region.equals("60") == true) {
+        timezone = "Europe/Madrid";
+      }
+    } else if (country.equals("GL") == true) {
+      if (region.equals("01") == true) {
+        timezone = "America/Thule";
+      } else if (region.equals("02") == true) {
+        timezone = "America/Godthab";
+      } else if (region.equals("03") == true) {
+        timezone = "America/Godthab";
+      }
+    } else if (country.equals("ID") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Asia/Pontianak";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("04") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("05") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("06") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("07") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("08") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("09") == true) {
+        timezone = "Asia/Jayapura";
+      } else if (region.equals("10") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("11") == true) {
+        timezone = "Asia/Pontianak";
+      } else if (region.equals("12") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("15") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("16") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("17") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("18") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("19") == true) {
+        timezone = "Asia/Pontianak";
+      } else if (region.equals("20") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("21") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("22") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("23") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("24") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("25") == true) {
+        timezone = "Asia/Pontianak";
+      } else if (region.equals("26") == true) {
+        timezone = "Asia/Pontianak";
+      } else if (region.equals("30") == true) {
+        timezone = "Asia/Jakarta";
+      } else if (region.equals("31") == true) {
+        timezone = "Asia/Makassar";
+      } else if (region.equals("33") == true) {
+        timezone = "Asia/Jakarta";
+      }
+    } else if (country.equals("KZ") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Asia/Almaty";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Almaty";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("04") == true) {
+        timezone = "Asia/Aqtobe";
+      } else if (region.equals("05") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("06") == true) {
+        timezone = "Asia/Aqtau";
+      } else if (region.equals("07") == true) {
+        timezone = "Asia/Oral";
+      } else if (region.equals("08") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("09") == true) {
+        timezone = "Asia/Aqtau";
+      } else if (region.equals("10") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("11") == true) {
+        timezone = "Asia/Almaty";
+      } else if (region.equals("12") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Aqtobe";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Qyzylorda";
+      } else if (region.equals("15") == true) {
+        timezone = "Asia/Almaty";
+      } else if (region.equals("16") == true) {
+        timezone = "Asia/Aqtobe";
+      } else if (region.equals("17") == true) {
+        timezone = "Asia/Almaty";
+      }
+    } else if (country.equals("MX") == true) {
+      if (region.equals("01") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("02") == true) {
+        timezone = "America/Tijuana";
+      } else if (region.equals("03") == true) {
+        timezone = "America/Hermosillo";
+      } else if (region.equals("04") == true) {
+        timezone = "America/Merida";
+      } else if (region.equals("05") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("06") == true) {
+        timezone = "America/Chihuahua";
+      } else if (region.equals("07") == true) {
+        timezone = "America/Monterrey";
+      } else if (region.equals("08") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("09") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("10") == true) {
+        timezone = "America/Mazatlan";
+      } else if (region.equals("11") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("12") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("13") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("14") == true) {
+        timezone = "America/Mazatlan";
+      } else if (region.equals("15") == true) {
+        timezone = "America/Chihuahua";
+      } else if (region.equals("16") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("17") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("18") == true) {
+        timezone = "America/Mazatlan";
+      } else if (region.equals("19") == true) {
+        timezone = "America/Monterrey";
+      } else if (region.equals("20") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("21") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("22") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("23") == true) {
+        timezone = "America/Cancun";
+      } else if (region.equals("24") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("25") == true) {
+        timezone = "America/Mazatlan";
+      } else if (region.equals("26") == true) {
+        timezone = "America/Hermosillo";
+      } else if (region.equals("27") == true) {
+        timezone = "America/Merida";
+      } else if (region.equals("28") == true) {
+        timezone = "America/Monterrey";
+      } else if (region.equals("29") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("30") == true) {
+        timezone = "America/Mexico_City";
+      } else if (region.equals("31") == true) {
+        timezone = "America/Merida";
+      } else if (region.equals("32") == true) {
+        timezone = "America/Monterrey";
+      }
+    } else if (country.equals("MY") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("04") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("05") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("06") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("07") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("08") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("09") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("11") == true) {
+        timezone = "Asia/Kuching";
+      } else if (region.equals("12") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Kuala_Lumpur";
+      } else if (region.equals("15") == true) {
+        timezone = "Asia/Kuching";
+      } else if (region.equals("16") == true) {
+        timezone = "Asia/Kuching";
+      }
+    } else if (country.equals("NZ") == true) {
+      if (region.equals("85") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("E7") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("E8") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("E9") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F1") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F2") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F3") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F4") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F5") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F7") == true) {
+        timezone = "Pacific/Chatham";
+      } else if (region.equals("F8") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("F9") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("G1") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("G2") == true) {
+        timezone = "Pacific/Auckland";
+      } else if (region.equals("G3") == true) {
+        timezone = "Pacific/Auckland";
+      }
+    } else if (country.equals("PT") == true) {
+      if (region.equals("02") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("03") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("04") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("05") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("06") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("07") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("08") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("09") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("10") == true) {
+        timezone = "Atlantic/Madeira";
+      } else if (region.equals("11") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("13") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("14") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("16") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("17") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("18") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("19") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("20") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("21") == true) {
+        timezone = "Europe/Lisbon";
+      } else if (region.equals("22") == true) {
+        timezone = "Europe/Lisbon";
+      }
+    } else if (country.equals("RU") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Novokuznetsk";
+      } else if (region.equals("04") == true) {
+        timezone = "Asia/Novosibirsk";
+      } else if (region.equals("05") == true) {
+        timezone = "Asia/Vladivostok";
+      } else if (region.equals("06") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("07") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("08") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("09") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("10") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("11") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("15") == true) {
+        timezone = "Asia/Anadyr";
+      } else if (region.equals("16") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("17") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("18") == true) {
+        timezone = "Asia/Krasnoyarsk";
+      } else if (region.equals("20") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("21") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("22") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("23") == true) {
+        timezone = "Europe/Kaliningrad";
+      } else if (region.equals("24") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("25") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("26") == true) {
+        timezone = "Asia/Kamchatka";
+      } else if (region.equals("27") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("28") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("29") == true) {
+        timezone = "Asia/Novokuznetsk";
+      } else if (region.equals("30") == true) {
+        timezone = "Asia/Vladivostok";
+      } else if (region.equals("31") == true) {
+        timezone = "Asia/Krasnoyarsk";
+      } else if (region.equals("32") == true) {
+        timezone = "Asia/Omsk";
+      } else if (region.equals("33") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("34") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("35") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("36") == true) {
+        timezone = "Asia/Anadyr";
+      } else if (region.equals("37") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("38") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("39") == true) {
+        timezone = "Asia/Krasnoyarsk";
+      } else if (region.equals("40") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("41") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("42") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("43") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("44") == true) {
+        timezone = "Asia/Magadan";
+      } else if (region.equals("45") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("46") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("47") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("48") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("49") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("50") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("51") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("52") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("53") == true) {
+        timezone = "Asia/Novosibirsk";
+      } else if (region.equals("54") == true) {
+        timezone = "Asia/Omsk";
+      } else if (region.equals("55") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("56") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("57") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("58") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("59") == true) {
+        timezone = "Asia/Vladivostok";
+      } else if (region.equals("60") == true) {
+        timezone = "Europe/Kaliningrad";
+      } else if (region.equals("61") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("62") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("63") == true) {
+        timezone = "Asia/Yakutsk";
+      } else if (region.equals("64") == true) {
+        timezone = "Asia/Sakhalin";
+      } else if (region.equals("65") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("66") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("67") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("68") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("69") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("70") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("71") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("72") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("73") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("74") == true) {
+        timezone = "Asia/Krasnoyarsk";
+      } else if (region.equals("75") == true) {
+        timezone = "Asia/Novosibirsk";
+      } else if (region.equals("76") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("77") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("78") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("79") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("80") == true) {
+        timezone = "Asia/Yekaterinburg";
+      } else if (region.equals("81") == true) {
+        timezone = "Europe/Samara";
+      } else if (region.equals("82") == true) {
+        timezone = "Asia/Irkutsk";
+      } else if (region.equals("83") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("84") == true) {
+        timezone = "Europe/Volgograd";
+      } else if (region.equals("85") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("86") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("87") == true) {
+        timezone = "Asia/Novosibirsk";
+      } else if (region.equals("88") == true) {
+        timezone = "Europe/Moscow";
+      } else if (region.equals("89") == true) {
+        timezone = "Asia/Vladivostok";
+      }
+    } else if (country.equals("UA") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("02") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("03") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("04") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("05") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("06") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("07") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("08") == true) {
+        timezone = "Europe/Simferopol";
+      } else if (region.equals("09") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("10") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("11") == true) {
+        timezone = "Europe/Simferopol";
+      } else if (region.equals("13") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("14") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("15") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("16") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("17") == true) {
+        timezone = "Europe/Simferopol";
+      } else if (region.equals("18") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("19") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("20") == true) {
+        timezone = "Europe/Simferopol";
+      } else if (region.equals("21") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("22") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("23") == true) {
+        timezone = "Europe/Kiev";
+      } else if (region.equals("24") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("25") == true) {
+        timezone = "Europe/Uzhgorod";
+      } else if (region.equals("26") == true) {
+        timezone = "Europe/Zaporozhye";
+      } else if (region.equals("27") == true) {
+        timezone = "Europe/Kiev";
+      }
+    } else if (country.equals("UZ") == true) {
+      if (region.equals("01") == true) {
+        timezone = "Asia/Tashkent";
+      } else if (region.equals("02") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("03") == true) {
+        timezone = "Asia/Tashkent";
+      } else if (region.equals("06") == true) {
+        timezone = "Asia/Tashkent";
+      } else if (region.equals("07") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("08") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("09") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("10") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("12") == true) {
+        timezone = "Asia/Samarkand";
+      } else if (region.equals("13") == true) {
+        timezone = "Asia/Tashkent";
+      } else if (region.equals("14") == true) {
+        timezone = "Asia/Tashkent";
+      }
+    } else if (country.equals("TL") == true) {
+      timezone = "Asia/Dili";
+    } else if (country.equals("PF") == true) {
+      timezone = "Pacific/Marquesas";
     }
     return timezone;
   }

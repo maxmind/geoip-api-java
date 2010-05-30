@@ -126,9 +126,9 @@ public class LookupService {
 
     private final Country UNKNOWN_COUNTRY = new Country("--", "N/A");
 
-    private final HashMap hashmapcountryCodetoindex = new HashMap(512);
-    private final HashMap hashmapcountryNametoindex = new HashMap(512);
-    private final String[] countryCode = {
+    private static final HashMap hashmapcountryCodetoindex = new HashMap(512);
+    private static final HashMap hashmapcountryNametoindex = new HashMap(512);
+    private static final String[] countryCode = {
 	"--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR",
 	"AS","AT","AU","AW","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ",
 	"BM","BN","BO","BR","BS","BT","BV","BW","BY","BZ","CA","CC","CD","CF",
@@ -149,7 +149,7 @@ public class LookupService {
 	"YT","RS","ZA","ZM","ME","ZW","A1","A2","O1","AX","GG","IM","JE","BL",
 	"MF"};
 
-    private final String[] countryName = {
+    private static final String[] countryName = {
 	"N/A","Asia/Pacific Region","Europe","Andorra","United Arab Emirates",
 	"Afghanistan","Antigua and Barbuda","Anguilla","Albania","Armenia",
 	"Netherlands Antilles","Angola","Antarctica","Argentina","American Samoa",
@@ -201,6 +201,20 @@ public class LookupService {
 	"South Africa","Zambia","Montenegro","Zimbabwe","Anonymous Proxy",
 	"Satellite Provider","Other","Aland Islands","Guernsey","Isle of Man","Jersey",
 	"Saint Barthelemy","Saint Martin"};
+
+
+    /* init the hashmap once at startup time */
+    static {
+        int i;
+        if(countryCode.length!=countryName.length)
+            throw new AssertionError("countryCode.length!=countryName.length");
+              
+        // distributed service only
+        for (i = 0; i < countryCode.length ;i++){
+            hashmapcountryCodetoindex.put(countryCode[i],Integer.valueOf(i));
+            hashmapcountryNametoindex.put(countryName[i],Integer.valueOf(i));
+        }
+    };
 
 
     /**
@@ -301,16 +315,7 @@ public class LookupService {
         byte [] buf = new byte[SEGMENT_RECORD_LENGTH];
 
 	if (file == null) {
-
-                if(countryCode.length!=countryName.length)
-                    throw new AssertionError("countryCode.length!=countryName.length");
-              
-	        // distributed service only
-	        for (i = 0; i < countryCode.length ;i++){
-	  	    hashmapcountryCodetoindex.put(countryCode[i],Integer.valueOf(i));
-		    hashmapcountryNametoindex.put(countryName[i],Integer.valueOf(i));
-	        }
-	    return;
+          return;
 	}
 	if ((dboptions & GEOIP_CHECK_CACHE) != 0) {
             mtime = databaseFile.lastModified();
