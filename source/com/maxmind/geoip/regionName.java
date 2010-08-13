@@ -2647,7 +2647,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Hovedstaden";
         break;
         case 18:
-        name = "Midtjyllen";
+        name = "Midtjylland";
         break;
         case 19:
         name = "Nordjylland";
