@@ -1,3 +1,4 @@
+1.2.4 Aug 13th 2010
         - Update FIPS codes 20100810 ( Boris Zentner )
         - Simplify init code in class LookupServices ( Boris Zentner )
         - Big timezone update ( Boris Zentner )
