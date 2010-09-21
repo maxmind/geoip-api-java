@@ -46,8 +46,7 @@ Please send any comments to support@maxmind.com
 
 To generate the JAR file, cd to the source directory and run
 
-jar cf maxmindgeoip.jar com/maxmind/geoip/Country.class com/maxmind/geoip/DatabaseInfo.class com/maxmind/geoip/Location.class com/maxmind/geoip/LookupService.class com/maxmind/geoip/Region.class
-
+jar cf maxmindgeoip.jar com/maxmind/geoip/Country.class com/maxmind/geoip/DatabaseInfo.class com/maxmind/geoip/Location.class com/maxmind/geoip/LookupService.class com/maxmind/geoip/Region.class com/maxmind/geoip/regionName.class com/maxmind/geoip/timeZone.class
 
 MEMORY CACHING AND OTHER OPTIONS
 ================================
