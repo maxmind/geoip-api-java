@@ -1,3 +1,7 @@
+        - Add support for new database types NETSPEED_EDITION_REV1_V6,
+                NETSPEED_EDITION_REV1, ASNUM_EDITION_V6, CITY_EDITION_REV1_V6,
+                ISP_EDITION_V6, ORG_EDITION_V6, DOMAIN_EDITION, DOMAIN_EDITION_V6 ( Boris Zentner )
+        - Add new examples CityLookupTestV6 and ASNumLookupTestV6 ( Boris Zentner )
 1.2.4 Aug 13th 2010
         - Update FIPS codes 20100810 ( Boris Zentner )
         - Simplify init code in class LookupServices ( Boris Zentner )

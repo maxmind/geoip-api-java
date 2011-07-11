@@ -342,13 +342,28 @@ public class LookupService {
                 else if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
 			 databaseType == DatabaseInfo.CITY_EDITION_REV1 ||
 			 databaseType == DatabaseInfo.ORG_EDITION ||
+			 databaseType == DatabaseInfo.ORG_EDITION_V6 ||
 			 databaseType == DatabaseInfo.ISP_EDITION ||
-			 databaseType == DatabaseInfo.ASNUM_EDITION) {
+			 databaseType == DatabaseInfo.ISP_EDITION_V6 ||
+			 databaseType == DatabaseInfo.DOMAIN_EDITION ||
+			 databaseType == DatabaseInfo.DOMAIN_EDITION_V6 ||
+			 databaseType == DatabaseInfo.ASNUM_EDITION ||
+			 databaseType == DatabaseInfo.ASNUM_EDITION_V6 ||
+  			 databaseType == DatabaseInfo.NETSPEED_EDITION_REV1 ||
+			 databaseType == DatabaseInfo.NETSPEED_EDITION_REV1_V6 ||
+                         databaseType == DatabaseInfo.CITY_EDITION_REV0_V6 ||
+			 databaseType == DatabaseInfo.CITY_EDITION_REV1_V6
+			 ) {
 			databaseSegments = new int[1];
 			databaseSegments[0] = 0;
 			if (databaseType == DatabaseInfo.CITY_EDITION_REV0 ||
 			    databaseType == DatabaseInfo.CITY_EDITION_REV1 ||
-			    databaseType == DatabaseInfo.ASNUM_EDITION) {
+			    databaseType == DatabaseInfo.ASNUM_EDITION_V6 ||
+                            databaseType == DatabaseInfo.NETSPEED_EDITION_REV1 ||
+			    databaseType == DatabaseInfo.NETSPEED_EDITION_REV1_V6 ||
+                            databaseType == DatabaseInfo.CITY_EDITION_REV0_V6 ||
+			    databaseType == DatabaseInfo.CITY_EDITION_REV1_V6 ||
+		      	    databaseType == DatabaseInfo.ASNUM_EDITION) {
 			    recordLength = STANDARD_RECORD_LENGTH;
 			}
 			else {
@@ -588,6 +603,25 @@ public class LookupService {
     }
 
     // for GeoIP City only
+    public Location getLocationV6(String str) {
+        if (dnsService == 0) {
+            InetAddress addr;
+            try {
+                addr = InetAddress.getByName(str);
+            }
+            catch (UnknownHostException e) {
+                return null;
+            }
+
+            return getLocationV6(addr);
+        } else {
+            String str2 = getDnsAttributes(str);
+ 	    return getLocationwithdnsservice(str2);
+	    // TODO if DNS is not available, go to local file as backup
+	}
+    }
+
+    // for GeoIP City only
     public Location getLocation(InetAddress addr) {
         return getLocation(bytesToLong(addr.getAddress()));
     }
@@ -754,6 +788,93 @@ public class LookupService {
 	return record;
     }
 
+    public synchronized Location getLocationV6(InetAddress addr) {
+        int record_pointer;
+        byte record_buf[] = new byte[FULL_RECORD_LENGTH];
+        int record_buf_offset = 0;
+        Location record = new Location();
+        int str_length = 0;
+        int j, seek_country;
+        double latitude = 0, longitude = 0;
+
+        try {
+            seek_country = seekCountryV6(addr);
+            if (seek_country == databaseSegments[0]) {
+                return null;
+            }
+            record_pointer = seek_country + (2 * recordLength - 1) * databaseSegments[0];
+
+            if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+                //read from memory
+		System.arraycopy(dbbuffer, record_pointer, record_buf, 0, Math.min(dbbuffer.length - record_pointer, FULL_RECORD_LENGTH));
+} else {
+                //read from disk
+                file.seek(record_pointer);
+                file.readFully(record_buf);
+            }
+
+            // get country
+            record.countryCode = countryCode[unsignedByteToInt(record_buf[0])];
+            record.countryName = countryName[unsignedByteToInt(record_buf[0])];
+            record_buf_offset++;
+
+            // get region
+            while (record_buf[record_buf_offset + str_length] != '\0')
+                str_length++;
+            if (str_length > 0) {
+                record.region = new String(record_buf, record_buf_offset, str_length);
+            }
+            record_buf_offset += str_length + 1;
+            str_length = 0;
+
+            // get city
+            while (record_buf[record_buf_offset + str_length] != '\0')
+                str_length++;
+            if (str_length > 0) {
+                record.city = new String(record_buf, record_buf_offset, str_length, "ISO-8859-1");
+            }
+            record_buf_offset += str_length + 1;
+            str_length = 0;
+
+            // get postal code
+            while (record_buf[record_buf_offset + str_length] != '\0')
+                str_length++;
+            if (str_length > 0) {
+                record.postalCode = new String(record_buf, record_buf_offset, str_length);
+            }
+            record_buf_offset += str_length + 1;
+
+            // get latitude
+            for (j = 0; j < 3; j++)
+                latitude += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
+            record.latitude = (float) latitude/10000 - 180;
+            record_buf_offset += 3;
+
+            // get longitude
+            for (j = 0; j < 3; j++)
+                longitude += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
+	    record.longitude = (float) longitude/10000 - 180;
+
+	    record.dma_code = record.metro_code = 0;
+	    record.area_code = 0;
+	    if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
+		// get DMA code
+		int metroarea_combo = 0;
+		if (record.countryCode == "US") {
+		    record_buf_offset += 3;
+		    for (j = 0; j < 3; j++)
+			metroarea_combo += (unsignedByteToInt(record_buf[record_buf_offset + j]) << (j * 8));
+		    record.metro_code = record.dma_code = metroarea_combo/1000;
+		    record.area_code = metroarea_combo % 1000;
+		}
+            }
+	}
+	catch (IOException e) {
+            System.err.println("IO Exception while seting up segments");
+        }
+        return record;
+    }
+
     public synchronized Location getLocation(long ipnum) {
         int record_pointer;
         byte record_buf[] = new byte[FULL_RECORD_LENGTH];
@@ -890,6 +1011,56 @@ public class LookupService {
             return null;
         }
     }
+
+
+     public String getOrgV6(String str) {
+        InetAddress addr;
+	try {
+	    addr = InetAddress.getByName(str);
+	}
+	catch (UnknownHostException e) {
+            return null;
+	}
+	return getOrgV6(addr);
+    }
+
+    // GeoIP Organization and ISP Edition methods
+    public synchronized String getOrgV6(InetAddress addr) {
+        int seek_org;
+        int record_pointer;
+        int str_length = 0;
+        byte [] buf = new byte[MAX_ORG_RECORD_LENGTH];
+        String org_buf;
+
+        try {
+            seek_org = seekCountryV6(addr);
+            if (seek_org == databaseSegments[0]) {
+		return null;
+            }
+
+            record_pointer = seek_org + (2 * recordLength - 1) * databaseSegments[0];
+            if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
+                //read from memory
+		System.arraycopy(dbbuffer, record_pointer, buf, 0, Math.min(dbbuffer.length - record_pointer, MAX_ORG_RECORD_LENGTH));
+            } else {
+		//read from disk
+                file.seek(record_pointer);
+                file.readFully(buf);
+            }
+            while (buf[str_length] != '\0') {
+		str_length++;
+            }
+            org_buf = new String(buf, 0, str_length, "ISO-8859-1");
+            return org_buf;
+        }
+        catch (IOException e) {
+            System.out.println("IO Exception");
+            return null;
+        }
+    }
+
+ 
+
 
     /**
      * Finds the country index value given an IPv6 address.
