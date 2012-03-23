@@ -1397,6 +1397,12 @@ public class timeZone {
       timezone = "Asia/Dili";
     } else if (country.equals("PF") == true) {
       timezone = "Pacific/Marquesas";
+    } else if (country.equals("SX") == true) {
+      timezone = "America/Curacao";
+    } else if (country.equals("BQ") == true) {
+      timezone = "America/Curacao";
+    } else if (country.equals("CW") == true) {
+      timezone = "America/Curacao";
     }
     return timezone;
   }

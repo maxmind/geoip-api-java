@@ -5149,17 +5149,11 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 5:
         name = "Jambi";
         break;
-        case 6:
-        name = "Jawa Barat";
-        break;
         case 7:
         name = "Jawa Tengah";
         break;
         case 8:
         name = "Jawa Timur";
-        break;
-        case 9:
-        name = "Papua";
         break;
         case 10:
         name = "Yogyakarta";
@@ -5179,20 +5173,11 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 15:
         name = "Lampung";
         break;
-        case 16:
-        name = "Maluku";
-        break;
         case 17:
         name = "Nusa Tenggara Barat";
         break;
         case 18:
         name = "Nusa Tenggara Timur";
-        break;
-        case 19:
-        name = "Riau";
-        break;
-        case 20:
-        name = "Sulawesi Selatan";
         break;
         case 21:
         name = "Sulawesi Tengah";
@@ -5200,14 +5185,8 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 22:
         name = "Sulawesi Tenggara";
         break;
-        case 23:
-        name = "Sulawesi Utara";
-        break;
         case 24:
         name = "Sumatera Barat";
-        break;
-        case 25:
-        name = "Sumatera Selatan";
         break;
         case 26:
         name = "Sumatera Utara";
@@ -5845,29 +5824,38 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 2:
         name = "Al Balqa'";
         break;
-        case 7:
-        name = "Ma";
-        break;
         case 9:
         name = "Al Karak";
-        break;
-        case 10:
-        name = "Al Mafraq";
-        break;
-        case 11:
-        name = "Amman Governorate";
         break;
         case 12:
         name = "At Tafilah";
         break;
-        case 13:
-        name = "Az Zarqa";
-        break;
-        case 14:
-        name = "Irbid";
+        case 15:
+        name = "Al Mafraq";
         break;
         case 16:
         name = "Amman";
+        break;
+        case 17:
+        name = "Az Zaraqa";
+        break;
+        case 18:
+        name = "Irbid";
+        break;
+        case 19:
+        name = "Ma'an";
+        break;
+        case 20:
+        name = "Ajlun";
+        break;
+        case 21:
+        name = "Al Aqabah";
+        break;
+        case 22:
+        name = "Jarash";
+        break;
+        case 23:
+        name = "Madaba";
         break;
       }
     }
@@ -7136,6 +7124,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 81:
         name = "Ocnita";
+        break;
+        case 82:
+        name = "Orhei";
         break;
         case 83:
         name = "Rezina";
@@ -8502,9 +8493,6 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 7:
         name = "Noord-Holland";
-        break;
-        case 8:
-        name = "Overijssel";
         break;
         case 9:
         name = "Utrecht";
@@ -10009,8 +9997,8 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 91:
         name = "Krasnoyarskiy Kray";
         break;
-        case 942:
-        name = "Chechnya Republic";
+        case 92:
+        name = "Kamchatskiy Kray";
         break;
       }
     }
@@ -10050,9 +10038,6 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 2:
         name = "Al Bahah";
         break;
-        case 3:
-        name = "Al Jawf";
-        break;
         case 5:
         name = "Al Madinah";
         break;
@@ -10062,11 +10047,11 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 8:
         name = "Al Qasim";
         break;
-        case 9:
-        name = "Al Qurayyat";
-        break;
         case 10:
         name = "Ar Riyad";
+        break;
+        case 11:
+        name = "Asir Province";
         break;
         case 13:
         name = "Ha'il";
@@ -12635,10 +12620,16 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Shabwah";
         break;
         case 6:
-        name = "Al Ghaydah";
+        name = "Lahij";
+        break;
+        case 7:
+        name = "Al Bayda'";
         break;
         case 8:
         name = "Al Hudaydah";
+        break;
+        case 9:
+        name = "Al Jawf";
         break;
         case 10:
         name = "Al Mahwit";
@@ -12646,14 +12637,29 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 11:
         name = "Dhamar";
         break;
+        case 12:
+        name = "Hajjah";
+        break;
+        case 13:
+        name = "Ibb";
+        break;
         case 14:
         name = "Ma'rib";
         break;
         case 15:
-        name = "Sa";
+        name = "Sa'dah";
         break;
         case 16:
-        name = "San";
+        name = "San'a'";
+        break;
+        case 17:
+        name = "Taizz";
+        break;
+        case 18:
+        name = "Ad Dali";
+        break;
+        case 19:
+        name = "Amran";
         break;
         case 20:
         name = "Al Bayda'";
@@ -12671,7 +12677,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Lahij";
         break;
         case 25:
-        name = "Ta";
+        name = "Taizz";
         break;
       }
     }
