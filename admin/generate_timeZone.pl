@@ -29,7 +29,8 @@ END
 
 while ($str = <FILE>) {
   $str =~ s!\s*$!!; 
-  my ($country,$region,$timezone) = split("\t",$str);
+  my ($country,$region,$timezone) = split(/\t/,$str);
+  die "Wrong timezone\n" unless $timezone;
   if ($country ne $old_country) {
     if ($had_region) {
       print "      }\n";
