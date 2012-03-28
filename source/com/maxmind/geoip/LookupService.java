@@ -981,7 +981,11 @@ public class LookupService {
             } else {
 		//read from disk
                 file.seek(record_pointer);
-                file.readFully(buf);
+                try{
+                  // read as much as possible
+                  file.readFully(buf);
+                }
+                catch(IOException e){}
             }
             while (buf[str_length] != '\0') {
 		str_length++;
