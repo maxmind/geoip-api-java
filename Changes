@@ -1,3 +1,7 @@
+1.2.6 Mar 28th 2012
+        - Update country codes, FIPS codes and timezone ( Boris Zentner )
+1.2.5 Aug 23th 2011
+        - Fix small buffer issue when java tries to read over the EOF ( Boris Zentner )
         - Add support for new database types NETSPEED_EDITION_REV1_V6,
                 NETSPEED_EDITION_REV1, ASNUM_EDITION_V6, CITY_EDITION_REV1_V6,
                 ISP_EDITION_V6, ORG_EDITION_V6, DOMAIN_EDITION, DOMAIN_EDITION_V6 ( Boris Zentner )
