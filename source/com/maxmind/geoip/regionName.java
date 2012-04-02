@@ -1031,6 +1031,12 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 12:
         name = "Vlaams-Brabant";
         break;
+        case 13:
+        name = "Flanders";
+        break;
+        case 14:
+        name = "Wallonia";
+        break;
       }
     }
     if (country_code.equals("BF") == true) {
@@ -9999,6 +10005,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 92:
         name = "Kamchatskiy Kray";
+        break;
+        case 93:
+        name = "Zabaykal'skiy Kray";
         break;
       }
     }
