@@ -2278,15 +2278,6 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 4:
         name = "Atlantico";
         break;
-        case 5:
-        name = "Bolivar Department";
-        break;
-        case 6:
-        name = "Boyaca Department";
-        break;
-        case 7:
-        name = "Caldas Department";
-        break;
         case 8:
         name = "Caqueta";
         break;
@@ -2313,9 +2304,6 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
         case 17:
         name = "La Guajira";
-        break;
-        case 18:
-        name = "Magdalena Department";
         break;
         case 19:
         name = "Meta";
