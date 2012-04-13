@@ -1,3 +1,7 @@
+1.2.8 Apr 13th 2012
+	- Fix: Close the database file without exceptions whether it is
+	  open(STANDARD) or not(MEMORY_CACHE) in conjunction with the
+	  CHECK_CACHE option. (Lorenzo Crosby)
 1.2.7 Apr 10th 2012
         - Update timezones ( Boris Zentner )
 	- Update FIPS codes 20120402 ( Boris Zentner )
