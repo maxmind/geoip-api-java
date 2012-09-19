@@ -6,6 +6,18 @@ cd -
 CLASSPATH=".:source" javac *.java
 CLASSPATH=".:source" java CountryLookupTest
 
+OR if you use maven:
+ mvn clean install
+ add dependency to your project:
+
+ ```
+ <dependency>
+    <groupId>com.maxmind.geoip</groupId>
+    <artifactId>geoip-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+ </dependency>
+ ```
+
 By default, CountryLookupTest expects to find the
 GeoIP Country database in /usr/local/share/GeoIP/GeoIP.dat
 
