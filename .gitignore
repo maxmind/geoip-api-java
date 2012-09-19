@@ -6,5 +6,8 @@
 *.war
 *.ear
 
-target
 reports
+target/
+.classpath
+.project
+.settings
