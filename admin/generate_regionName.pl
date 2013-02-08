@@ -50,13 +50,13 @@ while ( my $str = <FILE> ) {
   $last_country_code = $country_code;
 }
 close(FILE);
-print "      }\n";
-print "    }\n";
+#print "      }\n";
+#print "    }\n";
 
 # fips10_4.txt extracted from http://www.maxmind.com/app/fips10_4
 open( FILE, "fips10_4.txt" ) or die $!;
 <FILE>;
-$last_country_code = "";
+#$last_country_code = "";
 while ( my $str = <FILE> ) {
   chomp($str);
   my ( $country_code, $region_code, $name ) = split( ",", $str );
@@ -97,9 +97,12 @@ sub readcode {
       print "      }\n";
       print "    }\n";
     }
-    print "    if (country_code.equals(" . qq(")
-      . $country_code . qq(")
-      . ") == true) {\n";
+
+    if ( $last_country_code eq "" ) {
+        print "    if (country_code.equals(" . qq(") . $country_code . qq(") . ") == true) {\n";
+	} else {
+        print "    else if (country_code.equals(" . qq(") . $country_code . qq(") . ") == true) {\n";
+	}
     print "      switch (region_code2) {\n";
   }
 
