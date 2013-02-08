@@ -66,7 +66,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("US") == true) {
+    else if (country_code.equals("US") == true) {
       switch (region_code2) {
         case 848:
         name = "Armed Forces Americas";
@@ -256,11 +256,8 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AD") == true) {
+    else if (country_code.equals("AD") == true) {
       switch (region_code2) {
-        case 2:
-        name = "Canillo";
-        break;
         case 3:
         name = "Encamp";
         break;
@@ -281,7 +278,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AE") == true) {
+    else if (country_code.equals("AE") == true) {
       switch (region_code2) {
         case 1:
         name = "Abu Dhabi";
@@ -306,7 +303,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AF") == true) {
+    else if (country_code.equals("AF") == true) {
       switch (region_code2) {
         case 1:
         name = "Badakhshan";
@@ -412,7 +409,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AG") == true) {
+    else if (country_code.equals("AG") == true) {
       switch (region_code2) {
         case 1:
         name = "Barbuda";
@@ -440,7 +437,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AL") == true) {
+    else if (country_code.equals("AL") == true) {
       switch (region_code2) {
         case 40:
         name = "Berat";
@@ -480,7 +477,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AM") == true) {
+    else if (country_code.equals("AM") == true) {
       switch (region_code2) {
         case 1:
         name = "Aragatsotn";
@@ -517,7 +514,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AO") == true) {
+    else if (country_code.equals("AO") == true) {
       switch (region_code2) {
         case 1:
         name = "Benguela";
@@ -575,7 +572,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AR") == true) {
+    else if (country_code.equals("AR") == true) {
       switch (region_code2) {
         case 1:
         name = "Buenos Aires";
@@ -651,7 +648,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AT") == true) {
+    else if (country_code.equals("AT") == true) {
       switch (region_code2) {
         case 1:
         name = "Burgenland";
@@ -682,7 +679,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AU") == true) {
+    else if (country_code.equals("AU") == true) {
       switch (region_code2) {
         case 1:
         name = "Australian Capital Territory";
@@ -710,7 +707,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("AZ") == true) {
+    else if (country_code.equals("AZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Abseron";
@@ -927,7 +924,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BA") == true) {
+    else if (country_code.equals("BA") == true) {
       switch (region_code2) {
         case 1:
         name = "Federation of Bosnia and Herzegovina";
@@ -937,7 +934,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BB") == true) {
+    else if (country_code.equals("BB") == true) {
       switch (region_code2) {
         case 1:
         name = "Christ Church";
@@ -974,7 +971,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BD") == true) {
+    else if (country_code.equals("BD") == true) {
       switch (region_code2) {
         case 81:
         name = "Dhaka";
@@ -996,7 +993,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BE") == true) {
+    else if (country_code.equals("BE") == true) {
       switch (region_code2) {
         case 1:
         name = "Antwerpen";
@@ -1039,7 +1036,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BF") == true) {
+    else if (country_code.equals("BF") == true) {
       switch (region_code2) {
         case 15:
         name = "Bam";
@@ -1178,7 +1175,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BG") == true) {
+    else if (country_code.equals("BG") == true) {
       switch (region_code2) {
         case 33:
         name = "Mikhaylovgrad";
@@ -1269,7 +1266,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BH") == true) {
+    else if (country_code.equals("BH") == true) {
       switch (region_code2) {
         case 1:
         name = "Al Hadd";
@@ -1321,7 +1318,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BI") == true) {
+    else if (country_code.equals("BI") == true) {
       switch (region_code2) {
         case 2:
         name = "Bujumbura";
@@ -1373,7 +1370,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BJ") == true) {
+    else if (country_code.equals("BJ") == true) {
       switch (region_code2) {
         case 7:
         name = "Alibori";
@@ -1413,7 +1410,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BM") == true) {
+    else if (country_code.equals("BM") == true) {
       switch (region_code2) {
         case 1:
         name = "Devonshire";
@@ -1450,7 +1447,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BN") == true) {
+    else if (country_code.equals("BN") == true) {
       switch (region_code2) {
         case 7:
         name = "Alibori";
@@ -1490,7 +1487,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BO") == true) {
+    else if (country_code.equals("BO") == true) {
       switch (region_code2) {
         case 1:
         name = "Chuquisaca";
@@ -1521,7 +1518,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BR") == true) {
+    else if (country_code.equals("BR") == true) {
       switch (region_code2) {
         case 1:
         name = "Acre";
@@ -1606,7 +1603,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BS") == true) {
+    else if (country_code.equals("BS") == true) {
       switch (region_code2) {
         case 5:
         name = "Bimini";
@@ -1673,7 +1670,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BT") == true) {
+    else if (country_code.equals("BT") == true) {
       switch (region_code2) {
         case 5:
         name = "Bumthang";
@@ -1731,7 +1728,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BW") == true) {
+    else if (country_code.equals("BW") == true) {
       switch (region_code2) {
         case 1:
         name = "Central";
@@ -1762,7 +1759,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BY") == true) {
+    else if (country_code.equals("BY") == true) {
       switch (region_code2) {
         case 1:
         name = "Brestskaya Voblasts'";
@@ -1787,7 +1784,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("BZ") == true) {
+    else if (country_code.equals("BZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Belize";
@@ -1809,7 +1806,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CD") == true) {
+    else if (country_code.equals("CD") == true) {
       switch (region_code2) {
         case 1:
         name = "Bandundu";
@@ -1843,7 +1840,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CF") == true) {
+    else if (country_code.equals("CF") == true) {
       switch (region_code2) {
         case 1:
         name = "Bamingui-Bangoran";
@@ -1898,7 +1895,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CG") == true) {
+    else if (country_code.equals("CG") == true) {
       switch (region_code2) {
         case 1:
         name = "Bouenza";
@@ -1935,7 +1932,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CH") == true) {
+    else if (country_code.equals("CH") == true) {
       switch (region_code2) {
         case 1:
         name = "Aargau";
@@ -2017,7 +2014,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CI") == true) {
+    else if (country_code.equals("CI") == true) {
       switch (region_code2) {
         case 74:
         name = "Agneby";
@@ -2078,7 +2075,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CL") == true) {
+    else if (country_code.equals("CL") == true) {
       switch (region_code2) {
         case 1:
         name = "Valparaiso";
@@ -2133,7 +2130,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CM") == true) {
+    else if (country_code.equals("CM") == true) {
       switch (region_code2) {
         case 4:
         name = "Est";
@@ -2167,7 +2164,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CN") == true) {
+    else if (country_code.equals("CN") == true) {
       switch (region_code2) {
         case 1:
         name = "Anhui";
@@ -2264,7 +2261,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CO") == true) {
+    else if (country_code.equals("CO") == true) {
       switch (region_code2) {
         case 1:
         name = "Amazonas";
@@ -2367,7 +2364,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CR") == true) {
+    else if (country_code.equals("CR") == true) {
       switch (region_code2) {
         case 1:
         name = "Alajuela";
@@ -2392,7 +2389,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CU") == true) {
+    else if (country_code.equals("CU") == true) {
       switch (region_code2) {
         case 1:
         name = "Pinar del Rio";
@@ -2441,7 +2438,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CV") == true) {
+    else if (country_code.equals("CV") == true) {
       switch (region_code2) {
         case 1:
         name = "Boa Vista";
@@ -2493,7 +2490,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CY") == true) {
+    else if (country_code.equals("CY") == true) {
       switch (region_code2) {
         case 1:
         name = "Famagusta";
@@ -2515,7 +2512,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("CZ") == true) {
+    else if (country_code.equals("CZ") == true) {
       switch (region_code2) {
         case 52:
         name = "Hlavni mesto Praha";
@@ -2561,7 +2558,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DE") == true) {
+    else if (country_code.equals("DE") == true) {
       switch (region_code2) {
         case 1:
         name = "Baden-Wurttemberg";
@@ -2613,7 +2610,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DJ") == true) {
+    else if (country_code.equals("DJ") == true) {
       switch (region_code2) {
         case 1:
         name = "Ali Sabieh";
@@ -2635,7 +2632,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DK") == true) {
+    else if (country_code.equals("DK") == true) {
       switch (region_code2) {
         case 17:
         name = "Hovedstaden";
@@ -2654,7 +2651,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DM") == true) {
+    else if (country_code.equals("DM") == true) {
       switch (region_code2) {
         case 2:
         name = "Saint Andrew";
@@ -2688,7 +2685,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DO") == true) {
+    else if (country_code.equals("DO") == true) {
       switch (region_code2) {
         case 1:
         name = "Azua";
@@ -2794,7 +2791,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("DZ") == true) {
+    else if (country_code.equals("DZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Alger";
@@ -2942,7 +2939,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("EC") == true) {
+    else if (country_code.equals("EC") == true) {
       switch (region_code2) {
         case 1:
         name = "Galapagos";
@@ -3012,7 +3009,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("EE") == true) {
+    else if (country_code.equals("EE") == true) {
       switch (region_code2) {
         case 1:
         name = "Harjumaa";
@@ -3079,7 +3076,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("EG") == true) {
+    else if (country_code.equals("EG") == true) {
       switch (region_code2) {
         case 1:
         name = "Ad Daqahliyah";
@@ -3161,7 +3158,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ER") == true) {
+    else if (country_code.equals("ER") == true) {
       switch (region_code2) {
         case 1:
         name = "Anseba";
@@ -3183,7 +3180,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ES") == true) {
+    else if (country_code.equals("ES") == true) {
       switch (region_code2) {
         case 7:
         name = "Islas Baleares";
@@ -3238,7 +3235,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ET") == true) {
+    else if (country_code.equals("ET") == true) {
       switch (region_code2) {
         case 44:
         name = "Adis Abeba";
@@ -3275,7 +3272,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("FI") == true) {
+    else if (country_code.equals("FI") == true) {
       switch (region_code2) {
         case 1:
         name = "Aland";
@@ -3297,7 +3294,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("FJ") == true) {
+    else if (country_code.equals("FJ") == true) {
       switch (region_code2) {
         case 1:
         name = "Central";
@@ -3316,7 +3313,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("FM") == true) {
+    else if (country_code.equals("FM") == true) {
       switch (region_code2) {
         case 1:
         name = "Kosrae";
@@ -3332,7 +3329,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("FR") == true) {
+    else if (country_code.equals("FR") == true) {
       switch (region_code2) {
         case 97:
         name = "Aquitaine";
@@ -3402,7 +3399,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GA") == true) {
+    else if (country_code.equals("GA") == true) {
       switch (region_code2) {
         case 1:
         name = "Estuaire";
@@ -3433,7 +3430,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GB") == true) {
+    else if (country_code.equals("GB") == true) {
       switch (region_code2) {
         case 832:
         name = "Barking and Dagenham";
@@ -4122,9 +4119,24 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 1910:
         name = "Wrexham";
         break;
+        case 1911:
+        name = "Bedfordshire";
+        break;
+        case 1912:
+        name = "Central Bedfordshire";
+        break;
+        case 1913:
+        name = "Cheshire East";
+        break;
+        case 1914:
+        name = "Cheshire West and Chester";
+        break;
+        case 1915:
+        name = "Isles of Scilly";
+        break;
       }
     }
-    if (country_code.equals("GD") == true) {
+    else if (country_code.equals("GD") == true) {
       switch (region_code2) {
         case 1:
         name = "Saint Andrew";
@@ -4146,7 +4158,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GE") == true) {
+    else if (country_code.equals("GE") == true) {
       switch (region_code2) {
         case 1:
         name = "Abashis Raioni";
@@ -4342,7 +4354,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GH") == true) {
+    else if (country_code.equals("GH") == true) {
       switch (region_code2) {
         case 1:
         name = "Greater Accra";
@@ -4376,7 +4388,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GL") == true) {
+    else if (country_code.equals("GL") == true) {
       switch (region_code2) {
         case 1:
         name = "Nordgronland";
@@ -4389,7 +4401,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GM") == true) {
+    else if (country_code.equals("GM") == true) {
       switch (region_code2) {
         case 1:
         name = "Banjul";
@@ -4411,7 +4423,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GN") == true) {
+    else if (country_code.equals("GN") == true) {
       switch (region_code2) {
         case 1:
         name = "Beyla";
@@ -4517,7 +4529,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GQ") == true) {
+    else if (country_code.equals("GQ") == true) {
       switch (region_code2) {
         case 3:
         name = "Annobon";
@@ -4542,7 +4554,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GR") == true) {
+    else if (country_code.equals("GR") == true) {
       switch (region_code2) {
         case 1:
         name = "Evros";
@@ -4699,7 +4711,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GT") == true) {
+    else if (country_code.equals("GT") == true) {
       switch (region_code2) {
         case 1:
         name = "Alta Verapaz";
@@ -4769,7 +4781,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GW") == true) {
+    else if (country_code.equals("GW") == true) {
       switch (region_code2) {
         case 1:
         name = "Bafata";
@@ -4800,7 +4812,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("GY") == true) {
+    else if (country_code.equals("GY") == true) {
       switch (region_code2) {
         case 10:
         name = "Barima-Waini";
@@ -4834,7 +4846,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("HN") == true) {
+    else if (country_code.equals("HN") == true) {
       switch (region_code2) {
         case 1:
         name = "Atlantida";
@@ -4892,7 +4904,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("HR") == true) {
+    else if (country_code.equals("HR") == true) {
       switch (region_code2) {
         case 1:
         name = "Bjelovarsko-Bilogorska";
@@ -4959,7 +4971,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("HT") == true) {
+    else if (country_code.equals("HT") == true) {
       switch (region_code2) {
         case 3:
         name = "Nord-Ouest";
@@ -4993,7 +5005,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("HU") == true) {
+    else if (country_code.equals("HU") == true) {
       switch (region_code2) {
         case 1:
         name = "Bacs-Kiskun";
@@ -5126,7 +5138,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ID") == true) {
+    else if (country_code.equals("ID") == true) {
       switch (region_code2) {
         case 1:
         name = "Aceh";
@@ -5229,7 +5241,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IE") == true) {
+    else if (country_code.equals("IE") == true) {
       switch (region_code2) {
         case 1:
         name = "Carlow";
@@ -5311,7 +5323,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IL") == true) {
+    else if (country_code.equals("IL") == true) {
       switch (region_code2) {
         case 1:
         name = "HaDarom";
@@ -5333,7 +5345,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IN") == true) {
+    else if (country_code.equals("IN") == true) {
       switch (region_code2) {
         case 1:
         name = "Andaman and Nicobar Islands";
@@ -5442,7 +5454,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IQ") == true) {
+    else if (country_code.equals("IQ") == true) {
       switch (region_code2) {
         case 1:
         name = "Al Anbar";
@@ -5500,7 +5512,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IR") == true) {
+    else if (country_code.equals("IR") == true) {
       switch (region_code2) {
         case 1:
         name = "Azarbayjan-e Bakhtari";
@@ -5619,9 +5631,12 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 43:
         name = "Khorasan-e Shemali";
         break;
+        case 44:
+        name = "Alborz";
+        break;
       }
     }
-    if (country_code.equals("IS") == true) {
+    else if (country_code.equals("IS") == true) {
       switch (region_code2) {
         case 3:
         name = "Arnessysla";
@@ -5683,6 +5698,12 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 37:
         name = "Vestur-Skaftafellssysla";
         break;
+        case 38:
+        name = "Austurland";
+        break;
+        case 39:
+        name = "Hofuoborgarsvaoio";
+        break;
         case 40:
         name = "Norourland Eystra";
         break;
@@ -5703,7 +5724,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("IT") == true) {
+    else if (country_code.equals("IT") == true) {
       switch (region_code2) {
         case 1:
         name = "Abruzzi";
@@ -5767,7 +5788,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("JM") == true) {
+    else if (country_code.equals("JM") == true) {
       switch (region_code2) {
         case 1:
         name = "Clarendon";
@@ -5813,7 +5834,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("JO") == true) {
+    else if (country_code.equals("JO") == true) {
       switch (region_code2) {
         case 2:
         name = "Al Balqa'";
@@ -5853,7 +5874,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("JP") == true) {
+    else if (country_code.equals("JP") == true) {
       switch (region_code2) {
         case 1:
         name = "Aichi";
@@ -5998,7 +6019,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KE") == true) {
+    else if (country_code.equals("KE") == true) {
       switch (region_code2) {
         case 1:
         name = "Central";
@@ -6026,7 +6047,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KG") == true) {
+    else if (country_code.equals("KG") == true) {
       switch (region_code2) {
         case 1:
         name = "Bishkek";
@@ -6057,7 +6078,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KH") == true) {
+    else if (country_code.equals("KH") == true) {
       switch (region_code2) {
         case 1:
         name = "Batdambang";
@@ -6127,7 +6148,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KI") == true) {
+    else if (country_code.equals("KI") == true) {
       switch (region_code2) {
         case 1:
         name = "Gilbert Islands";
@@ -6140,7 +6161,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KM") == true) {
+    else if (country_code.equals("KM") == true) {
       switch (region_code2) {
         case 1:
         name = "Anjouan";
@@ -6153,7 +6174,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KN") == true) {
+    else if (country_code.equals("KN") == true) {
       switch (region_code2) {
         case 1:
         name = "Christ Church Nichola Town";
@@ -6199,7 +6220,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KP") == true) {
+    else if (country_code.equals("KP") == true) {
       switch (region_code2) {
         case 1:
         name = "Chagang-do";
@@ -6242,7 +6263,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KR") == true) {
+    else if (country_code.equals("KR") == true) {
       switch (region_code2) {
         case 1:
         name = "Cheju-do";
@@ -6294,7 +6315,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KW") == true) {
+    else if (country_code.equals("KW") == true) {
       switch (region_code2) {
         case 1:
         name = "Al Ahmadi";
@@ -6316,7 +6337,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KY") == true) {
+    else if (country_code.equals("KY") == true) {
       switch (region_code2) {
         case 1:
         name = "Creek";
@@ -6344,7 +6365,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("KZ") == true) {
+    else if (country_code.equals("KZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Almaty";
@@ -6399,7 +6420,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LA") == true) {
+    else if (country_code.equals("LA") == true) {
       switch (region_code2) {
         case 1:
         name = "Attapu";
@@ -6442,7 +6463,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LB") == true) {
+    else if (country_code.equals("LB") == true) {
       switch (region_code2) {
         case 1:
         name = "Beqaa";
@@ -6479,7 +6500,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LC") == true) {
+    else if (country_code.equals("LC") == true) {
       switch (region_code2) {
         case 1:
         name = "Anse-la-Raye";
@@ -6516,7 +6537,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LI") == true) {
+    else if (country_code.equals("LI") == true) {
       switch (region_code2) {
         case 1:
         name = "Balzers";
@@ -6559,88 +6580,13 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LK") == true) {
+    else if (country_code.equals("LK") == true) {
       switch (region_code2) {
-        case 1:
-        name = "Amparai";
-        break;
-        case 2:
-        name = "Anuradhapura";
-        break;
-        case 3:
-        name = "Badulla";
-        break;
-        case 4:
-        name = "Batticaloa";
-        break;
-        case 6:
-        name = "Galle";
-        break;
-        case 7:
-        name = "Hambantota";
-        break;
-        case 9:
-        name = "Kalutara";
-        break;
-        case 10:
-        name = "Kandy";
-        break;
-        case 11:
-        name = "Kegalla";
-        break;
-        case 12:
-        name = "Kurunegala";
-        break;
-        case 14:
-        name = "Matale";
-        break;
-        case 15:
-        name = "Matara";
-        break;
-        case 16:
-        name = "Moneragala";
-        break;
-        case 17:
-        name = "Nuwara Eliya";
-        break;
-        case 18:
-        name = "Polonnaruwa";
-        break;
-        case 19:
-        name = "Puttalam";
-        break;
-        case 20:
-        name = "Ratnapura";
-        break;
-        case 21:
-        name = "Trincomalee";
-        break;
-        case 23:
-        name = "Colombo";
-        break;
-        case 24:
-        name = "Gampaha";
-        break;
-        case 25:
-        name = "Jaffna";
-        break;
-        case 26:
-        name = "Mannar";
-        break;
-        case 27:
-        name = "Mullaittivu";
-        break;
-        case 28:
-        name = "Vavuniya";
-        break;
         case 29:
         name = "Central";
         break;
         case 30:
         name = "North Central";
-        break;
-        case 31:
-        name = "Northern";
         break;
         case 32:
         name = "North Western";
@@ -6657,9 +6603,15 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 36:
         name = "Western";
         break;
+        case 37:
+        name = "Eastern";
+        break;
+        case 38:
+        name = "Northern";
+        break;
       }
     }
-    if (country_code.equals("LR") == true) {
+    else if (country_code.equals("LR") == true) {
       switch (region_code2) {
         case 1:
         name = "Bong";
@@ -6714,7 +6666,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LS") == true) {
+    else if (country_code.equals("LS") == true) {
       switch (region_code2) {
         case 10:
         name = "Berea";
@@ -6748,7 +6700,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LT") == true) {
+    else if (country_code.equals("LT") == true) {
       switch (region_code2) {
         case 56:
         name = "Alytaus Apskritis";
@@ -6782,7 +6734,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LU") == true) {
+    else if (country_code.equals("LU") == true) {
       switch (region_code2) {
         case 1:
         name = "Diekirch";
@@ -6795,7 +6747,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LV") == true) {
+    else if (country_code.equals("LV") == true) {
       switch (region_code2) {
         case 1:
         name = "Aizkraukles";
@@ -6898,7 +6850,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("LY") == true) {
+    else if (country_code.equals("LY") == true) {
       switch (region_code2) {
         case 3:
         name = "Al Aziziyah";
@@ -6977,7 +6929,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MA") == true) {
+    else if (country_code.equals("MA") == true) {
       switch (region_code2) {
         case 45:
         name = "Grand Casablanca";
@@ -7026,7 +6978,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MC") == true) {
+    else if (country_code.equals("MC") == true) {
       switch (region_code2) {
         case 1:
         name = "La Condamine";
@@ -7039,7 +6991,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MD") == true) {
+    else if (country_code.equals("MD") == true) {
       switch (region_code2) {
         case 51:
         name = "Gagauzia";
@@ -7154,7 +7106,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MG") == true) {
+    else if (country_code.equals("MG") == true) {
       switch (region_code2) {
         case 1:
         name = "Antsiranana";
@@ -7176,7 +7128,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MK") == true) {
+    else if (country_code.equals("MK") == true) {
       switch (region_code2) {
         case 1:
         name = "Aracinovo";
@@ -7549,7 +7501,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ML") == true) {
+    else if (country_code.equals("ML") == true) {
       switch (region_code2) {
         case 1:
         name = "Bamako";
@@ -7580,7 +7532,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MM") == true) {
+    else if (country_code.equals("MM") == true) {
       switch (region_code2) {
         case 1:
         name = "Rakhine State";
@@ -7629,7 +7581,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MN") == true) {
+    else if (country_code.equals("MN") == true) {
       switch (region_code2) {
         case 1:
         name = "Arhangay";
@@ -7705,7 +7657,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MO") == true) {
+    else if (country_code.equals("MO") == true) {
       switch (region_code2) {
         case 1:
         name = "Ilhas";
@@ -7715,7 +7667,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MR") == true) {
+    else if (country_code.equals("MR") == true) {
       switch (region_code2) {
         case 1:
         name = "Hodh Ech Chargui";
@@ -7755,7 +7707,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MS") == true) {
+    else if (country_code.equals("MS") == true) {
       switch (region_code2) {
         case 1:
         name = "Saint Anthony";
@@ -7768,7 +7720,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MU") == true) {
+    else if (country_code.equals("MU") == true) {
       switch (region_code2) {
         case 12:
         name = "Black River";
@@ -7808,7 +7760,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MV") == true) {
+    else if (country_code.equals("MV") == true) {
       switch (region_code2) {
         case 1:
         name = "Seenu";
@@ -7872,7 +7824,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MW") == true) {
+    else if (country_code.equals("MW") == true) {
       switch (region_code2) {
         case 2:
         name = "Chikwawa";
@@ -7957,7 +7909,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MX") == true) {
+    else if (country_code.equals("MX") == true) {
       switch (region_code2) {
         case 1:
         name = "Aguascalientes";
@@ -8057,7 +8009,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MY") == true) {
+    else if (country_code.equals("MY") == true) {
       switch (region_code2) {
         case 1:
         name = "Johor";
@@ -8109,7 +8061,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("MZ") == true) {
+    else if (country_code.equals("MZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Cabo Delgado";
@@ -8146,7 +8098,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NA") == true) {
+    else if (country_code.equals("NA") == true) {
       switch (region_code2) {
         case 1:
         name = "Bethanien";
@@ -8264,7 +8216,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NE") == true) {
+    else if (country_code.equals("NE") == true) {
       switch (region_code2) {
         case 1:
         name = "Agadez";
@@ -8292,7 +8244,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NG") == true) {
+    else if (country_code.equals("NG") == true) {
       switch (region_code2) {
         case 5:
         name = "Lagos";
@@ -8407,7 +8359,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NI") == true) {
+    else if (country_code.equals("NI") == true) {
       switch (region_code2) {
         case 1:
         name = "Boaco";
@@ -8465,7 +8417,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NL") == true) {
+    else if (country_code.equals("NL") == true) {
       switch (region_code2) {
         case 1:
         name = "Drenthe";
@@ -8505,7 +8457,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NO") == true) {
+    else if (country_code.equals("NO") == true) {
       switch (region_code2) {
         case 1:
         name = "Akershus";
@@ -8566,7 +8518,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NP") == true) {
+    else if (country_code.equals("NP") == true) {
       switch (region_code2) {
         case 1:
         name = "Bagmati";
@@ -8612,7 +8564,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NR") == true) {
+    else if (country_code.equals("NR") == true) {
       switch (region_code2) {
         case 1:
         name = "Aiwo";
@@ -8658,7 +8610,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("NZ") == true) {
+    else if (country_code.equals("NZ") == true) {
       switch (region_code2) {
         case 10:
         name = "Chatham Islands";
@@ -8710,7 +8662,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("OM") == true) {
+    else if (country_code.equals("OM") == true) {
       switch (region_code2) {
         case 1:
         name = "Ad Dakhiliyah";
@@ -8738,7 +8690,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PA") == true) {
+    else if (country_code.equals("PA") == true) {
       switch (region_code2) {
         case 1:
         name = "Bocas del Toro";
@@ -8772,7 +8724,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PE") == true) {
+    else if (country_code.equals("PE") == true) {
       switch (region_code2) {
         case 1:
         name = "Amazonas";
@@ -8851,7 +8803,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PG") == true) {
+    else if (country_code.equals("PG") == true) {
       switch (region_code2) {
         case 1:
         name = "Central";
@@ -8915,7 +8867,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PH") == true) {
+    else if (country_code.equals("PH") == true) {
       switch (region_code2) {
         case 1:
         name = "Abra";
@@ -9322,9 +9274,45 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 1135:
         name = "Negros Occidental";
         break;
+        case 1181:
+        name = "Compostela Valley";
+        break;
+        case 1182:
+        name = "Davao del Norte";
+        break;
+        case 1225:
+        name = "Kalinga";
+        break;
+        case 1267:
+        name = "Malaybalay";
+        break;
+        case 1477:
+        name = "Zambales";
+        break;
+        case 1352:
+        name = "San Jose del Monte";
+        break;
+        case 1353:
+        name = "San Juan";
+        break;
+        case 1355:
+        name = "Santiago";
+        break;
+        case 1356:
+        name = "Sarangani";
+        break;
+        case 1391:
+        name = "Sipalay";
+        break;
+        case 1393:
+        name = "Surigao del Norte";
+        break;
+        case 1478:
+        name = "Zamboanga";
+        break;
       }
     }
-    if (country_code.equals("PK") == true) {
+    else if (country_code.equals("PK") == true) {
       switch (region_code2) {
         case 1:
         name = "Federally Administered Tribal Areas";
@@ -9352,7 +9340,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PL") == true) {
+    else if (country_code.equals("PL") == true) {
       switch (region_code2) {
         case 72:
         name = "Dolnoslaskie";
@@ -9404,7 +9392,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PS") == true) {
+    else if (country_code.equals("PS") == true) {
       switch (region_code2) {
         case 1131:
         name = "Gaza";
@@ -9414,7 +9402,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PT") == true) {
+    else if (country_code.equals("PT") == true) {
       switch (region_code2) {
         case 2:
         name = "Aveiro";
@@ -9478,7 +9466,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("PY") == true) {
+    else if (country_code.equals("PY") == true) {
       switch (region_code2) {
         case 1:
         name = "Alto Parana";
@@ -9539,7 +9527,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("QA") == true) {
+    else if (country_code.equals("QA") == true) {
       switch (region_code2) {
         case 1:
         name = "Ad Dawhah";
@@ -9576,7 +9564,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("RO") == true) {
+    else if (country_code.equals("RO") == true) {
       switch (region_code2) {
         case 1:
         name = "Alba";
@@ -9706,7 +9694,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("RS") == true) {
+    else if (country_code.equals("RS") == true) {
       switch (region_code2) {
         case 1:
         name = "Kosovo";
@@ -9716,7 +9704,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("RU") == true) {
+    else if (country_code.equals("RU") == true) {
       switch (region_code2) {
         case 1:
         name = "Adygeya";
@@ -9999,7 +9987,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("RW") == true) {
+    else if (country_code.equals("RW") == true) {
       switch (region_code2) {
         case 1:
         name = "Butare";
@@ -10030,7 +10018,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SA") == true) {
+    else if (country_code.equals("SA") == true) {
       switch (region_code2) {
         case 2:
         name = "Al Bahah";
@@ -10073,7 +10061,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SB") == true) {
+    else if (country_code.equals("SB") == true) {
       switch (region_code2) {
         case 3:
         name = "Malaita";
@@ -10104,7 +10092,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SC") == true) {
+    else if (country_code.equals("SC") == true) {
       switch (region_code2) {
         case 1:
         name = "Anse aux Pins";
@@ -10177,7 +10165,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SD") == true) {
+    else if (country_code.equals("SD") == true) {
       switch (region_code2) {
         case 27:
         name = "Al Wusta";
@@ -10214,7 +10202,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SE") == true) {
+    else if (country_code.equals("SE") == true) {
       switch (region_code2) {
         case 2:
         name = "Blekinge Lan";
@@ -10281,7 +10269,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SH") == true) {
+    else if (country_code.equals("SH") == true) {
       switch (region_code2) {
         case 1:
         name = "Ascension";
@@ -10294,434 +10282,596 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SI") == true) {
+    else if (country_code.equals("SI") == true) {
       switch (region_code2) {
         case 1:
-        name = "Ajdovscina";
+        name = "Ajdovscina Commune";
         break;
         case 2:
-        name = "Beltinci";
+        name = "Beltinci Commune";
         break;
         case 3:
-        name = "Bled";
+        name = "Bled Commune";
         break;
         case 4:
-        name = "Bohinj";
+        name = "Bohinj Commune";
         break;
         case 5:
-        name = "Borovnica";
+        name = "Borovnica Commune";
         break;
         case 6:
-        name = "Bovec";
+        name = "Bovec Commune";
         break;
         case 7:
-        name = "Brda";
+        name = "Brda Commune";
         break;
         case 8:
-        name = "Brezice";
+        name = "Brezice Commune";
         break;
         case 9:
-        name = "Brezovica";
+        name = "Brezovica Commune";
         break;
         case 11:
-        name = "Celje";
+        name = "Celje Commune";
         break;
         case 12:
-        name = "Cerklje na Gorenjskem";
+        name = "Cerklje na Gorenjskem Commune";
         break;
         case 13:
-        name = "Cerknica";
+        name = "Cerknica Commune";
         break;
         case 14:
-        name = "Cerkno";
+        name = "Cerkno Commune";
         break;
         case 15:
-        name = "Crensovci";
+        name = "Crensovci Commune";
         break;
         case 16:
-        name = "Crna na Koroskem";
+        name = "Crna na Koroskem Commune";
         break;
         case 17:
-        name = "Crnomelj";
+        name = "Crnomelj Commune";
         break;
         case 19:
-        name = "Divaca";
+        name = "Divaca Commune";
         break;
         case 20:
-        name = "Dobrepolje";
+        name = "Dobrepolje Commune";
         break;
         case 22:
-        name = "Dol pri Ljubljani";
+        name = "Dol pri Ljubljani Commune";
         break;
         case 24:
-        name = "Dornava";
+        name = "Dornava Commune";
         break;
         case 25:
-        name = "Dravograd";
+        name = "Dravograd Commune";
         break;
         case 26:
-        name = "Duplek";
+        name = "Duplek Commune";
         break;
         case 27:
-        name = "Gorenja Vas-Poljane";
+        name = "Gorenja vas-Poljane Commune";
         break;
         case 28:
-        name = "Gorisnica";
+        name = "Gorisnica Commune";
         break;
         case 29:
-        name = "Gornja Radgona";
+        name = "Gornja Radgona Commune";
         break;
         case 30:
-        name = "Gornji Grad";
+        name = "Gornji Grad Commune";
         break;
         case 31:
-        name = "Gornji Petrovci";
+        name = "Gornji Petrovci Commune";
         break;
         case 32:
-        name = "Grosuplje";
+        name = "Grosuplje Commune";
         break;
         case 34:
-        name = "Hrastnik";
+        name = "Hrastnik Commune";
         break;
         case 35:
-        name = "Hrpelje-Kozina";
+        name = "Hrpelje-Kozina Commune";
         break;
         case 36:
-        name = "Idrija";
+        name = "Idrija Commune";
         break;
         case 37:
-        name = "Ig";
+        name = "Ig Commune";
         break;
         case 38:
-        name = "Ilirska Bistrica";
+        name = "Ilirska Bistrica Commune";
         break;
         case 39:
-        name = "Ivancna Gorica";
+        name = "Ivancna Gorica Commune";
         break;
         case 40:
-        name = "Izola-Isola";
+        name = "Izola-Isola Commune";
         break;
         case 42:
-        name = "Jursinci";
+        name = "Jursinci Commune";
         break;
         case 44:
-        name = "Kanal";
+        name = "Kanal Commune";
         break;
         case 45:
-        name = "Kidricevo";
+        name = "Kidricevo Commune";
         break;
         case 46:
-        name = "Kobarid";
+        name = "Kobarid Commune";
         break;
         case 47:
-        name = "Kobilje";
+        name = "Kobilje Commune";
         break;
         case 49:
-        name = "Komen";
+        name = "Komen Commune";
         break;
         case 50:
-        name = "Koper-Capodistria";
+        name = "Koper-Capodistria Urban Commune";
         break;
         case 51:
-        name = "Kozje";
+        name = "Kozje Commune";
         break;
         case 52:
-        name = "Kranj";
+        name = "Kranj Commune";
         break;
         case 53:
-        name = "Kranjska Gora";
+        name = "Kranjska Gora Commune";
         break;
         case 54:
-        name = "Krsko";
+        name = "Krsko Commune";
         break;
         case 55:
-        name = "Kungota";
+        name = "Kungota Commune";
         break;
         case 57:
-        name = "Lasko";
+        name = "Lasko Commune";
         break;
         case 61:
-        name = "Ljubljana";
+        name = "Ljubljana Urban Commune";
         break;
         case 62:
-        name = "Ljubno";
+        name = "Ljubno Commune";
         break;
         case 64:
-        name = "Logatec";
+        name = "Logatec Commune";
         break;
         case 66:
-        name = "Loski Potok";
+        name = "Loski Potok Commune";
         break;
         case 68:
-        name = "Lukovica";
+        name = "Lukovica Commune";
         break;
         case 71:
-        name = "Medvode";
+        name = "Medvode Commune";
         break;
         case 72:
-        name = "Menges";
+        name = "Menges Commune";
         break;
         case 73:
-        name = "Metlika";
+        name = "Metlika Commune";
         break;
         case 74:
-        name = "Mezica";
+        name = "Mezica Commune";
         break;
         case 76:
-        name = "Mislinja";
+        name = "Mislinja Commune";
         break;
         case 77:
-        name = "Moravce";
+        name = "Moravce Commune";
         break;
         case 78:
-        name = "Moravske Toplice";
+        name = "Moravske Toplice Commune";
         break;
         case 79:
-        name = "Mozirje";
+        name = "Mozirje Commune";
         break;
         case 80:
-        name = "Murska Sobota";
+        name = "Murska Sobota Urban Commune";
         break;
         case 81:
-        name = "Muta";
+        name = "Muta Commune";
         break;
         case 82:
-        name = "Naklo";
+        name = "Naklo Commune";
         break;
         case 83:
-        name = "Nazarje";
+        name = "Nazarje Commune";
         break;
         case 84:
-        name = "Nova Gorica";
+        name = "Nova Gorica Urban Commune";
         break;
         case 86:
-        name = "Odranci";
+        name = "Odranci Commune";
         break;
         case 87:
-        name = "Ormoz";
+        name = "Ormoz Commune";
         break;
         case 88:
-        name = "Osilnica";
+        name = "Osilnica Commune";
         break;
         case 89:
-        name = "Pesnica";
+        name = "Pesnica Commune";
         break;
         case 91:
-        name = "Pivka";
+        name = "Pivka Commune";
         break;
         case 92:
-        name = "Podcetrtek";
+        name = "Podcetrtek Commune";
         break;
         case 94:
-        name = "Postojna";
+        name = "Postojna Commune";
         break;
         case 97:
-        name = "Puconci";
+        name = "Puconci Commune";
         break;
         case 98:
-        name = "Racam";
+        name = "Race-Fram Commune";
         break;
         case 99:
-        name = "Radece";
+        name = "Radece Commune";
         break;
         case 832:
-        name = "Radenci";
+        name = "Radenci Commune";
         break;
         case 833:
-        name = "Radlje ob Dravi";
+        name = "Radlje ob Dravi Commune";
         break;
         case 834:
-        name = "Radovljica";
+        name = "Radovljica Commune";
         break;
         case 837:
-        name = "Rogasovci";
+        name = "Rogasovci Commune";
         break;
         case 838:
-        name = "Rogaska Slatina";
+        name = "Rogaska Slatina Commune";
         break;
         case 839:
-        name = "Rogatec";
+        name = "Rogatec Commune";
         break;
         case 875:
-        name = "Semic";
+        name = "Semic Commune";
         break;
         case 876:
-        name = "Sencur";
+        name = "Sencur Commune";
         break;
         case 877:
-        name = "Sentilj";
+        name = "Sentilj Commune";
         break;
         case 878:
-        name = "Sentjernej";
+        name = "Sentjernej Commune";
         break;
         case 880:
-        name = "Sevnica";
+        name = "Sevnica Commune";
         break;
         case 881:
-        name = "Sezana";
+        name = "Sezana Commune";
         break;
         case 882:
-        name = "Skocjan";
+        name = "Skocjan Commune";
         break;
         case 883:
-        name = "Skofja Loka";
+        name = "Skofja Loka Commune";
         break;
         case 918:
-        name = "Skofljica";
+        name = "Skofljica Commune";
         break;
         case 919:
-        name = "Slovenj Gradec";
+        name = "Slovenj Gradec Urban Commune";
         break;
         case 921:
-        name = "Slovenske Konjice";
+        name = "Slovenske Konjice Commune";
         break;
         case 922:
-        name = "Smarje pri Jelsah";
+        name = "Smarje pri Jelsah Commune";
         break;
         case 923:
-        name = "Smartno ob Paki";
+        name = "Smartno ob Paki Commune";
         break;
         case 924:
-        name = "Sostanj";
+        name = "Sostanj Commune";
         break;
         case 925:
-        name = "Starse";
+        name = "Starse Commune";
         break;
         case 926:
-        name = "Store";
+        name = "Store Commune";
         break;
         case 961:
-        name = "Sveti Jurij";
+        name = "Sveti Jurij Commune";
         break;
         case 962:
-        name = "Tolmin";
+        name = "Tolmin Commune";
         break;
         case 963:
-        name = "Trbovlje";
+        name = "Trbovlje Commune";
         break;
         case 964:
-        name = "Trebnje";
+        name = "Trebnje Commune";
         break;
         case 965:
-        name = "Trzic";
+        name = "Trzic Commune";
         break;
         case 966:
-        name = "Turnisce";
+        name = "Turnisce Commune";
         break;
         case 967:
-        name = "Velenje";
+        name = "Velenje Urban Commune";
         break;
         case 968:
-        name = "Velike Lasce";
+        name = "Velike Lasce Commune";
         break;
         case 1004:
-        name = "Vipava";
+        name = "Vipava Commune";
         break;
         case 1005:
-        name = "Vitanje";
+        name = "Vitanje Commune";
         break;
         case 1006:
-        name = "Vodice";
+        name = "Vodice Commune";
         break;
         case 1008:
-        name = "Vrhnika";
+        name = "Vrhnika Commune";
         break;
         case 1009:
-        name = "Vuzenica";
+        name = "Vuzenica Commune";
         break;
         case 1010:
-        name = "Zagorje ob Savi";
+        name = "Zagorje ob Savi Commune";
         break;
         case 1012:
-        name = "Zavrc";
+        name = "Zavrc Commune";
         break;
         case 1047:
-        name = "Zelezniki";
+        name = "Zelezniki Commune";
         break;
         case 1048:
-        name = "Ziri";
+        name = "Ziri Commune";
         break;
         case 1049:
-        name = "Zrece";
+        name = "Zrece Commune";
+        break;
+        case 1050:
+        name = "Benedikt Commune";
+        break;
+        case 1051:
+        name = "Bistrica ob Sotli Commune";
+        break;
+        case 1052:
+        name = "Bloke Commune";
+        break;
+        case 1053:
+        name = "Braslovce Commune";
+        break;
+        case 1054:
+        name = "Cankova Commune";
+        break;
+        case 1055:
+        name = "Cerkvenjak Commune";
+        break;
+        case 1090:
+        name = "Destrnik Commune";
+        break;
+        case 1091:
+        name = "Dobje Commune";
+        break;
+        case 1092:
+        name = "Dobrna Commune";
         break;
         case 1093:
-        name = "Dobrova-Horjul-Polhov Gradec";
+        name = "Dobrova-Horjul-Polhov Gradec Commune";
+        break;
+        case 1094:
+        name = "Dobrovnik-Dobronak Commune";
+        break;
+        case 1095:
+        name = "Dolenjske Toplice Commune";
         break;
         case 1096:
-        name = "Domzale";
+        name = "Domzale Commune";
+        break;
+        case 1097:
+        name = "Grad Commune";
+        break;
+        case 1098:
+        name = "Hajdina Commune";
+        break;
+        case 1133:
+        name = "Hoce-Slivnica Commune";
+        break;
+        case 1134:
+        name = "Hodos-Hodos Commune";
+        break;
+        case 1135:
+        name = "Horjul Commune";
         break;
         case 1136:
-        name = "Jesenice";
+        name = "Jesenice Commune";
+        break;
+        case 1137:
+        name = "Jezersko Commune";
         break;
         case 1138:
-        name = "Kamnik";
+        name = "Kamnik Commune";
         break;
         case 1139:
-        name = "Kocevje";
+        name = "Kocevje Commune";
+        break;
+        case 1140:
+        name = "Komenda Commune";
+        break;
+        case 1141:
+        name = "Kostel Commune";
+        break;
+        case 1176:
+        name = "Krizevci Commune";
         break;
         case 1177:
-        name = "Kuzma";
+        name = "Kuzma Commune";
         break;
         case 1178:
-        name = "Lenart";
+        name = "Lenart Commune";
+        break;
+        case 1179:
+        name = "Lendava-Lendva Commune";
         break;
         case 1180:
-        name = "Litija";
+        name = "Litija Commune";
         break;
         case 1181:
-        name = "Ljutomer";
+        name = "Ljutomer Commune";
         break;
         case 1182:
-        name = "Loska Dolina";
+        name = "Loska Dolina Commune";
+        break;
+        case 1183:
+        name = "Lovrenc na Pohorju Commune";
         break;
         case 1184:
-        name = "Luce";
+        name = "Luce Commune";
         break;
         case 1219:
-        name = "Majsperk";
+        name = "Majsperk Commune";
         break;
         case 1220:
-        name = "Maribor";
+        name = "Maribor Commune";
+        break;
+        case 1221:
+        name = "Markovci Commune";
+        break;
+        case 1222:
+        name = "Miklavz na Dravskem polju Commune";
         break;
         case 1223:
-        name = "Miren-Kostanjevica";
+        name = "Miren-Kostanjevica Commune";
+        break;
+        case 1224:
+        name = "Mirna Pec Commune";
         break;
         case 1225:
-        name = "Novo Mesto";
+        name = "Novo mesto Urban Commune";
+        break;
+        case 1226:
+        name = "Oplotnica Commune";
         break;
         case 1227:
-        name = "Piran";
+        name = "Piran-Pirano Commune";
+        break;
+        case 1262:
+        name = "Podlehnik Commune";
+        break;
+        case 1263:
+        name = "Podvelka Commune";
+        break;
+        case 1264:
+        name = "Polzela Commune";
+        break;
+        case 1265:
+        name = "Prebold Commune";
         break;
         case 1266:
-        name = "Preddvor";
+        name = "Preddvor Commune";
+        break;
+        case 1267:
+        name = "Prevalje Commune";
         break;
         case 1268:
-        name = "Ptuj";
+        name = "Ptuj Urban Commune";
+        break;
+        case 1269:
+        name = "Ravne na Koroskem Commune";
+        break;
+        case 1270:
+        name = "Razkrizje Commune";
         break;
         case 1305:
-        name = "Ribnica";
+        name = "Ribnica Commune";
+        break;
+        case 1306:
+        name = "Ribnica na Pohorju Commune";
         break;
         case 1307:
-        name = "Ruse";
+        name = "Ruse Commune";
+        break;
+        case 1308:
+        name = "Salovci Commune";
+        break;
+        case 1309:
+        name = "Selnica ob Dravi Commune";
+        break;
+        case 1310:
+        name = "Sempeter-Vrtojba Commune";
         break;
         case 1311:
-        name = "Sentjur pri Celju";
+        name = "Sentjur pri Celju Commune";
         break;
         case 1312:
-        name = "Slovenska Bistrica";
+        name = "Slovenska Bistrica Commune";
+        break;
+        case 1313:
+        name = "Smartno pri Litiji Commune";
+        break;
+        case 1348:
+        name = "Sodrazica Commune";
+        break;
+        case 1349:
+        name = "Solcava Commune";
+        break;
+        case 1350:
+        name = "Sveta Ana Commune";
+        break;
+        case 1351:
+        name = "Sveti Andraz v Slovenskih goricah Commune";
+        break;
+        case 1352:
+        name = "Tabor Commune";
+        break;
+        case 1353:
+        name = "Tisina Commune";
+        break;
+        case 1354:
+        name = "Trnovska vas Commune";
+        break;
+        case 1355:
+        name = "Trzin Commune";
+        break;
+        case 1356:
+        name = "Velika Polana Commune";
+        break;
+        case 1391:
+        name = "Verzej Commune";
         break;
         case 1392:
-        name = "Videm";
+        name = "Videm Commune";
         break;
         case 1393:
-        name = "Vojnik";
+        name = "Vojnik Commune";
+        break;
+        case 1394:
+        name = "Vransko Commune";
         break;
         case 1395:
-        name = "Zalec";
+        name = "Zalec Commune";
+        break;
+        case 1396:
+        name = "Zetale Commune";
+        break;
+        case 1397:
+        name = "Zirovnica Commune";
+        break;
+        case 1398:
+        name = "Zuzemberk Commune";
+        break;
+        case 1399:
+        name = "Apace Commune";
+        break;
+        case 1434:
+        name = "Cirkulane Commune";
         break;
       }
     }
-    if (country_code.equals("SK") == true) {
+    else if (country_code.equals("SK") == true) {
       switch (region_code2) {
         case 1:
         name = "Banska Bystrica";
@@ -10749,7 +10899,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SL") == true) {
+    else if (country_code.equals("SL") == true) {
       switch (region_code2) {
         case 1:
         name = "Eastern";
@@ -10765,7 +10915,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SM") == true) {
+    else if (country_code.equals("SM") == true) {
       switch (region_code2) {
         case 1:
         name = "Acquaviva";
@@ -10796,7 +10946,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SN") == true) {
+    else if (country_code.equals("SN") == true) {
       switch (region_code2) {
         case 1:
         name = "Dakar";
@@ -10833,7 +10983,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SO") == true) {
+    else if (country_code.equals("SO") == true) {
       switch (region_code2) {
         case 1:
         name = "Bakool";
@@ -10897,7 +11047,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SR") == true) {
+    else if (country_code.equals("SR") == true) {
       switch (region_code2) {
         case 10:
         name = "Brokopondo";
@@ -10931,7 +11081,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ST") == true) {
+    else if (country_code.equals("ST") == true) {
       switch (region_code2) {
         case 1:
         name = "Principe";
@@ -10941,7 +11091,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SV") == true) {
+    else if (country_code.equals("SV") == true) {
       switch (region_code2) {
         case 1:
         name = "Ahuachapan";
@@ -10987,7 +11137,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SY") == true) {
+    else if (country_code.equals("SY") == true) {
       switch (region_code2) {
         case 1:
         name = "Al Hasakah";
@@ -11033,7 +11183,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("SZ") == true) {
+    else if (country_code.equals("SZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Hhohho";
@@ -11052,7 +11202,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TD") == true) {
+    else if (country_code.equals("TD") == true) {
       switch (region_code2) {
         case 1:
         name = "Batha";
@@ -11098,7 +11248,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TG") == true) {
+    else if (country_code.equals("TG") == true) {
       switch (region_code2) {
         case 22:
         name = "Centrale";
@@ -11117,7 +11267,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TH") == true) {
+    else if (country_code.equals("TH") == true) {
       switch (region_code2) {
         case 1:
         name = "Mae Hong Son";
@@ -11335,6 +11485,9 @@ static public String regionNameByCode(String country_code,String region_code) {
         case 73:
         name = "Nakhon Phanom";
         break;
+        case 74:
+        name = "Prachin Buri";
+        break;
         case 75:
         name = "Ubon Ratchathani";
         break;
@@ -11355,7 +11508,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TJ") == true) {
+    else if (country_code.equals("TJ") == true) {
       switch (region_code2) {
         case 1:
         name = "Kuhistoni Badakhshon";
@@ -11368,7 +11521,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TM") == true) {
+    else if (country_code.equals("TM") == true) {
       switch (region_code2) {
         case 1:
         name = "Ahal";
@@ -11387,7 +11540,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TN") == true) {
+    else if (country_code.equals("TN") == true) {
       switch (region_code2) {
         case 2:
         name = "Kasserine";
@@ -11463,7 +11616,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TO") == true) {
+    else if (country_code.equals("TO") == true) {
       switch (region_code2) {
         case 1:
         name = "Ha";
@@ -11476,7 +11629,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TR") == true) {
+    else if (country_code.equals("TR") == true) {
       switch (region_code2) {
         case 2:
         name = "Adiyaman";
@@ -11723,7 +11876,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TT") == true) {
+    else if (country_code.equals("TT") == true) {
       switch (region_code2) {
         case 1:
         name = "Arima";
@@ -11763,7 +11916,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TW") == true) {
+    else if (country_code.equals("TW") == true) {
       switch (region_code2) {
         case 1:
         name = "Fu-chien";
@@ -11779,7 +11932,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("TZ") == true) {
+    else if (country_code.equals("TZ") == true) {
       switch (region_code2) {
         case 2:
         name = "Pwani";
@@ -11861,7 +12014,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("UA") == true) {
+    else if (country_code.equals("UA") == true) {
       switch (region_code2) {
         case 1:
         name = "Cherkas'ka Oblast'";
@@ -11946,7 +12099,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("UG") == true) {
+    else if (country_code.equals("UG") == true) {
       switch (region_code2) {
         case 26:
         name = "Apac";
@@ -12115,7 +12268,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("UY") == true) {
+    else if (country_code.equals("UY") == true) {
       switch (region_code2) {
         case 1:
         name = "Artigas";
@@ -12176,7 +12329,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("UZ") == true) {
+    else if (country_code.equals("UZ") == true) {
       switch (region_code2) {
         case 1:
         name = "Andijon";
@@ -12222,7 +12375,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("VC") == true) {
+    else if (country_code.equals("VC") == true) {
       switch (region_code2) {
         case 1:
         name = "Charlotte";
@@ -12244,7 +12397,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("VE") == true) {
+    else if (country_code.equals("VE") == true) {
       switch (region_code2) {
         case 1:
         name = "Amazonas";
@@ -12323,7 +12476,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("VN") == true) {
+    else if (country_code.equals("VN") == true) {
       switch (region_code2) {
         case 1:
         name = "An Giang";
@@ -12374,100 +12527,97 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Lang Son";
         break;
         case 43:
-        name = "An Giang";
-        break;
-        case 44:
-        name = "Dac Lac";
-        break;
-        case 45:
         name = "Dong Nai";
         break;
-        case 46:
-        name = "Dong Thap";
-        break;
-        case 47:
-        name = "Kien Giang";
-        break;
-        case 49:
-        name = "Song Be";
-        break;
-        case 50:
-        name = "Vinh Phu";
-        break;
-        case 51:
+        case 44:
         name = "Ha Noi";
         break;
-        case 52:
-        name = "Ho Chi Minh";
-        break;
-        case 53:
+        case 45:
         name = "Ba Ria-Vung Tau";
         break;
-        case 54:
+        case 46:
         name = "Binh Dinh";
         break;
-        case 55:
+        case 47:
         name = "Binh Thuan";
         break;
-        case 58:
+        case 49:
+        name = "Gia Lai";
+        break;
+        case 50:
         name = "Ha Giang";
         break;
-        case 59:
-        name = "Ha Tay";
-        break;
-        case 60:
+        case 52:
         name = "Ha Tinh";
         break;
-        case 61:
+        case 53:
         name = "Hoa Binh";
         break;
-        case 62:
+        case 54:
         name = "Khanh Hoa";
         break;
-        case 63:
+        case 55:
         name = "Kon Tum";
+        break;
+        case 58:
+        name = "Nghe An";
+        break;
+        case 59:
+        name = "Ninh Binh";
+        break;
+        case 60:
+        name = "Ninh Thuan";
+        break;
+        case 61:
+        name = "Phu Yen";
+        break;
+        case 62:
+        name = "Quang Binh";
+        break;
+        case 63:
+        name = "Quang Ngai";
         break;
         case 64:
         name = "Quang Tri";
         break;
         case 65:
-        name = "Nam Ha";
-        break;
-        case 66:
-        name = "Nghe An";
-        break;
-        case 67:
-        name = "Ninh Binh";
-        break;
-        case 68:
-        name = "Ninh Thuan";
-        break;
-        case 69:
-        name = "Phu Yen";
-        break;
-        case 70:
-        name = "Quang Binh";
-        break;
-        case 71:
-        name = "Quang Ngai";
-        break;
-        case 72:
-        name = "Quang Tri";
-        break;
-        case 73:
         name = "Soc Trang";
         break;
-        case 74:
-        name = "Thua Thien";
+        case 66:
+        name = "Thua Thien-Hue";
         break;
-        case 75:
+        case 67:
         name = "Tra Vinh";
         break;
-        case 76:
+        case 68:
         name = "Tuyen Quang";
         break;
-        case 77:
+        case 69:
         name = "Vinh Long";
+        break;
+        case 70:
+        name = "Yen Bai";
+        break;
+        case 71:
+        name = "Bac Giang";
+        break;
+        case 72:
+        name = "Bac Kan";
+        break;
+        case 73:
+        name = "Bac Lieu";
+        break;
+        case 74:
+        name = "Bac Ninh";
+        break;
+        case 75:
+        name = "Binh Duong";
+        break;
+        case 76:
+        name = "Binh Phuoc";
+        break;
+        case 77:
+        name = "Ca Mau";
         break;
         case 78:
         name = "Da Nang";
@@ -12494,13 +12644,13 @@ static public String regionNameByCode(String country_code,String region_code) {
         name = "Thai Nguyen";
         break;
         case 86:
-        name = "Vinh Puc Province";
+        name = "Vinh Phuc";
         break;
         case 87:
         name = "Can Tho";
         break;
         case 88:
-        name = "Dak Lak";
+        name = "Dac Lak";
         break;
         case 89:
         name = "Lai Chau";
@@ -12519,7 +12669,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("VU") == true) {
+    else if (country_code.equals("VU") == true) {
       switch (region_code2) {
         case 5:
         name = "Ambrym";
@@ -12565,7 +12715,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("WS") == true) {
+    else if (country_code.equals("WS") == true) {
       switch (region_code2) {
         case 2:
         name = "Aiga-i-le-Tai";
@@ -12599,7 +12749,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("YE") == true) {
+    else if (country_code.equals("YE") == true) {
       switch (region_code2) {
         case 1:
         name = "Abyan";
@@ -12678,7 +12828,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ZA") == true) {
+    else if (country_code.equals("ZA") == true) {
       switch (region_code2) {
         case 1:
         name = "North-Western Province";
@@ -12712,7 +12862,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ZM") == true) {
+    else if (country_code.equals("ZM") == true) {
       switch (region_code2) {
         case 1:
         name = "Western";
@@ -12743,7 +12893,7 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
-    if (country_code.equals("ZW") == true) {
+    else if (country_code.equals("ZW") == true) {
       switch (region_code2) {
         case 1:
         name = "Manicaland";
