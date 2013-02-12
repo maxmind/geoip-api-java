@@ -11081,6 +11081,40 @@ static public String regionNameByCode(String country_code,String region_code) {
         break;
       }
     }
+    else if (country_code.equals("SS") == true) {
+      switch (region_code2) {
+        case 1:
+        name = "Central Equatoria";
+        break;
+        case 2:
+        name = "Eastern Equatoria";
+        break;
+        case 3:
+        name = "Jonglei";
+        break;
+        case 4:
+        name = "Lakes";
+        break;
+        case 5:
+        name = "Northern Bahr el Ghazal";
+        break;
+        case 6:
+        name = "Unity";
+        break;
+        case 7:
+        name = "Upper Nile";
+        break;
+        case 8:
+        name = "Warrap";
+        break;
+        case 9:
+        name = "Western Bahr el Ghazal";
+        break;
+        case 10:
+        name = "Western Equatoria";
+        break;
+      }
+    }
     else if (country_code.equals("ST") == true) {
       switch (region_code2) {
         case 1:
