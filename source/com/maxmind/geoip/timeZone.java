@@ -1163,6 +1163,8 @@ public class timeZone {
       timezone = "Indian/Mahe";
     } else if (country.equals("SD") == true) {
       timezone = "Africa/Khartoum";
+    } else if (country.equals("SS") == true) {
+      timezone = "Africa/Juba";
     } else if (country.equals("SE") == true) {
       timezone = "Europe/Stockholm";
     } else if (country.equals("SG") == true) {
