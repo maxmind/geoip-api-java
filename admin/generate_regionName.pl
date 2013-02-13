@@ -108,9 +108,8 @@ sub readcode {
 
   #  $name =~ s!\s+!!g;
   $name =~ s!\"!!g;
-  $name = qq(") . $name . qq(");
+  $name = qq/"/ . $name . q/"/;
   print "        case " . $region_code2 . ":\n";
-  print "        name = " . $name . ";\n";
-  print "        break;\n";
+  print "        return $name;\n";
 }
 
