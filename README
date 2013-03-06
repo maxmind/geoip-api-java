@@ -32,15 +32,15 @@ Note that CountryLookupTest assumes that you have the GeoIP Country database
 installed at /usr/local/share/GeoIP/GeoIP.dat
 
 A free GeoLite Country database is available from:
-http://www.maxmind.com/app/geoip_country
+http://dev.maxmind.com/geoip/geolite
 
 A free GeoLite City database is available from:
-http://www.maxmind.com/app/geolitecity
+http://dev.maxmind.com/geoip/geolite
 
 MaxMind GeoIP Country offers greater accuracy over the free database.
 MaxMind GeoIP Country, Region, City, ISP, and Organization are available
 for purchase from here:
-http://www.maxmind.com/app/products
+https://www.maxmind.com/en/geolocation_landing
 
 Please send any comments to support@maxmind.com
 

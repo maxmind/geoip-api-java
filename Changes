@@ -1,3 +1,6 @@
+1.2.9 Feb 19th 2013
+        - Update FIPS codes 20130208 ( Boris Zentner )
+        - Add new country South Sudan ( Boris Zentner )
 1.2.8 Apr 13th 2012
 	- Fix: Close the database file without exceptions whether it is
 	  open(STANDARD) or not(MEMORY_CACHE) in conjunction with the
