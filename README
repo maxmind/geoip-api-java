@@ -13,7 +13,7 @@ OR if you use maven:
  <dependency>
     <groupId>com.maxmind.geoip</groupId>
     <artifactId>geoip-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.2.10</version>
  </dependency>
 
 By default, CountryLookupTest expects to find the
@@ -24,7 +24,7 @@ lookupCountryXxxx methods return null if a country can not
 be found (it used to return '--' or 'N/A'.  Be sure to check the
 return value for null !
 
-This is version 1.2.3 of the Java interface to GeoIP.  For more information
+This is version 1.2.10 of the Java interface to GeoIP.  For more information
 see http://www.maxmind.com/
 
 As of version 1.1.4 this API is fully thread safe.
