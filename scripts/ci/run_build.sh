@@ -22,9 +22,7 @@ gunzip GeoIP/GeoIP.dat.gz
 # curl https://www.maxmind.com/regionSample.csv -o GeoIP/regionSample.csv
 
 
-
-
-#mvn compile
-#mvn exec:java -Dexec.mainClass="com.berico.clavin.resolver.impl.lucene.GeonamesIndexBuilder" -Dexec.args="./IndexDirectory allCountries.txt"
-#mvn package
+mvn compile
+mvn test
+mvn package
 
