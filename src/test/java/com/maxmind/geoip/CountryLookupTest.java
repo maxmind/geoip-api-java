@@ -1,21 +1,28 @@
+package com.maxmind.geoip;
+
 /* CountryLookupTest.java */
 
 /* Only works with GeoIP Country Edition */
 /* For Geoip City Edition, use CityLookupTest.java */
 
-import com.maxmind.geoip.*;
+import static org.junit.Assert.assertEquals;
+
+import com.maxmind.geoip.LookupService;
 import java.io.IOException;
 
-class CountryLookupTest {
-    public static void main(String[] args) {
-	try {
+import org.junit.Test;
+
+public class CountryLookupTest {
+	@Test
+    public void testCountryLookup() throws IOException {
+
 	    String sep = System.getProperty("file.separator");
 
 	    // Uncomment for windows
 	    // String dir = System.getProperty("user.dir"); 
 
 	    // Uncomment for Linux
-	    String dir = "/usr/local/share/GeoIP";
+	    String dir = "GeoIP";
 
 	    String dbfile = dir + sep + "GeoIP.dat"; 
 	    // You should only call LookupService once, especially if you use
@@ -24,16 +31,14 @@ class CountryLookupTest {
 	    //LookupService cl = new LookupService(dbfile,LookupService.GEOIP_STANDARD);
 	    LookupService cl = new LookupService(dbfile,LookupService.GEOIP_MEMORY_CACHE);
 
-	    System.out.println(cl.getCountry("151.38.39.114").getCode());
-	    System.out.println(cl.getCountry("151.38.39.114").getName());
-	    System.out.println(cl.getCountry("12.25.205.51").getName());
-	    System.out.println(cl.getCountry("64.81.104.131").getName());
-	    System.out.println(cl.getCountry("200.21.225.82").getName());
+	    assertEquals(cl.getCountry("151.38.39.114").getCode(),"IT");
+	    assertEquals(cl.getCountry("151.38.39.114").getName(),"Italy");
+	    assertEquals(cl.getCountry("12.25.205.51").getName(),"United States");
+	    assertEquals(cl.getCountry("64.81.104.131").getName(),"United States");
+	    assertEquals(cl.getCountry("200.21.225.82").getName(),"Colombia");
 
 	    cl.close();
+	
 	}
-	catch (IOException e) {
-	    System.out.println("IO Exception");
-	}
-    }
 }
+

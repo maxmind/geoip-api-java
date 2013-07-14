@@ -8,7 +8,7 @@
 
     <groupId>com.maxmind.geoip</groupId>
     <artifactId>geoip-api</artifactId>
-    <version>1.2.11-SNAPSHOT</version>
+    <version>1.2.12</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -46,24 +46,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.5</jdk.version>
-        <junit.version>4.8.1</junit.version>
+        <junit.version>4.11</junit.version>
         <mockito.version>1.9.0</mockito.version>
     </properties>
 
-    <build>
-        <sourceDirectory>source</sourceDirectory>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.1</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    
 
     <dependencies>
         <dependency>
