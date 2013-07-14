@@ -2,7 +2,8 @@
 
 curl http://dev.maxmind.com/static/geoip-test-databases.tar.gz -o geoip-test-databases.tar.gz
 md5sum geoip-test-databases.tar.gz
-tar xzf geoip-test-databases.tar.gz
+#tar xzf geoip-test-databases.tar.gz
+gzcat geoip-test-databases.tar.gz | tar -x -
 
 
 mvn compile
