@@ -13,15 +13,8 @@ import org.junit.Test;
 public class CountryLookupV6Test {
 	@Test
     public void testCountryLookupV6() throws IOException {
-	    String sep = System.getProperty("file.separator");
 
-	    // Uncomment for windows
-	    // String dir = System.getProperty("user.dir"); 
-
-	    // Uncomment for Linux
-	    String dir = "GeoIP";
-
-	    String dbfile = dir + sep + "GeoLiteCityv6.dat"; 
+	    String dbfile = "src/test/resources/GeoIP/GeoLiteCityv6.dat"; 
 
 	    LookupService cl = new LookupService(dbfile,LookupService.GEOIP_MEMORY_CACHE);
 

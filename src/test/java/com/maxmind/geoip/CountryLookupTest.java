@@ -16,15 +16,8 @@ public class CountryLookupTest {
 	@Test
     public void testCountryLookup() throws IOException {
 
-	    String sep = System.getProperty("file.separator");
-
-	    // Uncomment for windows
-	    // String dir = System.getProperty("user.dir"); 
-
-	    // Uncomment for Linux
-	    String dir = "GeoIP";
-
-	    String dbfile = dir + sep + "GeoIP.dat"; 
+	   
+	    String dbfile = "src/test/resources/GeoIP/GeoIP.dat"; 
 	    // You should only call LookupService once, especially if you use
 	    // GEOIP_MEMORY_CACHE mode, since the LookupService constructor takes up
 	    // resources to load the GeoIP.dat file into memory

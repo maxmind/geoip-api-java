@@ -11,7 +11,7 @@ import org.junit.Test;
 public class DistributedServiceTest {
 	@Test
     public void testDistributedService() throws IOException {
-		LookupService cl = new LookupService("GeoIP/GeoIPCity.dat",
+		LookupService cl = new LookupService("src/test/resources/GeoIP/GeoIPCity.dat",
  					LookupService.GEOIP_MEMORY_CACHE );
         	 
         Location l = cl.getLocation("64.17.254.216");

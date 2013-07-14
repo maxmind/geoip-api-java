@@ -1,0 +1,8 @@
+Copyright (c) 2012 MaxMind LLC.  All Rights Reserved.
+locId,country,region,city,postalCode,latitude,longitude,metroCode,areaCode
+34,"BT","","","",27.5000,90.5000,,
+13547,"GB","H9","London","",51.5142,-0.0931,,
+50428,"SE","16","Linköping","",58.4167,15.6167,,
+121700,"US","WA","Milton","98354",47.2513,-122.3149,819,253
+401900,"US","AA","Apo","34021",0.0000,0.0000,,510
+375290,"GB","K2","Oxford","OX1",51.7500,-1.2500,,

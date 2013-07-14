@@ -9,7 +9,7 @@ public class BenchmarkGeoIPTest {
 
 	
 	public void testGeoipCountry(int flags,String msg,int numlookups) throws IOException {
-		LookupService cl = new LookupService("GeoIP/GeoIP.dat",flags);
+		LookupService cl = new LookupService("src/test/resources/GeoIP/GeoIP.dat",flags);
 		int i4 = 0;
 		long t1 = System.currentTimeMillis();
 		for (int i2 = 0;i2 < numlookups;i2++){
@@ -42,7 +42,7 @@ public class BenchmarkGeoIPTest {
 	 */
 
 static void testGeoipCity(int flags,String msg,int numlookups) throws IOException{
-  LookupService cl = new LookupService("GeoIP/GeoIPCity.dat",flags);
+  LookupService cl = new LookupService("src/test/resources/GeoIP/GeoIPCity.dat",flags);
   int i4 = 0;
   long t1 = System.currentTimeMillis();
   for (int i2 = 0;i2 < numlookups;i2++){

@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class NetSpeedCellLookupTest {
    public void testNetSpeedCellLookup () throws IOException {
-	    LookupService ns = new LookupService("GeoIP/GeoIPNetSpeedCell.dat");
+	    LookupService ns = new LookupService("src/test/resources/GeoIP/GeoIPNetSpeedCell.dat");
 	    System.out.println("XX: " + ns.getOrg("64.4.4.4"));
 	    ns.close();
    }

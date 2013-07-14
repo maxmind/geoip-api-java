@@ -15,7 +15,7 @@ public class CityLookupV6Test {
 	@Test
     public void testCityLookupV6() throws IOException {
 	
-	    LookupService cl = new LookupService("GeoIP/GeoLiteCityv6.dat",
+	    LookupService cl = new LookupService("src/test/resources/GeoIP/GeoLiteCityv6.dat",
 					LookupService.GEOIP_MEMORY_CACHE );
             Location l1 = cl.getLocationV6("2a02:ff40::");
             Location l2 = cl.getLocationV6("2001:208::");

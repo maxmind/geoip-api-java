@@ -11,8 +11,8 @@ import org.junit.Test;
 public class OrgLookupTest {
    @Test
    public void testOrgLookup() throws IOException {
-	    LookupService orgl = new LookupService("GeoIP/GeoIPOrg.dat");
-	    LookupService ispl = new LookupService("GeoIP/GeoIPISP.dat");
+	    LookupService orgl = new LookupService("src/test/resources/GeoIP/GeoIPOrg.dat");
+	    LookupService ispl = new LookupService("src/test/resources/GeoIP/GeoIPISP.dat");
 	    System.out.println("Organization: " + orgl.getOrg("64.4.4.4") +
 		       "\tISP: " + ispl.getOrg("64.4.4.4"));
 	    orgl.close();

@@ -14,7 +14,7 @@ public class CityLookupTest {
 	@Test
     public void testCityLookup() throws IOException {
 
-	    LookupService cl = new LookupService("GeoIP/GeoIPCity.dat",
+	    LookupService cl = new LookupService("src/test/resources/GeoIP/GeoIPCity.dat",
 					LookupService.GEOIP_MEMORY_CACHE );
 	    
 	    	System.out.println(cl.getDatabaseInfo());
