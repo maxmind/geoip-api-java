@@ -18,9 +18,9 @@ public class ASNumLookupTest {
     public void testASNumLookup() throws IOException
     {
     	    LookupService asnl = new LookupService("GeoIP/GeoIPASNum.dat");
-    	    String ASNum = asnl.getOrg("64.4.4.4");
+    	    String ASNum = asnl.getOrg("64.17.254.216");
     	    asnl.close();
-    	    assertEquals(ASNum, "AS8075 Microsoft Corp");
+    	    assertEquals(ASNum, "AS33224");
     }
 	
 	

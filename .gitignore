@@ -12,3 +12,4 @@ target/
 .project
 .settings
 /GeoIP/
+geoip-test-databases.tar.gz

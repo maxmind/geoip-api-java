@@ -17,8 +17,8 @@ public class CityLookupV6Test {
 	
 	    LookupService cl = new LookupService("GeoIP/GeoLiteCityv6.dat",
 					LookupService.GEOIP_MEMORY_CACHE );
-            Location l1 = cl.getLocationV6("::213.52.50.8");
-            Location l2 = cl.getLocationV6("2a00:1450:4013:c00::8a");
+            Location l1 = cl.getLocationV6("2a02:ff40::");
+            Location l2 = cl.getLocationV6("2001:208::");
 	   
             String results = "countryCode: " + l2.countryCode +
                                "\n countryName: " + l2.countryName +
@@ -36,19 +36,19 @@ public class CityLookupV6Test {
 
                      
 	    cl.close();
-	    String expected = "countryCode: IE" + 
-	    		"\n countryName: Ireland" +
+	    String expected = "countryCode: SG" + 
+	    		"\n countryName: Singapore" +
 	    		"\n region: null" +
 	    		"\n regionName: null" +
 	    		"\n city: null" +
 	    		"\n postalCode: null" +
-	    		"\n latitude: 53.0" +
-	    		"\n longitude: -8.0" +
-	    		"\n distance: 1369.9140208883634" +
-	    		"\n distance: 1369.9140208883634" +
+	    		"\n latitude: 1.3666992" +
+	    		"\n longitude: 103.79999" +
+	    		"\n distance: 11074.876894933519" +
+	    		"\n distance: 11074.876894933519" +
 	    		"\n metro code: 0" +
 	    		"\n area code: 0" +
-	    		"\n timezone: Europe/Dublin";
+	    		"\n timezone: Asia/Singapore";
 	    
 	    		assertEquals(expected, results);
 	

@@ -14,11 +14,15 @@ public class CityLookupTest {
 	@Test
     public void testCityLookup() throws IOException {
 
-	    LookupService cl = new LookupService("GeoIP/GeoLiteCity.dat",
+	    LookupService cl = new LookupService("GeoIP/GeoIPCity.dat",
 					LookupService.GEOIP_MEMORY_CACHE );
 	    
-            Location l1 = cl.getLocation("213.52.50.8");
-            Location l2 = cl.getLocation("64.4.4.4");
+	    	System.out.println(cl.getDatabaseInfo());
+	    	
+	    
+            Location l1 = cl.getLocation("64.17.254.216");
+            Location l2 = cl.getLocation("66.92.181.240");
+            
 	    String output = "countryCode: " + l2.countryCode +
                                "\n countryName: " + l2.countryName +
                                "\n region: " + l2.region +
@@ -35,18 +39,20 @@ public class CityLookupTest {
 
 	    cl.close();
 	    
+	    System.out.println(output);
+	    
 	    String expected = "countryCode: US" +
 	    			"\n countryName: United States" +
-	    			"\n region: WA" + 
-	    			"\n regionName: Washington" +
-	    			"\n city: Redmond" +
-	    			"\n postalCode: 98052" +
-	    			"\n latitude: 47.6801" +
-	    			"\n longitude: -122.120605" +
-	    			"\n distance: 7347.927119377516" +
-	    			"\n distance: 7347.927119377516" +
-	    			"\n metro code: 819" +
-	    			"\n area code: 425" +
+	    			"\n region: CA" + 
+	    			"\n regionName: California" +
+	    			"\n city: Fremont" +
+	    			"\n postalCode: 94538" +
+	    			"\n latitude: 37.507904" +
+	    			"\n longitude: -121.96" +
+	    			"\n distance: 512.8934984414043" +
+	    			"\n distance: 512.8934984414043" +
+	    			"\n metro code: 807" +
+	    			"\n area code: 510" +
 	    			"\n timezone: America/Los_Angeles";
 	    
 	    assertEquals(expected, output);

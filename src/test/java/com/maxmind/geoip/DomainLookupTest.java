@@ -2,24 +2,17 @@ package com.maxmind.geoip;
 
 /* DomainLookupTest.java */
 
-//import com.maxmind.geoip.*;
+import com.maxmind.geoip.LookupService;
 import java.io.IOException;
 
-// Ignore for now, need a binary dataset
+import org.junit.Test;
 
 
-/* sample of how to use the GeoIP Java API with GeoIP Domain database */
-/* Usage: java DomainLookupTest 64.4.4.4 */
-
-//class DomainLookupTest {
-//    public static void main(String[] args) {
-//	try {
-//	    LookupService gid = new LookupService("/usr/local/share/GeoIP/GeoIPDomain.dat");
-//	    System.out.println("Domain: " + gid.getOrg(args[0]));
-//	    gid.close();
-//	}
-//	catch (IOException e) {
-//	    System.out.println("IO Exception");
-//	}
-// //   }
-//}
+public class DomainLookupTest {
+	@Test
+    public void testDomainLookup() throws IOException {
+	    LookupService gid = new LookupService("GeoIP/GeoIPDomain.dat");
+	    System.out.println("Domain: " + gid.getOrg("64.4.4.4"));
+	    gid.close();
+	}
+}

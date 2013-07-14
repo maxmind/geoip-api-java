@@ -11,10 +11,10 @@ import org.junit.Test;
 public class DistributedServiceTest {
 	@Test
     public void testDistributedService() throws IOException {
-		LookupService cl = new LookupService("GeoIP/GeoLiteCity.dat",
+		LookupService cl = new LookupService("GeoIP/GeoIPCity.dat",
  					LookupService.GEOIP_MEMORY_CACHE );
         	 
-        Location l = cl.getLocation("24.24.24.24");
+        Location l = cl.getLocation("64.17.254.216");
         String results = "countryCode: " + l.countryCode +
 			       " countryName: " + l.countryName +
 			       " region: " + l.region +
@@ -24,7 +24,7 @@ public class DistributedServiceTest {
                                " longitude: " + l.longitude;
 	    cl.close();
 	    
-	    String expected = "countryCode: US countryName: United States region: NY city: East Syracuse postalCode: 13057 latitude: 43.089203 longitude: -76.025";
+	    String expected = "countryCode: US countryName: United States region: CA city: El Segundo postalCode: 90245 latitude: 33.916397 longitude: -118.404";
 	    
 	    assertEquals(results, expected);
 	    
