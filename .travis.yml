@@ -1,6 +1,3 @@
 language: java
-# before_script: 
-#   - chmod +x scripts/ci/run_build.sh
-# script: ./scripts/ci/run_build.sh
 
 
