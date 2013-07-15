@@ -1,22 +1,20 @@
 # GeoIP Java API
 
-[![Build Status](https://travis-ci.org/tlpinney/geoip-api-java.png?branch=master)](https://travis-ci.org/tlpinney/geoip-api-java)
+[![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
 
 
-## Installation 
-    # get necessary data to run the tests
-    sh scripts/ci/run_build.sh 
-    mvn clean install 
+## Installation
+    mvn clean install
 
-## Packaging 
-    mvn package 
-    # look in target directory for the jar file     
+## Packaging
+    mvn package
+    # look in target directory for the jar file
 
-## Testing  
-    mvn test 
+## Testing
+    mvn test
 
 
-## Add in as a dependency to an external project 
+## Add in as a dependency to an external project
 
     <dependency>
         <groupId>com.maxmind.geoip</groupId>
@@ -24,6 +22,8 @@
         <version>1.2.12</version>
     </dependency>
 
+
+## API change since 1.0.x
 
 IMPORTANT API Change for 1.1.x users - as of GeoIP 1.1.0 the
 lookupCountryXxxx methods return null if a country can not
@@ -60,7 +60,7 @@ GEOIP_INDEX_CACHE - just cache
 Note the options can be combined, for example:
 LookupService cl = new LookupService(dbfile, LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
 
-## Windows Notes 
+## Windows Notes
 
-If it doesn't work on Windows, try to remove or comment out all the "package com.maxmind.geoip" lines 
+If it doesn't work on Windows, try to remove or comment out all the `package com.maxmind.geoip` lines
 from all the files.
