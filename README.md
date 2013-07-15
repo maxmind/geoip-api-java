@@ -2,65 +2,64 @@
 
 [![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
 
+## Define Your Dependencies
 
-## Installation
-    mvn clean install
+We recommend installing this package with Maven. To do this, add the dependency to your pom.xml:
 
-## Packaging
-    mvn package
-    # look in target directory for the jar file
-
-## Testing
-    mvn test
-
-
-## Add in as a dependency to an external project
-
+```xml
     <dependency>
         <groupId>com.maxmind.geoip</groupId>
         <artifactId>geoip-api</artifactId>
-        <version>1.2.12</version>
+        <version>1.2.11</version>
     </dependency>
+```
+
+## Building Manually
+
+### Installation
+    mvn clean install
+
+### Packaging
+    mvn package
+
+The jar file will be in the `target` directory.
+
+### Testing
+    mvn test
+
+## API Changes
+
+### 1.1.4
+
+As of version 1.1.4 this API is thread safe.
+
+### 1.1.0
+
+IMPORTANT API Change for 1.1.x users: As of GeoIP 1.1.0 the
+`lookupCountryXxxx` methods return `null` if a country can not be found. These
+methods previously returned `--` or `N/A`. Be sure to check the return value
+for `null`.
 
 
-## API change since 1.0.x
-
-IMPORTANT API Change for 1.1.x users - as of GeoIP 1.1.0 the
-lookupCountryXxxx methods return null if a country can not
-be found (it used to return '--' or 'N/A'.  Be sure to check the
-return value for null !
-
-This is version 1.2.12 of the Java interface to GeoIP.  For more information
-see http://www.maxmind.com/
-
-As of version 1.1.4 this API is fully thread safe.
-
-
-## MEMORY CACHING AND OTHER OPTIONS
-
+## Memory Caching and Other Options
 
 The following options can be passed as the second parameter to the
-LookupService constructor:
+`LookupService` constructor:
 
-GEOIP_STANDARD - read database from filesystem, uses least memory.
+* `GEOIP_STANDARD` - Read database from file system. Uses the least memory.
+* `GEOIP_MEMORY_CACHE` - Load database into memory. This provides faster
+  performance but uses more memory
+* `GEOIP_CHECK_CACHE` - Check for updated database.  If database has been
+  updated, reload file handle and/or memory cache.
+* `GEOIP_INDEX_CACHE` - Cache only the most frequently accessed index portion
+   of the database, resulting in faster lookups than GEOIP_STANDARD, but less
+   memory usage than `GEOIP_MEMORY_CACHE`. This is useful for larger
+   databases such as GeoIP Organization and GeoIP City.  Note: for GeoIP
+   Country, Region and Netspeed databases, `GEOIP_INDEX_CACHE` is equivalent
+   to `GEOIP_MEMORY_CACHE`.
 
-GEOIP_MEMORY_CACHE - load database into memory, faster performance
-        but uses more memory
+These options may be combined. For example:
 
-GEOIP_CHECK_CACHE - check for updated database.  If database has been updated,
-        reload filehandle and/or memory cache.
-
-GEOIP_INDEX_CACHE - just cache
-        the most frequently accessed index portion of the database, resulting
-        in faster lookups than GEOIP_STANDARD, but less memory usage than
-        GEOIP_MEMORY_CACHE - useful for larger databases such as
-        GeoIP Organization and GeoIP City.  Note, for GeoIP Country, Region
-        and Netspeed databases, GEOIP_INDEX_CACHE is equivalent to GEOIP_MEMORY_CACHE
-
-Note the options can be combined, for example:
+```java
 LookupService cl = new LookupService(dbfile, LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
-
-## Windows Notes
-
-If it doesn't work on Windows, try to remove or comment out all the `package com.maxmind.geoip` lines
-from all the files.
+```
