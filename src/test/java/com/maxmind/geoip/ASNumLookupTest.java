@@ -22,7 +22,4 @@ public class ASNumLookupTest {
     	    asnl.close();
     	    assertEquals(ASNum, "AS33224");
     }
-	
-	
-   
 }
