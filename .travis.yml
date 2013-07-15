@@ -1,3 +1,14 @@
 language: java
 
+jdk:
+  - openjdk6
+  - openjdk7
+  - oraclejdk6
+  - oraclejdk7
 
+notifications:
+  email:
+    recipients:
+      - dev@maxmind.com
+    on_success: change
+    on_failure: always

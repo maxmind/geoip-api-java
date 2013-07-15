@@ -1,6 +1,4 @@
-# GeoIP Java API
-
-[![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
+# GeoIP Java API [![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
 
 ## Define Your Dependencies
 
