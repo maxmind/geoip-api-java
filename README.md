@@ -8,7 +8,7 @@ We recommend installing this package with Maven. To do this, add the dependency 
     <dependency>
         <groupId>com.maxmind.geoip</groupId>
         <artifactId>geoip-api</artifactId>
-        <version>1.2.11</version>
+        <version>1.2.10</version>
     </dependency>
 ```
 
