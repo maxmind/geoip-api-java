@@ -25,6 +25,7 @@ class CountryLookupV6 {
 	    System.out.println(cl.getCountryV6("ipv6.google.com").getCode());
 	    System.out.println(cl.getCountryV6("::127.0.0.1").getName());
 	    System.out.println(cl.getCountryV6("::151.38.39.114").getName());
+	    System.out.println(cl.getCountryV6("::ffff:151.38.39.114").getName());
 	    System.out.println(cl.getCountryV6("2001:4860:0:1001::68").getName());
 
 	    cl.close();

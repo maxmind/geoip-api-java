@@ -1,3 +1,4 @@
+        - Fix IPv6 lookups with ffff prefix. (Boris Zentner )
 1.2.11 July XXXX 2013
         - File reorganization and unit tests ( Travis Pinney )
 1.2.10 May 23rd 2013

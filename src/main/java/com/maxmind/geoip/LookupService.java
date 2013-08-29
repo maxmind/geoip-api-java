@@ -26,6 +26,7 @@ import java.io.RandomAccessFile;
 import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
@@ -34,6 +35,8 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
+
+import static java.lang.System.arraycopy;
 
 /**
  * Provides a lookup service for information based on an IP address. The
@@ -1130,6 +1133,16 @@ public class LookupService {
 	 */
 	private synchronized int seekCountryV6(InetAddress addr) {
 		byte[] v6vec = addr.getAddress();
+
+		if ( v6vec.length == 4){
+                        // sometimes java returns an ipv4 address for IPv6 input
+		        // we have to work around that feature
+			// It happens for ::ffff:24.24.24.24
+		        byte[] t = new byte[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+                        arraycopy(v6vec, 0, t, 12, 4);
+	                v6vec = t;
+		}
+
 		byte[] buf = new byte[2 * MAX_RECORD_LENGTH];
 		int[] x = new int[2];
 		int offset = 0;
