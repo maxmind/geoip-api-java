@@ -20,13 +20,13 @@
 
 package com.maxmind.geoip;
 
+import static java.lang.System.arraycopy;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
@@ -35,8 +35,6 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
-
-import static java.lang.System.arraycopy;
 
 /**
  * Provides a lookup service for information based on an IP address. The
@@ -239,7 +237,7 @@ public class LookupService {
 			hashmapcountryCodetoindex.put(countryCode[i], Integer.valueOf(i));
 			hashmapcountryNametoindex.put(countryName[i], Integer.valueOf(i));
 		}
-	};
+	}
 
 	/**
 	 * Create a new distributed lookup service using the license key
@@ -475,7 +473,7 @@ public class LookupService {
 	public Country getCountryV6(String ipAddress) {
 		InetAddress addr;
 		try {
-			addr = Inet6Address.getByName(ipAddress);
+			addr = InetAddress.getByName(ipAddress);
 		} catch (UnknownHostException e) {
 			return UNKNOWN_COUNTRY;
 		}
@@ -1134,13 +1132,13 @@ public class LookupService {
 	private synchronized int seekCountryV6(InetAddress addr) {
 		byte[] v6vec = addr.getAddress();
 
-		if ( v6vec.length == 4){
-                        // sometimes java returns an ipv4 address for IPv6 input
-		        // we have to work around that feature
+		if (v6vec.length == 4) {
+			// sometimes java returns an ipv4 address for IPv6 input
+			// we have to work around that feature
 			// It happens for ::ffff:24.24.24.24
-		        byte[] t = new byte[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-                        arraycopy(v6vec, 0, t, 12, 4);
-	                v6vec = t;
+			byte[] t = new byte[16];
+			arraycopy(v6vec, 0, t, 12, 4);
+			v6vec = t;
 		}
 
 		byte[] buf = new byte[2 * MAX_RECORD_LENGTH];
