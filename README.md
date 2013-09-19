@@ -8,7 +8,7 @@ We recommend installing this package with Maven. To do this, add the dependency 
     <dependency>
         <groupId>com.maxmind.geoip</groupId>
         <artifactId>geoip-api</artifactId>
-        <version>1.2.10</version>
+        <version>1.2.11</version>
     </dependency>
 ```
 
@@ -50,14 +50,15 @@ The following options can be passed as the second parameter to the
 * `GEOIP_CHECK_CACHE` - Check for updated database.  If database has been
   updated, reload file handle and/or memory cache.
 * `GEOIP_INDEX_CACHE` - Cache only the most frequently accessed index portion
-   of the database, resulting in faster lookups than GEOIP_STANDARD, but less
-   memory usage than `GEOIP_MEMORY_CACHE`. This is useful for larger
-   databases such as GeoIP Organization and GeoIP City.  Note: for GeoIP
-   Country, Region and Netspeed databases, `GEOIP_INDEX_CACHE` is equivalent
-   to `GEOIP_MEMORY_CACHE`.
+  of the database, resulting in faster lookups than GEOIP_STANDARD, but less
+  memory usage than `GEOIP_MEMORY_CACHE`. This is useful for larger
+  databases such as GeoIP Organization and GeoIP City.  Note: for GeoIP
+  Country, Region and Netspeed databases, `GEOIP_INDEX_CACHE` is equivalent
+  to `GEOIP_MEMORY_CACHE`.
 
 These options may be combined. For example:
 
 ```java
-LookupService cl = new LookupService(dbfile, LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
+LookupService cl = new LookupService(dbfile,
+    LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
 ```
