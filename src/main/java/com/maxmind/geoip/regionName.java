@@ -6871,47 +6871,47 @@ public class regionName {
 		} else if (country_code.equals("SE") == true) {
 			switch (region_code2) {
 			case 2:
-				return "Blekinge Lan";
+				return "Blekinge Län";
 			case 3:
-				return "Gavleborgs Lan";
+				return "Gävleborgs Län";
 			case 5:
-				return "Gotlands Lan";
+				return "Götlands Län";
 			case 6:
-				return "Hallands Lan";
+				return "Hallands Län";
 			case 7:
-				return "Jamtlands Lan";
+				return "Jämtlands Län";
 			case 8:
-				return "Jonkopings Lan";
+				return "Jönköpings Län";
 			case 9:
-				return "Kalmar Lan";
+				return "Kalmar Län";
 			case 10:
-				return "Dalarnas Lan";
+				return "Dalarnas Län";
 			case 12:
-				return "Kronobergs Lan";
+				return "Kronobergs Län";
 			case 14:
-				return "Norrbottens Lan";
+				return "Norrbottens Län";
 			case 15:
-				return "Orebro Lan";
+				return "Örebro Län";
 			case 16:
-				return "Ostergotlands Lan";
+				return "Östergötlands Län";
 			case 18:
-				return "Sodermanlands Lan";
+				return "Södermanlands Län";
 			case 21:
-				return "Uppsala Lan";
+				return "Uppsala Län";
 			case 22:
-				return "Varmlands Lan";
+				return "Värmlands Län";
 			case 23:
-				return "Vasterbottens Lan";
+				return "Västerbottens Län";
 			case 24:
-				return "Vasternorrlands Lan";
+				return "Västernorrlands Län";
 			case 25:
-				return "Vastmanlands Lan";
+				return "Västmanlands Län";
 			case 26:
-				return "Stockholms Lan";
+				return "Stockholms Län";
 			case 27:
-				return "Skane Lan";
+				return "Skåne Län";
 			case 28:
-				return "Vastra Gotaland";
+				return "Västra Götaland";
 			}
 		} else if (country_code.equals("SH") == true) {
 			switch (region_code2) {
