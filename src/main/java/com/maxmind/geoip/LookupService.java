@@ -1,4 +1,4 @@
-*
+/*
  * LookupService.java
  *
  * Copyright (C) 2003 MaxMind LLC. All Rights Reserved.
