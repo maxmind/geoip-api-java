@@ -1,18 +1,18 @@
-/**
+*
  * LookupService.java
- * 
+ *
  * Copyright (C) 2003 MaxMind LLC. All Rights Reserved.
- * 
+ *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
  * Software Foundation; either version 2 of the License, or (at your option) any
  * later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public License
  * along with this library; if not, write to the Free Software Foundation, Inc.,
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
@@ -35,10 +35,10 @@ import java.net.UnknownHostException;
  * available about an IP address. See the DatabaseInfo class for further
  * details.
  * <p>
- * 
+ *
  * The following code snippet demonstrates looking up the country that an IP
  * address is from:
- * 
+ *
  * <pre>
  * // First, create a LookupService instance with the location of the database.
  * LookupService lookupService = new LookupService(&quot;c:\\geoip.dat&quot;);
@@ -47,11 +47,11 @@ import java.net.UnknownHostException;
  * System.out.println(&quot;The country is: &quot; + country.getName());
  * System.out.println(&quot;The country code is: &quot; + country.getCode());
  * </pre>
- * 
+ *
  * In general, a single LookupService instance should be created and then reused
  * repeatedly.
  * <p>
- * 
+ *
  * <i>Tip:</i> Those deploying the GeoIP API as part of a web application may
  * find it difficult to pass in a File to create the lookup service, as the
  * location of the database may vary per deployment or may even be part of the
@@ -59,13 +59,13 @@ import java.net.UnknownHostException;
  * of the web-app. For example, by putting it into the WEB-INF/classes directory
  * of the web application. The following code snippet demonstrates how to create
  * a LookupService using a database that can be found on the classpath:
- * 
+ *
  * <pre>
  * String fileName = getClass().getResource(&quot;/GeoIP.dat&quot;).toExternalForm()
  *         .substring(6);
  * LookupService lookupService = new LookupService(fileName);
  * </pre>
- * 
+ *
  * @author Matt Tucker (matt@jivesoftware.com)
  */
 public class LookupService {
@@ -221,7 +221,7 @@ public class LookupService {
 
     /**
      * Create a new lookup service using the specified database file.
-     * 
+     *
      * @param databaseFile
      *            String representation of the database file.
      * @throws java.io.IOException
@@ -234,7 +234,7 @@ public class LookupService {
 
     /**
      * Create a new lookup service using the specified database file.
-     * 
+     *
      * @param databaseFile
      *            the database file.
      * @throws java.io.IOException
@@ -249,7 +249,7 @@ public class LookupService {
 
     /**
      * Create a new lookup service using the specified database file.
-     * 
+     *
      * @param databaseFile
      *            String representation of the database file.
      * @param options
@@ -266,7 +266,7 @@ public class LookupService {
 
     /**
      * Create a new lookup service using the specified database file.
-     * 
+     *
      * @param databaseFile
      *            the database file.
      * @param options
@@ -286,7 +286,7 @@ public class LookupService {
 
     /**
      * Reads meta-data from the database file.
-     * 
+     *
      * @throws java.io.IOException
      *             if an error occurs reading from the database file.
      */
@@ -402,7 +402,7 @@ public class LookupService {
 
     /**
      * Returns the country the IP address is in.
-     * 
+     *
      * @param ipAddress
      *            String version of an IPv6 address, i.e. "::127.0.0.1"
      * @return the country the IP address is from.
@@ -419,7 +419,7 @@ public class LookupService {
 
     /**
      * Returns the country the IP address is in.
-     * 
+     *
      * @param ipAddress
      *            String version of an IP address, i.e. "127.0.0.1"
      * @return the country the IP address is from.
@@ -436,7 +436,7 @@ public class LookupService {
 
     /**
      * Returns the country the IP address is in.
-     * 
+     *
      * @param ipAddress
      *            the IP address.
      * @return the country the IP address is from.
@@ -447,7 +447,7 @@ public class LookupService {
 
     /**
      * Returns the country the IP address is in.
-     * 
+     *
      * @param addr
      *            the IP address as Inet6Address.
      * @return the country the IP address is from.
@@ -466,7 +466,7 @@ public class LookupService {
 
     /**
      * Returns the country the IP address is in.
-     * 
+     *
      * @param ipAddress
      *            the IP address in long format.
      * @return the country the IP address is from.
@@ -515,7 +515,7 @@ public class LookupService {
 
     /**
      * Returns information about the database.
-     * 
+     *
      * @return database info.
      */
     public synchronized DatabaseInfo getDatabaseInfo() {
@@ -960,7 +960,7 @@ public class LookupService {
 
     /**
      * Finds the country index value given an IPv6 address.
-     * 
+     *
      * @param addr
      *            the ip address to find in long format.
      * @return the country index.
@@ -1038,7 +1038,7 @@ public class LookupService {
 
     /**
      * Finds the country index value given an IP address.
-     * 
+     *
      * @param ipAddress
      *            the ip address to find in long format.
      * @return the country index.
@@ -1101,7 +1101,7 @@ public class LookupService {
 
     /**
      * Returns the long version of an IP address given an InetAddress object.
-     * 
+     *
      * @param address
      *            the InetAddress.
      * @return the long form of the IP address.
