@@ -787,7 +787,10 @@ public class LookupService {
             } else {
                 // read from disk
                 file.seek(record_pointer);
-                file.readFully(record_buf);
+                // We do not know the exact EOF
+                try {
+                    file.readFully(record_buf);
+                } catch (IOException e) {}
             }
 
             // get country
