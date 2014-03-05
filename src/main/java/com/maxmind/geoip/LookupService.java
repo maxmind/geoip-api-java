@@ -787,7 +787,10 @@ public class LookupService {
             } else {
                 // read from disk
                 file.seek(record_pointer);
-                file.readFully(record_buf);
+                // We do not know the exact EOF
+                try {
+                    file.readFully(record_buf);
+                } catch (IOException e) {}
             }
 
             // get country
@@ -1051,12 +1054,12 @@ public class LookupService {
         for (int depth = 31; depth >= 0; depth--) {
             if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
                 // read from memory
-                for (int i = 0; i < 2 * MAX_RECORD_LENGTH; i++) {
+                for (int i = 0; i < 2 * recordLength; i++) {
                     buf[i] = dbbuffer[(2 * recordLength * offset) + i];
                 }
             } else if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
                 // read from index cache
-                for (int i = 0; i < 2 * MAX_RECORD_LENGTH; i++) {
+                for (int i = 0; i < 2 * recordLength; i++) {
                     buf[i] = index_cache[(2 * recordLength * offset) + i];
                 }
             } else {
