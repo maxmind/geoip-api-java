@@ -39,8 +39,8 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@git.maxmind.com:geoip-api-java</connection>
-        <developerConnection>scm:git:git@git.maxmind.com:geoip-api-java</developerConnection>
+        <connection>scm:git:git://github.com:maxmind/geoip-api-java.git</connection>
+        <developerConnection>scm:git:git@github.com:maxmind/geoip-api-java.git</developerConnection>
     </scm>
 
     <properties>
