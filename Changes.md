@@ -1,6 +1,16 @@
 Changes
 =======
 
+1.2.12 (2014-03-10)
+-------------------
+
+* Code and examples for the non-functional distributed lookup service were
+  removed.
+* A bug that could cause an `ArrayIndexOutOfBoundsException` when using
+  `GEOIP_INDEX_CACHE` was fixed. On the last node, the reader would attempt
+  to read beyond the end of the buffer due to the incorrect record length
+  being used.
+
 1.2.11 (2013-09-19)
 -------------------
 

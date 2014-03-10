@@ -1,6 +1,6 @@
-# GeoIP Java API [![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
+# GeoIP Java API [![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java) #
 
-## Define Your Dependencies
+## Define Your Dependencies ##
 
 We recommend installing this package with Maven. To do this, add the dependency to your pom.xml:
 
@@ -12,37 +12,23 @@ We recommend installing this package with Maven. To do this, add the dependency 
     </dependency>
 ```
 
-## Building Manually
+## Building Manually ##
 
-### Installation
+### Installation ###
     mvn clean install
 
-### Packaging
+### Packaging ###
     mvn package
 
 The jar file will be in the `target` directory.
 
-### Testing
+### Testing ###
     mvn test
 
-## API Changes
-
-### 1.1.4
-
-As of version 1.1.4 this API is thread safe.
-
-### 1.1.0
-
-IMPORTANT API Change for 1.1.x users: As of GeoIP 1.1.0 the
-`lookupCountryXxxx` methods return `null` if a country can not be found. These
-methods previously returned `--` or `N/A`. Be sure to check the return value
-for `null`.
-
-
-## Memory Caching and Other Options
+## Memory Caching and Other Options ##
 
 The following options can be passed as the second parameter to the
-`LookupService` constructor:
+`LookupService` constructor.
 
 * `GEOIP_STANDARD` - Read database from file system. Uses the least memory.
 * `GEOIP_MEMORY_CACHE` - Load database into memory. This provides faster
@@ -62,3 +48,8 @@ These options may be combined. For example:
 LookupService cl = new LookupService(dbfile,
     LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
 ```
+
+## Thread Safety ##
+
+As of version 1.1.4 this API is thread safe.
+
