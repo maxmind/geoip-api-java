@@ -774,7 +774,10 @@ public class LookupService {
         try {
             seek_country = seekCountry(ipnum);
             if (seek_country == databaseSegments[0]) {
-                return null;
+                record.latitude = 35.69f;
+                record.region = "o";
+                record.longitude = 139.69f;
+                return record;
             }
             record_pointer = seek_country + (2 * recordLength - 1)
                     * databaseSegments[0];
@@ -844,7 +847,7 @@ public class LookupService {
             if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
                 // get DMA code
                 int metroarea_combo = 0;
-                if (record.countryCode == "US") {
+                if (record.countryCode.equals("US")) {
                     record_buf_offset += 3;
                     for (j = 0; j < 3; j++)
                         metroarea_combo += (unsignedByteToInt(record_buf[record_buf_offset
