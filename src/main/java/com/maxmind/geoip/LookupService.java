@@ -790,7 +790,8 @@ public class LookupService {
                 // We do not know the exact EOF
                 try {
                     file.readFully(record_buf);
-                } catch (IOException e) {}
+                } catch (IOException e) {
+                }
             }
 
             // get country
@@ -844,7 +845,7 @@ public class LookupService {
             if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
                 // get DMA code
                 int metroarea_combo = 0;
-                if (record.countryCode == "US") {
+                if ("US".equals(record.countryCode)) {
                     record_buf_offset += 3;
                     for (j = 0; j < 3; j++)
                         metroarea_combo += (unsignedByteToInt(record_buf[record_buf_offset
