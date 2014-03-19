@@ -3,6 +3,8 @@ import java.io.IOException;
 
 /* sample of how to use the GeoIP Java API with GeoIP Netspeed database */
 /* Usage: java NetspeedLookup 24.24.24.24 */
+/* The Netspeed database does not return the "cellular" flag.
+ * Please see the NetSpeedCellLookup.java example if you use the flag. */
 
 class NetspeedLookup {
     public static void main(String[] args) {
