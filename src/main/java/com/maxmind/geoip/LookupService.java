@@ -878,7 +878,6 @@ public class LookupService {
     public synchronized String getOrg(long ipnum) {
         int seek_org;
         int record_pointer;
-        int str_length = 0;
         byte[] buf = new byte[MAX_ORG_RECORD_LENGTH];
         String org_buf;
 
@@ -904,10 +903,9 @@ public class LookupService {
                 } catch (IOException e) {
                 }
             }
-            while (buf[str_length] != '\0') {
-                str_length++;
-            }
-            org_buf = new String(buf, 0, str_length, "ISO-8859-1");
+            int strLength;
+            for (strLength = 0; strLength < buf.length && buf[strLength] != 0; strLength++) { }
+            org_buf = new String(buf, 0, strLength, "ISO-8859-1");
             return org_buf;
         } catch (IOException e) {
             System.out.println("IO Exception");
@@ -929,7 +927,7 @@ public class LookupService {
     public synchronized String getOrgV6(InetAddress addr) {
         int seek_org;
         int record_pointer;
-        int str_length = 0;
+
         byte[] buf = new byte[MAX_ORG_RECORD_LENGTH];
         String org_buf;
 
@@ -951,10 +949,10 @@ public class LookupService {
                 file.seek(record_pointer);
                 file.readFully(buf);
             }
-            while (buf[str_length] != '\0') {
-                str_length++;
-            }
-            org_buf = new String(buf, 0, str_length, "ISO-8859-1");
+
+            int strLength;
+            for (strLength = 0; strLength < buf.length && buf[strLength] != 0; strLength++) { }
+            org_buf = new String(buf, 0, strLength, "ISO-8859-1");
             return org_buf;
         } catch (IOException e) {
             System.out.println("IO Exception");
