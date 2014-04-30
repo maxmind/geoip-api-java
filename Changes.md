@@ -1,6 +1,15 @@
 Changes
 =======
 
+1.2.13 (2014-04-30)
+-------------------
+
+* Previously no checks were done to ensure that an organization name did not
+  exceed the 300 character maximum. If an organization name did exceed this
+  maximum, an `ArrayIndexOutOfBoundsException` was thrown.
+* A potential string comparison issue was fixed in `getLocation`.
+* Documentation and test fixes.
+
 1.2.12 (2014-03-10)
 -------------------
 
