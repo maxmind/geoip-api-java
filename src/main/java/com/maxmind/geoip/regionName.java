@@ -7274,6 +7274,8 @@ public class regionName {
                     return "Sredisce ob Dravi";
                 case 1481:
                     return "Straza";
+                case 1483:
+                    return "Sveti Jurij v Slovenskih Goricah";
             }
         } else if (country_code.equals("SK")) {
             switch (region_code2) {
@@ -8444,6 +8446,8 @@ public class regionName {
                     return "Toshkent";
                 case 14:
                     return "Toshkent";
+                case 15:
+                    return "Jizzax";
             }
         } else if (country_code.equals("VC")) {
             switch (region_code2) {
