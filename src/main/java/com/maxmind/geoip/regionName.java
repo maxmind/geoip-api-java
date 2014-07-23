@@ -4013,6 +4013,8 @@ public class regionName {
                     return "Takeo";
                 case 22:
                     return "Phnum Penh";
+                case 23:
+                    return "Ratanakiri";
                 case 25:
                     return "Banteay Meanchey";
                 case 28:

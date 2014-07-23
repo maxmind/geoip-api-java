@@ -1,6 +1,12 @@
 Changes
 =======
 
+1.2.14 (2014-07-23)
+-------------------
+
+* OSGi metadata was added to the jar. (Miguel Ángel Pastor Olivar)
+* Regions were updated.
+
 1.2.13 (2014-04-30)
 -------------------
 
