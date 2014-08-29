@@ -1,4 +1,13 @@
-# GeoIP Java API [![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java) #
+# GeoIP Legacy Java API #
+
+[![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
+
+## Important Note ##
+
+This API is for the GeoIP Legacy format (dat). To read the MaxMind DB format
+(mmdb) used by GeoIP2, please see
+[our GeoIP2 Java API](https://github.com/maxmind/GeoIP2-java).
+
 
 ## Define Your Dependencies ##
 
@@ -33,14 +42,14 @@ The following options can be passed as the second parameter to the
 * `GEOIP_STANDARD` - Read database from file system. Uses the least memory.
 * `GEOIP_MEMORY_CACHE` - Load database into memory. This provides faster
   performance but uses more memory
-* `GEOIP_CHECK_CACHE` - Check for updated database.  If database has been
+* `GEOIP_CHECK_CACHE` - Check for updated database. If database has been
   updated, reload file handle and/or memory cache.
 * `GEOIP_INDEX_CACHE` - Cache only the most frequently accessed index portion
   of the database, resulting in faster lookups than GEOIP_STANDARD, but less
-  memory usage than `GEOIP_MEMORY_CACHE`. This is useful for larger
-  databases such as GeoIP Organization and GeoIP City.  Note: for GeoIP
-  Country, Region and Netspeed databases, `GEOIP_INDEX_CACHE` is equivalent
-  to `GEOIP_MEMORY_CACHE`.
+  memory usage than `GEOIP_MEMORY_CACHE`. This is useful for larger databases
+  such as GeoIP Legacy Organization and GeoIP Legacy City. Note: for GeoIP
+  Legacy Country, Region and Netspeed databases, `GEOIP_INDEX_CACHE` is
+  equivalent to `GEOIP_MEMORY_CACHE`.
 
 These options may be combined. For example:
 
