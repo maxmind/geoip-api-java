@@ -290,7 +290,7 @@ public class LookupService {
      * @throws java.io.IOException
      *             if an error occurs reading from the database file.
      */
-    private void init() throws IOException {
+    synchronized private void init() throws IOException {
         int i, j;
         byte[] delim = new byte[3];
         byte[] buf = new byte[SEGMENT_RECORD_LENGTH];
