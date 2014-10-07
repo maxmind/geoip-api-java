@@ -389,7 +389,7 @@ public class LookupService {
     /**
      * Closes the lookup service.
      */
-    public void close() {
+synchronized public void close() {
         try {
             if (file != null) {
                 file.close();
@@ -452,7 +452,7 @@ public class LookupService {
      *            the IP address as Inet6Address.
      * @return the country the IP address is from.
      */
-    public Country getCountryV6(InetAddress addr) {
+    public synchronized Country getCountryV6(InetAddress addr) {
         if (file == null && (dboptions & GEOIP_MEMORY_CACHE) == 0) {
             throw new IllegalStateException("Database has been closed.");
         }
@@ -471,7 +471,7 @@ public class LookupService {
      *            the IP address in long format.
      * @return the country the IP address is from.
      */
-    public Country getCountry(long ipAddress) {
+    public synchronized Country getCountry(long ipAddress) {
         if (file == null && (dboptions & GEOIP_MEMORY_CACHE) == 0) {
             throw new IllegalStateException("Database has been closed.");
         }
