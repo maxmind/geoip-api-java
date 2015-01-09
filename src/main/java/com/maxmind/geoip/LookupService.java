@@ -20,8 +20,6 @@
 
 package com.maxmind.geoip;
 
-import static java.lang.System.arraycopy;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -975,7 +973,7 @@ public class LookupService {
             // we have to work around that feature
             // It happens for ::ffff:24.24.24.24
             byte[] t = new byte[16];
-            arraycopy(v6vec, 0, t, 12, 4);
+            System.arraycopy(v6vec, 0, t, 12, 4);
             v6vec = t;
         }
 
