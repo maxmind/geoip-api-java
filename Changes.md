@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.2.15 (2015-07-17)
+-------------------
+
+* Several threading synchronization issues were fixed.
+* Target version was decreased to 1.5 for increased compatibility.
+* Minor code cleanup.
+
 1.2.14 (2014-07-23)
 -------------------
 

@@ -1,7 +1,7 @@
 package com.maxmind.geoip;
 // generated automatically from admin/generate_regionName.pl
 public class regionName {
-    public static String regionNameByCode(String country_code,String region_code) {
+    public static String regionNameByCode(String country_code, String region_code) {
         String name = null;
         int region_code2 = -1;
         if (region_code == null) { return null; }
@@ -4943,6 +4943,8 @@ public class regionName {
                     return "Demir Hisar";
                 case 964:
                     return "Gostivar";
+                case 965:
+                    return "Jegunovce";
                 case 966:
                     return "Kavadarci";
                 case 967:
