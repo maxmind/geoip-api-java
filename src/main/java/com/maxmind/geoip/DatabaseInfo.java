@@ -46,26 +46,26 @@ import java.util.Date;
  */
 public class DatabaseInfo {
 
-    public final static int COUNTRY_EDITION = 1;
-    public final static int REGION_EDITION_REV0 = 7;
-    public final static int REGION_EDITION_REV1 = 3;
-    public final static int CITY_EDITION_REV0 = 6;
-    public final static int CITY_EDITION_REV1 = 2;
-    public final static int ORG_EDITION = 5;
-    public final static int ISP_EDITION = 4;
-    public final static int PROXY_EDITION = 8;
-    public final static int ASNUM_EDITION = 9;
-    public final static int NETSPEED_EDITION = 10;
-    public final static int DOMAIN_EDITION = 11;
-    public final static int COUNTRY_EDITION_V6 = 12;
-    public final static int ASNUM_EDITION_V6 = 21;
-    public final static int ISP_EDITION_V6 = 22;
-    public final static int ORG_EDITION_V6 = 23;
-    public final static int DOMAIN_EDITION_V6 = 24;
-    public final static int CITY_EDITION_REV1_V6 = 30;
-    public final static int CITY_EDITION_REV0_V6 = 31;
-    public final static int NETSPEED_EDITION_REV1 = 32;
-    public final static int NETSPEED_EDITION_REV1_V6 = 33;
+    public static final int COUNTRY_EDITION = 1;
+    public static final int REGION_EDITION_REV0 = 7;
+    public static final int REGION_EDITION_REV1 = 3;
+    public static final int CITY_EDITION_REV0 = 6;
+    public static final int CITY_EDITION_REV1 = 2;
+    public static final int ORG_EDITION = 5;
+    public static final int ISP_EDITION = 4;
+    public static final int PROXY_EDITION = 8;
+    public static final int ASNUM_EDITION = 9;
+    public static final int NETSPEED_EDITION = 10;
+    public static final int DOMAIN_EDITION = 11;
+    public static final int COUNTRY_EDITION_V6 = 12;
+    public static final int ASNUM_EDITION_V6 = 21;
+    public static final int ISP_EDITION_V6 = 22;
+    public static final int ORG_EDITION_V6 = 23;
+    public static final int DOMAIN_EDITION_V6 = 24;
+    public static final int CITY_EDITION_REV1_V6 = 30;
+    public static final int CITY_EDITION_REV0_V6 = 31;
+    public static final int NETSPEED_EDITION_REV1 = 32;
+    public static final int NETSPEED_EDITION_REV1_V6 = 33;
 
     private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
@@ -81,7 +81,7 @@ public class DatabaseInfo {
     }
 
     public int getType() {
-        if (info == null || info.equals("")) {
+        if (info == null || info.length() == 0) {
             return COUNTRY_EDITION;
         } else {
             // Get the type code from the database info string and then
@@ -97,7 +97,7 @@ public class DatabaseInfo {
      * @return true if the premium version of the database.
      */
     public boolean isPremium() {
-        return info.indexOf("FREE") < 0;
+        return !info.contains("FREE");
     }
 
     /**
