@@ -7,6 +7,7 @@ Changes
 * Several threading synchronization issues were fixed.
 * Target version was decreased to 1.5 for increased compatibility.
 * Minor code cleanup.
+* Region and timezone data were updated.
 
 1.2.14 (2014-07-23)
 -------------------
