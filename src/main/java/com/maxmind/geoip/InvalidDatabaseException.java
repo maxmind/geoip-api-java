@@ -7,7 +7,7 @@ import java.io.IOException;
  * unexpected data formatting. This generally suggests that the database is
  * corrupt or otherwise not in a format supported by the reader.
  */
-public class InvalidDatabaseException extends RuntimeException {
+public final class InvalidDatabaseException extends RuntimeException {
 
     /**
      * @param message A message describing the reason why the exception was thrown.
