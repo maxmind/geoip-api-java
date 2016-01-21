@@ -1,28 +1,29 @@
+---
+sudo: false
+addons:
+  coverity_scan:
+    project:
+      description: Build submitted via Travis CI
+      name: maxmind/geoip-api-java
+    notification_email: dev@maxmind.com
+    build_command_prepend: mvn clean
+    build_command: mvn -DskipTests=true compile
+    branch_pattern: .*coverity.*
 language: java
-
 jdk:
   - openjdk6
   - openjdk7
   - oraclejdk7
   - oraclejdk8
-
-notifications:
-  email:
-    recipients:
-      - dev@maxmind.com
-    on_success: change
-    on_failure: always
-
 env:
   global:
-   - secure: "d72scMGybGfXPuGKwvFXOF+3fq9d/FV5CDN1uAD5GW1r+vV0dZkKnoG3ZZ7bwikOIei4Z5zQ1oVhnPhHOS2ReCxmui1uwcGJnwl1Pwpmq/zei2sNsqyPMGA3q0v87g8wr5G+l3cRPDMBlqtjjuYHfbvyXPbYf0qTJ9NDWybg40s="
-
-addons:
-  coverity_scan:
-    project:
-      name: "maxmind/geoip-api-java"
-      description: "Build submitted via Travis CI"
-    notification_email: dev@maxmind.com
-    build_command_prepend: "mvn clean"
-    build_command:   "mvn -DskipTests=true compile"
-    branch_pattern: .*coverity.*
+    - secure: d72scMGybGfXPuGKwvFXOF+3fq9d/FV5CDN1uAD5GW1r+vV0dZkKnoG3ZZ7bwikOIei4Z5zQ1oVhnPhHOS2ReCxmui1uwcGJnwl1Pwpmq/zei2sNsqyPMGA3q0v87g8wr5G+l3cRPDMBlqtjjuYHfbvyXPbYf0qTJ9NDWybg40s=
+notifications:
+  email:
+    on_failure: always
+    on_success: change
+    recipients:
+      - dev-ci@maxmind.com
+  slack:
+    rooms:
+      secure: "e4/3Esjo65Quf7MN2mXKLY0CJ23iBFPdTGdGdhE8RVPzfR2/c+YzISSOGbDFGkuQyq2kDuK94PZ3JC7xT2Cy86DEIfCc3ws46qcknrRwbCZSXLH0gTYC748JKgdaGvXxjzwCyEIoAv67EiUPPFIm+R6d01P2h4JvGpAXSvD13DM=\n"
