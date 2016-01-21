@@ -726,21 +726,22 @@ public class LookupService {
     }
 
     private ByteBuffer readRecordBuf(int seek, int maxLength) throws IOException {
-        byte[] recordBuf = new byte[maxLength];
 
         int recordPointer = seek + (2 * recordLength - 1)
                 * databaseSegments[0];
 
+        ByteBuffer buffer;
         if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
-            // read from memory
-            System.arraycopy(dbbuffer, recordPointer, recordBuf, 0, Math
-                    .min(dbbuffer.length - recordPointer, recordBuf.length));
+            buffer = ByteBuffer.wrap(dbbuffer, recordPointer, Math
+                    .min(dbbuffer.length - recordPointer, maxLength));
         } else {
+            byte[] recordBuf = new byte[maxLength];
             // read from disk
             file.seek(recordPointer);
             file.read(recordBuf);
+            buffer = ByteBuffer.wrap(recordBuf);
         }
-        return ByteBuffer.wrap(recordBuf);
+        return buffer;
     }
 
 
@@ -861,7 +862,7 @@ public class LookupService {
         int offset = 0;
         _check_mtime();
         for (int depth = 127; depth >= 0; depth--) {
-            readIntoSeekBuf(buf, x, offset);
+            readNode(buf, x, offset);
 
             int bnum = 127 - depth;
             int idx = bnum >> 3;
@@ -898,7 +899,7 @@ public class LookupService {
         int offset = 0;
         _check_mtime();
         for (int depth = 31; depth >= 0; depth--) {
-            readIntoSeekBuf(buf, x, offset);
+            readNode(buf, x, offset);
 
             if ((ipAddress & (1 << depth)) > 0) {
                 if (x[1] >= databaseSegments[0]) {
@@ -918,12 +919,10 @@ public class LookupService {
                 + ipAddress);
     }
 
-    private void readIntoSeekBuf(byte[] buf, int[] x, int offset) {
+    private void readNode(byte[] buf, int[] x, int offset) {
         if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
             // read from memory
-            for (int i = 0; i < 2 * recordLength; i++) {
-                buf[i] = dbbuffer[(2 * recordLength * offset) + i];
-            }
+            System.arraycopy(dbbuffer, (2 * recordLength * offset), buf, 0, 2 * recordLength);
         } else if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
             // read from index cache
             System.arraycopy(index_cache, (2 * recordLength * offset), buf, 0, 2 * recordLength);
