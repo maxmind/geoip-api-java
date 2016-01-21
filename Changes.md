@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.3.0 (2016-01-XX)
+1.3.0 (2016-01-21)
 ------------------
 
 * `LookupService` will now throw an `InvalidDatabaseException` if there is a
