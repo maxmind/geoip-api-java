@@ -41,4 +41,13 @@ public class CityLookupTest {
 
 	}
 
+    @Test(expected=InvalidDatabaseException.class)
+	public void testCityLookupInInvalidDatabase() throws IOException {
+
+		LookupService cl = new LookupService(
+				"src/test/resources/GeoIP/GeoIPCity-Corrupt.dat",
+				LookupService.GEOIP_MEMORY_CACHE);
+		Location l2 = cl.getLocation("66.92.181.240");
+
+	}
 }

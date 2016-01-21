@@ -1,6 +1,19 @@
 Changes
 =======
 
+1.3.0 (2016-01-XX)
+------------------
+
+* `LookupService` will now throw an `InvalidDatabaseException` if there is a
+  problem with the database. This is a unchecked, runtime exception in order
+  to not introduce an API change. Previously `LookupService` would swallow
+  exceptions, either returning `null` or an invalid value or throwing an
+  exception such as `ArrayIndexOutOfBoundsException` cause by the invalid
+  state.
+* When using `GEOIP_MEMORY_CACHE`, the number of allocations has been reduced,
+  providing a moderate performance increase.
+* Minor code clean-up and de-duplication.
+
 1.2.15 (2015-07-17)
 -------------------
 
@@ -87,7 +100,7 @@ Changes
 * Update FIPS codes 20100530 ( Boris Zentner )
 * Update FIPS codes 20100510 ( Boris Zentner )
 * Add IPv6 support via getCountryV6 ( Boris Zentner )
-* Add exmaple for IPv6 lookups: CountryLookupTestV6 ( Boris Zentner )
+* Add example for IPv6 lookups: CountryLookupTestV6 ( Boris Zentner )
 * Fix DatabaseInfo string ( Boris Zentner )
 * Add netmask and last_netmask methods ( Boris Zentner )
 * Remove static keyword from objects that are reinitialized in the init()
@@ -109,7 +122,7 @@ Changes
 * Fix rare out of range error, when the last entry of the Org/ISP/Domain
   database is copied ( MEMORY_CACHE only ). ( Boris Zentner )
 * Update timezones for Australia
-* Remore "\n" from RegionLookupTest.java. println add already a newline
+* Remove "\n" from RegionLookupTest.java. println add already a newline
   ( Boris Zentner )
 * Change regionName.java and generate_regionName.pl to support FIPS codes
   with letters ( Boris Zentner ).
@@ -195,7 +208,7 @@ Changes
 1.1.1 (2002-10-31)
 ------------------
 
-* Added support for GeoIP Full Edition, remaned CountryLookup class
+* Added support for GeoIP Full Edition, renamed CountryLookup class
   to Lookup
 
 1.1.0 (2002-10-28)
