@@ -5,7 +5,7 @@ addons:
     project:
       description: Build submitted via Travis CI
       name: maxmind/geoip-api-java
-    notification_email: dev@maxmind.com
+    notification_email: dev-ci@maxmind.com
     build_command_prepend: mvn clean
     build_command: mvn -DskipTests=true compile
     branch_pattern: .*coverity.*
