@@ -403,6 +403,20 @@ public class LookupService {
     }
 
     /**
+     * @return The list of all known country names
+     */
+    public String[] getAllCountryNames() {
+        return countryName;
+    }
+    
+    /**
+     * @return The list of all known country codes
+     */
+    public String[] getAllCountryCodes() {
+        return countryCode;
+    }
+    
+    /**
      * Returns the country the IP address is in.
      *
      * @param ipAddress
