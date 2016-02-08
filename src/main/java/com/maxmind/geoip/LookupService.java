@@ -29,6 +29,8 @@ import java.nio.ByteBuffer;
 import java.nio.charset.CharacterCodingException;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Provides a lookup service for information based on an IP address. The
@@ -402,6 +404,20 @@ public class LookupService {
         }
     }
 
+    /**
+     * @return The list of all known country names
+     */
+    public List<String> getAllCountryNames() {
+        return Arrays.asList(Arrays.copyOf(countryName, countryName.length));
+    }
+    
+    /**
+     * @return The list of all known country codes
+     */
+    public List<String> getAllCountryCodes() {
+        return Arrays.asList(Arrays.copyOf(countryCode, countryCode.length));
+    }
+    
     /**
      * Returns the country the IP address is in.
      *
