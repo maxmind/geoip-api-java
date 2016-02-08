@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.3.1 (2016-02-08)
+------------------
+
+* `getAllCountryNames()` and `getAllCountryCodes()` were added to the
+  `LookupService`. These return all country names and codes known to the
+  GeoIP reader. Pull request by nguillaumin. GitHub #33.
+
 1.3.0 (2016-01-21)
 ------------------
 
