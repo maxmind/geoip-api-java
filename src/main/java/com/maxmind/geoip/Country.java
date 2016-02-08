@@ -27,8 +27,8 @@ package com.maxmind.geoip;
  */
 public class Country {
 
-	private String code;
-	private String name;
+	private final String code;
+	private final String name;
 
 	/**
 	 * Creates a new Country.
