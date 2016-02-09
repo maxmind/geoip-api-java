@@ -69,7 +69,7 @@ public class DatabaseInfo {
 
     private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
-    private String info;
+    private final String info;
 
     /**
      * Creates a new DatabaseInfo object given the database info String.
