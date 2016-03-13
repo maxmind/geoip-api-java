@@ -2,13 +2,13 @@ package com.maxmind.geoip;
 // generated automatically from admin/generate_timeZone.pl
 public class timeZone {
     public static String timeZoneByCountryAndRegion(String country, String region) {
-        String timezone = null;
         if (country == null) {
             return null;
         }
         if (region == null) {
             region = "";
         }
+        String timezone = null;
         if ("AD".equals(country)) {
                 timezone = "Europe/Andorra";
         } else if ("AE".equals(country)) {
