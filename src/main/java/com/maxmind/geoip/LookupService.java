@@ -298,9 +298,6 @@ public class LookupService {
      *             if an error occurs reading from the database file.
      */
     private synchronized void init() throws IOException {
-        byte[] delim = new byte[3];
-        byte[] buf = new byte[SEGMENT_RECORD_LENGTH];
-
         if (file == null) {
             return;
         }
@@ -308,6 +305,8 @@ public class LookupService {
             mtime = databaseFile.lastModified();
         }
         file.seek(file.length() - 3);
+        byte[] delim = new byte[3];
+        byte[] buf = new byte[SEGMENT_RECORD_LENGTH];
         for (int i = 0; i < STRUCTURE_INFO_MAX_SIZE; i++) {
             file.readFully(delim);
             if (delim[0] == -1 && delim[1] == -1 && delim[2] == -1) {
