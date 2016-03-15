@@ -1,30 +1,30 @@
 package com.maxmind.geoip;
 // generated automatically from admin/generate_regionName.pl
 public class regionName {
-    public static String regionNameByCode(String country_code, String region_code) {
+    public static String regionNameByCode(String countryCode, String regionCode) {
 
-        if (region_code == null) { return null; }
-        if (region_code.length() == 0) { return null; }
+        if (regionCode == null) { return null; }
+        if (regionCode.length() == 0) { return null; }
 
         String name = null;
         int region_code2 = -1;
-        if (    ((region_code.charAt(0) >= 48 ) && ( region_code.charAt(0) < ( 48 + 10 )))
-             && ((region_code.charAt(1) >= 48 ) && ( region_code.charAt(1) < ( 48 + 10 )))
+        if (    ((regionCode.charAt(0) >= 48 ) && ( regionCode.charAt(0) < ( 48 + 10 )))
+             && ((regionCode.charAt(1) >= 48 ) && ( regionCode.charAt(1) < ( 48 + 10 )))
         ){
             // only numbers, that shorten the large switch statements
-            region_code2 = (region_code.charAt(0)- 48) * 10 + region_code.charAt(1) - 48;
-        } else if (    (    ((region_code.charAt(0) >= 65) && (region_code.charAt(0) < (65 + 26)))
-                     || ((region_code.charAt(0) >= 48) && (region_code.charAt(0) < (48 + 10))))
-                && (    ((region_code.charAt(1) >= 65) && (region_code.charAt(1) < (65 + 26)))
-                     || ((region_code.charAt(1) >= 48) && (region_code.charAt(1) < (48 + 10))))
+            region_code2 = (regionCode.charAt(0)- 48) * 10 + regionCode.charAt(1) - 48;
+        } else if (    (    ((regionCode.charAt(0) >= 65) && (regionCode.charAt(0) < (65 + 26)))
+                     || ((regionCode.charAt(0) >= 48) && (regionCode.charAt(0) < (48 + 10))))
+                && (    ((regionCode.charAt(1) >= 65) && (regionCode.charAt(1) < (65 + 26)))
+                     || ((regionCode.charAt(1) >= 48) && (regionCode.charAt(1) < (48 + 10))))
         ) {
 
-            region_code2 = (region_code.charAt(0) - 48) * (65 + 26 - 48) + region_code.charAt(1) - 48 + 100;
+            region_code2 = (regionCode.charAt(0) - 48) * (65 + 26 - 48) + regionCode.charAt(1) - 48 + 100;
         }
 
         if (region_code2 == -1) {return null;}
 
-        if (country_code.equals("AD")) {
+        if (countryCode.equals("AD")) {
             switch (region_code2) {
                 case 2:
                     return "Canillo";
@@ -41,7 +41,7 @@ public class regionName {
                 case 8:
                     return "Escaldes-Engordany";
             }
-        } else if (country_code.equals("AE")) {
+        } else if (countryCode.equals("AE")) {
             switch (region_code2) {
                 case 1:
                     return "Abu Dhabi";
@@ -58,7 +58,7 @@ public class regionName {
                 case 7:
                     return "Umm Al Quwain";
             }
-        } else if (country_code.equals("AF")) {
+        } else if (countryCode.equals("AF")) {
             switch (region_code2) {
                 case 1:
                     return "Badakhshan";
@@ -129,7 +129,7 @@ public class regionName {
                 case 42:
                     return "Panjshir";
             }
-        } else if (country_code.equals("AG")) {
+        } else if (countryCode.equals("AG")) {
             switch (region_code2) {
                 case 1:
                     return "Barbuda";
@@ -148,7 +148,7 @@ public class regionName {
                 case 9:
                     return "Redonda";
             }
-        } else if (country_code.equals("AL")) {
+        } else if (countryCode.equals("AL")) {
             switch (region_code2) {
                 case 40:
                     return "Berat";
@@ -175,7 +175,7 @@ public class regionName {
                 case 51:
                     return "Vlore";
             }
-        } else if (country_code.equals("AM")) {
+        } else if (countryCode.equals("AM")) {
             switch (region_code2) {
                 case 1:
                     return "Aragatsotn";
@@ -200,7 +200,7 @@ public class regionName {
                 case 11:
                     return "Yerevan";
             }
-        } else if (country_code.equals("AO")) {
+        } else if (countryCode.equals("AO")) {
             switch (region_code2) {
                 case 1:
                     return "Benguela";
@@ -239,7 +239,7 @@ public class regionName {
                 case 20:
                     return "Luanda";
             }
-        } else if (country_code.equals("AR")) {
+        } else if (countryCode.equals("AR")) {
             switch (region_code2) {
                 case 1:
                     return "Buenos Aires";
@@ -290,7 +290,7 @@ public class regionName {
                 case 24:
                     return "Tucuman";
             }
-        } else if (country_code.equals("AT")) {
+        } else if (countryCode.equals("AT")) {
             switch (region_code2) {
                 case 1:
                     return "Burgenland";
@@ -311,7 +311,7 @@ public class regionName {
                 case 9:
                     return "Wien";
             }
-        } else if (country_code.equals("AU")) {
+        } else if (countryCode.equals("AU")) {
             switch (region_code2) {
                 case 1:
                     return "Australian Capital Territory";
@@ -330,7 +330,7 @@ public class regionName {
                 case 8:
                     return "Western Australia";
             }
-        } else if (country_code.equals("AZ")) {
+        } else if (countryCode.equals("AZ")) {
             switch (region_code2) {
                 case 1:
                     return "Abseron";
@@ -475,7 +475,7 @@ public class regionName {
                 case 71:
                     return "Zardab";
             }
-        } else if (country_code.equals("BA")) {
+        } else if (countryCode.equals("BA")) {
             switch (region_code2) {
                 case 1:
                     return "Federation of Bosnia and Herzegovina";
@@ -484,7 +484,7 @@ public class regionName {
                 case 2:
                     return "Republika Srpska";
             }
-        } else if (country_code.equals("BB")) {
+        } else if (countryCode.equals("BB")) {
             switch (region_code2) {
                 case 1:
                     return "Christ Church";
@@ -509,7 +509,7 @@ public class regionName {
                 case 11:
                     return "Saint Thomas";
             }
-        } else if (country_code.equals("BD")) {
+        } else if (countryCode.equals("BD")) {
             switch (region_code2) {
                 case 81:
                     return "Dhaka";
@@ -526,7 +526,7 @@ public class regionName {
                 case 87:
                     return "Rangpur";
             }
-        } else if (country_code.equals("BE")) {
+        } else if (countryCode.equals("BE")) {
             switch (region_code2) {
                 case 1:
                     return "Antwerpen";
@@ -555,7 +555,7 @@ public class regionName {
                 case 14:
                     return "Wallonia";
             }
-        } else if (country_code.equals("BF")) {
+        } else if (countryCode.equals("BF")) {
             switch (region_code2) {
                 case 15:
                     return "Bam";
@@ -648,7 +648,7 @@ public class regionName {
                 case 78:
                     return "Zondoma";
             }
-        } else if (country_code.equals("BG")) {
+        } else if (countryCode.equals("BG")) {
             switch (region_code2) {
                 case 33:
                     return "Mikhaylovgrad";
@@ -709,7 +709,7 @@ public class regionName {
                 case 65:
                     return "Yambol";
             }
-        } else if (country_code.equals("BH")) {
+        } else if (countryCode.equals("BH")) {
             switch (region_code2) {
                 case 1:
                     return "Al Hadd";
@@ -744,7 +744,7 @@ public class regionName {
                 case 19:
                     return "Al Wusta";
             }
-        } else if (country_code.equals("BI")) {
+        } else if (countryCode.equals("BI")) {
             switch (region_code2) {
                 case 2:
                     return "Bujumbura";
@@ -779,7 +779,7 @@ public class regionName {
                 case 23:
                     return "Mwaro";
             }
-        } else if (country_code.equals("BJ")) {
+        } else if (countryCode.equals("BJ")) {
             switch (region_code2) {
                 case 7:
                     return "Alibori";
@@ -806,7 +806,7 @@ public class regionName {
                 case 18:
                     return "Zou";
             }
-        } else if (country_code.equals("BM")) {
+        } else if (countryCode.equals("BM")) {
             switch (region_code2) {
                 case 1:
                     return "Devonshire";
@@ -831,7 +831,7 @@ public class regionName {
                 case 11:
                     return "Warwick";
             }
-        } else if (country_code.equals("BN")) {
+        } else if (countryCode.equals("BN")) {
             switch (region_code2) {
                 case 7:
                     return "Alibori";
@@ -858,7 +858,7 @@ public class regionName {
                 case 18:
                     return "Zou";
             }
-        } else if (country_code.equals("BO")) {
+        } else if (countryCode.equals("BO")) {
             switch (region_code2) {
                 case 1:
                     return "Chuquisaca";
@@ -879,7 +879,7 @@ public class regionName {
                 case 9:
                     return "Tarija";
             }
-        } else if (country_code.equals("BR")) {
+        } else if (countryCode.equals("BR")) {
             switch (region_code2) {
                 case 1:
                     return "Acre";
@@ -936,7 +936,7 @@ public class regionName {
                 case 31:
                     return "Tocantins";
             }
-        } else if (country_code.equals("BS")) {
+        } else if (countryCode.equals("BS")) {
             switch (region_code2) {
                 case 5:
                     return "Bimini";
@@ -981,7 +981,7 @@ public class regionName {
                 case 35:
                     return "San Salvador and Rum Cay";
             }
-        } else if (country_code.equals("BT")) {
+        } else if (countryCode.equals("BT")) {
             switch (region_code2) {
                 case 5:
                     return "Bumthang";
@@ -1020,7 +1020,7 @@ public class regionName {
                 case 22:
                     return "Wangdi Phodrang";
             }
-        } else if (country_code.equals("BW")) {
+        } else if (countryCode.equals("BW")) {
             switch (region_code2) {
                 case 1:
                     return "Central";
@@ -1041,7 +1041,7 @@ public class regionName {
                 case 11:
                     return "North-West";
             }
-        } else if (country_code.equals("BY")) {
+        } else if (countryCode.equals("BY")) {
             switch (region_code2) {
                 case 1:
                     return "Brestskaya Voblasts'";
@@ -1058,7 +1058,7 @@ public class regionName {
                 case 7:
                     return "Vitsyebskaya Voblasts'";
             }
-        } else if (country_code.equals("BZ")) {
+        } else if (countryCode.equals("BZ")) {
             switch (region_code2) {
                 case 1:
                     return "Belize";
@@ -1073,7 +1073,7 @@ public class regionName {
                 case 6:
                     return "Toledo";
             }
-        } else if (country_code.equals("CA")) {
+        } else if (countryCode.equals("CA")) {
             switch (region_code2) {
                 case 849:
                     return "Alberta";
@@ -1102,7 +1102,7 @@ public class regionName {
                 case 1899:
                     return "Yukon Territory";
             }
-        } else if (country_code.equals("CD")) {
+        } else if (countryCode.equals("CD")) {
             switch (region_code2) {
                 case 1:
                     return "Bandundu";
@@ -1125,7 +1125,7 @@ public class regionName {
                 case 12:
                     return "Sud-Kivu";
             }
-        } else if (country_code.equals("CF")) {
+        } else if (countryCode.equals("CF")) {
             switch (region_code2) {
                 case 1:
                     return "Bamingui-Bangoran";
@@ -1162,7 +1162,7 @@ public class regionName {
                 case 18:
                     return "Bangui";
             }
-        } else if (country_code.equals("CG")) {
+        } else if (countryCode.equals("CG")) {
             switch (region_code2) {
                 case 1:
                     return "Bouenza";
@@ -1187,7 +1187,7 @@ public class regionName {
                 case 14:
                     return "Cuvette-Ouest";
             }
-        } else if (country_code.equals("CH")) {
+        } else if (countryCode.equals("CH")) {
             switch (region_code2) {
                 case 1:
                     return "Aargau";
@@ -1242,7 +1242,7 @@ public class regionName {
                 case 26:
                     return "Jura";
             }
-        } else if (country_code.equals("CI")) {
+        } else if (countryCode.equals("CI")) {
             switch (region_code2) {
                 case 74:
                     return "Agneby";
@@ -1283,7 +1283,7 @@ public class regionName {
                 case 92:
                     return "Zanzan";
             }
-        } else if (country_code.equals("CL")) {
+        } else if (countryCode.equals("CL")) {
             switch (region_code2) {
                 case 1:
                     return "Valparaiso";
@@ -1320,7 +1320,7 @@ public class regionName {
                 case 17:
                     return "Los Rios";
             }
-        } else if (country_code.equals("CM")) {
+        } else if (countryCode.equals("CM")) {
             switch (region_code2) {
                 case 4:
                     return "Est";
@@ -1343,7 +1343,7 @@ public class regionName {
                 case 14:
                     return "Sud";
             }
-        } else if (country_code.equals("CN")) {
+        } else if (countryCode.equals("CN")) {
             switch (region_code2) {
                 case 1:
                     return "Anhui";
@@ -1408,7 +1408,7 @@ public class regionName {
                 case 33:
                     return "Chongqing";
             }
-        } else if (country_code.equals("CO")) {
+        } else if (countryCode.equals("CO")) {
             switch (region_code2) {
                 case 1:
                     return "Amazonas";
@@ -1477,7 +1477,7 @@ public class regionName {
                 case 38:
                     return "Magdalena";
             }
-        } else if (country_code.equals("CR")) {
+        } else if (countryCode.equals("CR")) {
             switch (region_code2) {
                 case 1:
                     return "Alajuela";
@@ -1494,7 +1494,7 @@ public class regionName {
                 case 8:
                     return "San Jose";
             }
-        } else if (country_code.equals("CU")) {
+        } else if (countryCode.equals("CU")) {
             switch (region_code2) {
                 case 1:
                     return "Pinar del Rio";
@@ -1527,7 +1527,7 @@ public class regionName {
                 case 16:
                     return "Villa Clara";
             }
-        } else if (country_code.equals("CV")) {
+        } else if (countryCode.equals("CV")) {
             switch (region_code2) {
                 case 1:
                     return "Boa Vista";
@@ -1562,7 +1562,7 @@ public class regionName {
                 case 20:
                     return "Tarrafal";
             }
-        } else if (country_code.equals("CY")) {
+        } else if (countryCode.equals("CY")) {
             switch (region_code2) {
                 case 1:
                     return "Famagusta";
@@ -1577,7 +1577,7 @@ public class regionName {
                 case 6:
                     return "Paphos";
             }
-        } else if (country_code.equals("CZ")) {
+        } else if (countryCode.equals("CZ")) {
             switch (region_code2) {
                 case 52:
                     return "Hlavni mesto Praha";
@@ -1608,7 +1608,7 @@ public class regionName {
                 case 90:
                     return "Zlinsky kraj";
             }
-        } else if (country_code.equals("DE")) {
+        } else if (countryCode.equals("DE")) {
             switch (region_code2) {
                 case 1:
                     return "Baden-Wurttemberg";
@@ -1643,7 +1643,7 @@ public class regionName {
                 case 16:
                     return "Berlin";
             }
-        } else if (country_code.equals("DJ")) {
+        } else if (countryCode.equals("DJ")) {
             switch (region_code2) {
                 case 1:
                     return "Ali Sabieh";
@@ -1658,7 +1658,7 @@ public class regionName {
                 case 8:
                     return "Arta";
             }
-        } else if (country_code.equals("DK")) {
+        } else if (countryCode.equals("DK")) {
             switch (region_code2) {
                 case 17:
                     return "Hovedstaden";
@@ -1671,7 +1671,7 @@ public class regionName {
                 case 21:
                     return "Syddanmark";
             }
-        } else if (country_code.equals("DM")) {
+        } else if (countryCode.equals("DM")) {
             switch (region_code2) {
                 case 2:
                     return "Saint Andrew";
@@ -1694,7 +1694,7 @@ public class regionName {
                 case 11:
                     return "Saint Peter";
             }
-        } else if (country_code.equals("DO")) {
+        } else if (countryCode.equals("DO")) {
             switch (region_code2) {
                 case 1:
                     return "Azua";
@@ -1765,7 +1765,7 @@ public class regionName {
                 case 37:
                     return "Santo Domingo";
             }
-        } else if (country_code.equals("DZ")) {
+        } else if (countryCode.equals("DZ")) {
             switch (region_code2) {
                 case 1:
                     return "Alger";
@@ -1864,7 +1864,7 @@ public class regionName {
                 case 56:
                     return "Tissemsilt";
             }
-        } else if (country_code.equals("EC")) {
+        } else if (countryCode.equals("EC")) {
             switch (region_code2) {
                 case 1:
                     return "Galapagos";
@@ -1911,7 +1911,7 @@ public class regionName {
                 case 24:
                     return "Orellana";
             }
-        } else if (country_code.equals("EE")) {
+        } else if (countryCode.equals("EE")) {
             switch (region_code2) {
                 case 1:
                     return "Harjumaa";
@@ -1956,7 +1956,7 @@ public class regionName {
                 case 21:
                     return "Vorumaa";
             }
-        } else if (country_code.equals("EG")) {
+        } else if (countryCode.equals("EG")) {
             switch (region_code2) {
                 case 1:
                     return "Ad Daqahliyah";
@@ -2013,7 +2013,7 @@ public class regionName {
                 case 28:
                     return "Al Uqsur";
             }
-        } else if (country_code.equals("ER")) {
+        } else if (countryCode.equals("ER")) {
             switch (region_code2) {
                 case 1:
                     return "Anseba";
@@ -2028,7 +2028,7 @@ public class regionName {
                 case 6:
                     return "Semenawi K'eyih Bahri";
             }
-        } else if (country_code.equals("ES")) {
+        } else if (countryCode.equals("ES")) {
             switch (region_code2) {
                 case 7:
                     return "Islas Baleares";
@@ -2065,7 +2065,7 @@ public class regionName {
                 case 60:
                     return "Comunidad Valenciana";
             }
-        } else if (country_code.equals("ET")) {
+        } else if (countryCode.equals("ET")) {
             switch (region_code2) {
                 case 44:
                     return "Adis Abeba";
@@ -2090,7 +2090,7 @@ public class regionName {
                 case 54:
                     return "YeDebub Biheroch Bihereseboch na Hizboch";
             }
-        } else if (country_code.equals("FI")) {
+        } else if (countryCode.equals("FI")) {
             switch (region_code2) {
                 case 1:
                     return "Aland";
@@ -2105,7 +2105,7 @@ public class regionName {
                 case 15:
                     return "Western Finland";
             }
-        } else if (country_code.equals("FJ")) {
+        } else if (countryCode.equals("FJ")) {
             switch (region_code2) {
                 case 1:
                     return "Central";
@@ -2118,7 +2118,7 @@ public class regionName {
                 case 5:
                     return "Western";
             }
-        } else if (country_code.equals("FM")) {
+        } else if (countryCode.equals("FM")) {
             switch (region_code2) {
                 case 1:
                     return "Kosrae";
@@ -2129,7 +2129,7 @@ public class regionName {
                 case 4:
                     return "Yap";
             }
-        } else if (country_code.equals("FR")) {
+        } else if (countryCode.equals("FR")) {
             switch (region_code2) {
                 case 97:
                     return "Aquitaine";
@@ -2176,7 +2176,7 @@ public class regionName {
                 case 918:
                     return "Alsace";
             }
-        } else if (country_code.equals("GA")) {
+        } else if (countryCode.equals("GA")) {
             switch (region_code2) {
                 case 1:
                     return "Estuaire";
@@ -2197,7 +2197,7 @@ public class regionName {
                 case 9:
                     return "Woleu-Ntem";
             }
-        } else if (country_code.equals("GB")) {
+        } else if (countryCode.equals("GB")) {
             switch (region_code2) {
                 case 832:
                     return "Barking and Dagenham";
@@ -2668,7 +2668,7 @@ public class regionName {
                 case 1915:
                     return "Isles of Scilly";
             }
-        } else if (country_code.equals("GD")) {
+        } else if (countryCode.equals("GD")) {
             switch (region_code2) {
                 case 1:
                     return "Saint Andrew";
@@ -2683,7 +2683,7 @@ public class regionName {
                 case 6:
                     return "Saint Patrick";
             }
-        } else if (country_code.equals("GE")) {
+        } else if (countryCode.equals("GE")) {
             switch (region_code2) {
                 case 1:
                     return "Abashis Raioni";
@@ -2814,7 +2814,7 @@ public class regionName {
                 case 64:
                     return "Zugdidis Raioni";
             }
-        } else if (country_code.equals("GH")) {
+        } else if (countryCode.equals("GH")) {
             switch (region_code2) {
                 case 1:
                     return "Greater Accra";
@@ -2837,7 +2837,7 @@ public class regionName {
                 case 11:
                     return "Upper West";
             }
-        } else if (country_code.equals("GL")) {
+        } else if (countryCode.equals("GL")) {
             switch (region_code2) {
                 case 1:
                     return "Nordgronland";
@@ -2846,7 +2846,7 @@ public class regionName {
                 case 3:
                     return "Vestgronland";
             }
-        } else if (country_code.equals("GM")) {
+        } else if (countryCode.equals("GM")) {
             switch (region_code2) {
                 case 1:
                     return "Banjul";
@@ -2861,7 +2861,7 @@ public class regionName {
                 case 7:
                     return "North Bank";
             }
-        } else if (country_code.equals("GN")) {
+        } else if (countryCode.equals("GN")) {
             switch (region_code2) {
                 case 1:
                     return "Beyla";
@@ -2932,7 +2932,7 @@ public class regionName {
                 case 39:
                     return "Siguiri";
             }
-        } else if (country_code.equals("GQ")) {
+        } else if (countryCode.equals("GQ")) {
             switch (region_code2) {
                 case 3:
                     return "Annobon";
@@ -2949,7 +2949,7 @@ public class regionName {
                 case 9:
                     return "Wele-Nzas";
             }
-        } else if (country_code.equals("GR")) {
+        } else if (countryCode.equals("GR")) {
             switch (region_code2) {
                 case 1:
                     return "Evros";
@@ -3054,7 +3054,7 @@ public class regionName {
                 case 51:
                     return "Lesvos";
             }
-        } else if (country_code.equals("GT")) {
+        } else if (countryCode.equals("GT")) {
             switch (region_code2) {
                 case 1:
                     return "Alta Verapaz";
@@ -3101,7 +3101,7 @@ public class regionName {
                 case 22:
                     return "Zacapa";
             }
-        } else if (country_code.equals("GW")) {
+        } else if (countryCode.equals("GW")) {
             switch (region_code2) {
                 case 1:
                     return "Bafata";
@@ -3122,7 +3122,7 @@ public class regionName {
                 case 12:
                     return "Biombo";
             }
-        } else if (country_code.equals("GY")) {
+        } else if (countryCode.equals("GY")) {
             switch (region_code2) {
                 case 10:
                     return "Barima-Waini";
@@ -3145,7 +3145,7 @@ public class regionName {
                 case 19:
                     return "Upper Takutu-Upper Essequibo";
             }
-        } else if (country_code.equals("HN")) {
+        } else if (countryCode.equals("HN")) {
             switch (region_code2) {
                 case 1:
                     return "Atlantida";
@@ -3184,7 +3184,7 @@ public class regionName {
                 case 18:
                     return "Yoro";
             }
-        } else if (country_code.equals("HR")) {
+        } else if (countryCode.equals("HR")) {
             switch (region_code2) {
                 case 1:
                     return "Bjelovarsko-Bilogorska";
@@ -3229,7 +3229,7 @@ public class regionName {
                 case 21:
                     return "Grad Zagreb";
             }
-        } else if (country_code.equals("HT")) {
+        } else if (countryCode.equals("HT")) {
             switch (region_code2) {
                 case 3:
                     return "Nord-Ouest";
@@ -3252,7 +3252,7 @@ public class regionName {
                 case 15:
                     return "Nippes";
             }
-        } else if (country_code.equals("HU")) {
+        } else if (countryCode.equals("HU")) {
             switch (region_code2) {
                 case 1:
                     return "Bacs-Kiskun";
@@ -3341,7 +3341,7 @@ public class regionName {
                 case 43:
                     return "Erd";
             }
-        } else if (country_code.equals("ID")) {
+        } else if (countryCode.equals("ID")) {
             switch (region_code2) {
                 case 1:
                     return "Aceh";
@@ -3410,7 +3410,7 @@ public class regionName {
                 case 41:
                     return "Sulawesi Barat";
             }
-        } else if (country_code.equals("IE")) {
+        } else if (countryCode.equals("IE")) {
             switch (region_code2) {
                 case 1:
                     return "Carlow";
@@ -3465,7 +3465,7 @@ public class regionName {
                 case 31:
                     return "Wicklow";
             }
-        } else if (country_code.equals("IL")) {
+        } else if (countryCode.equals("IL")) {
             switch (region_code2) {
                 case 1:
                     return "HaDarom";
@@ -3480,7 +3480,7 @@ public class regionName {
                 case 6:
                     return "Yerushalayim";
             }
-        } else if (country_code.equals("IN")) {
+        } else if (countryCode.equals("IN")) {
             switch (region_code2) {
                 case 1:
                     return "Andaman and Nicobar Islands";
@@ -3553,7 +3553,7 @@ public class regionName {
                 case 39:
                     return "Uttarakhand";
             }
-        } else if (country_code.equals("IQ")) {
+        } else if (countryCode.equals("IQ")) {
             switch (region_code2) {
                 case 1:
                     return "Al Anbar";
@@ -3592,7 +3592,7 @@ public class regionName {
                 case 18:
                     return "Salah ad Din";
             }
-        } else if (country_code.equals("IR")) {
+        } else if (countryCode.equals("IR")) {
             switch (region_code2) {
                 case 1:
                     return "Azarbayjan-e Bakhtari";
@@ -3675,7 +3675,7 @@ public class regionName {
                 case 44:
                     return "Alborz";
             }
-        } else if (country_code.equals("IS")) {
+        } else if (countryCode.equals("IS")) {
             switch (region_code2) {
                 case 3:
                     return "Arnessysla";
@@ -3734,7 +3734,7 @@ public class regionName {
                 case 45:
                     return "Vesturland";
             }
-        } else if (country_code.equals("IT")) {
+        } else if (countryCode.equals("IT")) {
             switch (region_code2) {
                 case 1:
                     return "Abruzzi";
@@ -3777,7 +3777,7 @@ public class regionName {
                 case 20:
                     return "Veneto";
             }
-        } else if (country_code.equals("JM")) {
+        } else if (countryCode.equals("JM")) {
             switch (region_code2) {
                 case 1:
                     return "Clarendon";
@@ -3808,7 +3808,7 @@ public class regionName {
                 case 17:
                     return "Kingston";
             }
-        } else if (country_code.equals("JO")) {
+        } else if (countryCode.equals("JO")) {
             switch (region_code2) {
                 case 2:
                     return "Al Balqa'";
@@ -3835,7 +3835,7 @@ public class regionName {
                 case 23:
                     return "Madaba";
             }
-        } else if (country_code.equals("JP")) {
+        } else if (countryCode.equals("JP")) {
             switch (region_code2) {
                 case 1:
                     return "Aichi";
@@ -3932,7 +3932,7 @@ public class regionName {
                 case 47:
                     return "Okinawa";
             }
-        } else if (country_code.equals("KE")) {
+        } else if (countryCode.equals("KE")) {
             switch (region_code2) {
                 case 1:
                     return "Central";
@@ -3951,7 +3951,7 @@ public class regionName {
                 case 9:
                     return "Western";
             }
-        } else if (country_code.equals("KG")) {
+        } else if (countryCode.equals("KG")) {
             switch (region_code2) {
                 case 1:
                     return "Bishkek";
@@ -3972,7 +3972,7 @@ public class regionName {
                 case 9:
                     return "Batken";
             }
-        } else if (country_code.equals("KH")) {
+        } else if (countryCode.equals("KH")) {
             switch (region_code2) {
                 case 1:
                     return "Batdambang";
@@ -4025,7 +4025,7 @@ public class regionName {
                 case 30:
                     return "Pailin";
             }
-        } else if (country_code.equals("KI")) {
+        } else if (countryCode.equals("KI")) {
             switch (region_code2) {
                 case 1:
                     return "Gilbert Islands";
@@ -4034,7 +4034,7 @@ public class regionName {
                 case 3:
                     return "Phoenix Islands";
             }
-        } else if (country_code.equals("KM")) {
+        } else if (countryCode.equals("KM")) {
             switch (region_code2) {
                 case 1:
                     return "Anjouan";
@@ -4043,7 +4043,7 @@ public class regionName {
                 case 3:
                     return "Moheli";
             }
-        } else if (country_code.equals("KN")) {
+        } else if (countryCode.equals("KN")) {
             switch (region_code2) {
                 case 1:
                     return "Christ Church Nichola Town";
@@ -4074,7 +4074,7 @@ public class regionName {
                 case 15:
                     return "Trinity Palmetto Point";
             }
-        } else if (country_code.equals("KP")) {
+        } else if (countryCode.equals("KP")) {
             switch (region_code2) {
                 case 1:
                     return "Chagang-do";
@@ -4103,7 +4103,7 @@ public class regionName {
                 case 18:
                     return "Najin Sonbong-si";
             }
-        } else if (country_code.equals("KR")) {
+        } else if (countryCode.equals("KR")) {
             switch (region_code2) {
                 case 1:
                     return "Cheju-do";
@@ -4138,7 +4138,7 @@ public class regionName {
                 case 21:
                     return "Ulsan-gwangyoksi";
             }
-        } else if (country_code.equals("KW")) {
+        } else if (countryCode.equals("KW")) {
             switch (region_code2) {
                 case 1:
                     return "Al Ahmadi";
@@ -4153,7 +4153,7 @@ public class regionName {
                 case 9:
                     return "Mubarak al Kabir";
             }
-        } else if (country_code.equals("KY")) {
+        } else if (countryCode.equals("KY")) {
             switch (region_code2) {
                 case 1:
                     return "Creek";
@@ -4172,7 +4172,7 @@ public class regionName {
                 case 8:
                     return "Western";
             }
-        } else if (country_code.equals("KZ")) {
+        } else if (countryCode.equals("KZ")) {
             switch (region_code2) {
                 case 1:
                     return "Almaty";
@@ -4209,7 +4209,7 @@ public class regionName {
                 case 17:
                     return "Zhambyl";
             }
-        } else if (country_code.equals("LA")) {
+        } else if (countryCode.equals("LA")) {
             switch (region_code2) {
                 case 1:
                     return "Attapu";
@@ -4238,7 +4238,7 @@ public class regionName {
                 case 17:
                     return "Louangphrabang";
             }
-        } else if (country_code.equals("LB")) {
+        } else if (countryCode.equals("LB")) {
             switch (region_code2) {
                 case 1:
                     return "Beqaa";
@@ -4263,7 +4263,7 @@ public class regionName {
                 case 11:
                     return "Baalbek-Hermel";
             }
-        } else if (country_code.equals("LC")) {
+        } else if (countryCode.equals("LC")) {
             switch (region_code2) {
                 case 1:
                     return "Anse-la-Raye";
@@ -4288,7 +4288,7 @@ public class regionName {
                 case 11:
                     return "Praslin";
             }
-        } else if (country_code.equals("LI")) {
+        } else if (countryCode.equals("LI")) {
             switch (region_code2) {
                 case 1:
                     return "Balzers";
@@ -4317,7 +4317,7 @@ public class regionName {
                 case 22:
                     return "River Gee";
             }
-        } else if (country_code.equals("LK")) {
+        } else if (countryCode.equals("LK")) {
             switch (region_code2) {
                 case 29:
                     return "Central";
@@ -4338,7 +4338,7 @@ public class regionName {
                 case 38:
                     return "Northern";
             }
-        } else if (country_code.equals("LR")) {
+        } else if (countryCode.equals("LR")) {
             switch (region_code2) {
                 case 1:
                     return "Bong";
@@ -4375,7 +4375,7 @@ public class regionName {
                 case 22:
                     return "River Gee";
             }
-        } else if (country_code.equals("LS")) {
+        } else if (countryCode.equals("LS")) {
             switch (region_code2) {
                 case 10:
                     return "Berea";
@@ -4398,7 +4398,7 @@ public class regionName {
                 case 19:
                     return "Thaba-Tseka";
             }
-        } else if (country_code.equals("LT")) {
+        } else if (countryCode.equals("LT")) {
             switch (region_code2) {
                 case 56:
                     return "Alytaus Apskritis";
@@ -4421,7 +4421,7 @@ public class regionName {
                 case 65:
                     return "Vilniaus Apskritis";
             }
-        } else if (country_code.equals("LU")) {
+        } else if (countryCode.equals("LU")) {
             switch (region_code2) {
                 case 1:
                     return "Diekirch";
@@ -4430,7 +4430,7 @@ public class regionName {
                 case 3:
                     return "Luxembourg";
             }
-        } else if (country_code.equals("LV")) {
+        } else if (countryCode.equals("LV")) {
             switch (region_code2) {
                 case 1:
                     return "Aizkraukles";
@@ -4499,7 +4499,7 @@ public class regionName {
                 case 33:
                     return "Ventspils";
             }
-        } else if (country_code.equals("LY")) {
+        } else if (countryCode.equals("LY")) {
             switch (region_code2) {
                 case 3:
                     return "Al Aziziyah";
@@ -4552,7 +4552,7 @@ public class regionName {
                 case 62:
                     return "Yafran";
             }
-        } else if (country_code.equals("MA")) {
+        } else if (countryCode.equals("MA")) {
             switch (region_code2) {
                 case 45:
                     return "Grand Casablanca";
@@ -4585,7 +4585,7 @@ public class regionName {
                 case 59:
                     return "La,youne-Boujdour-Sakia El Hamra";
             }
-        } else if (country_code.equals("MC")) {
+        } else if (countryCode.equals("MC")) {
             switch (region_code2) {
                 case 1:
                     return "La Condamine";
@@ -4594,7 +4594,7 @@ public class regionName {
                 case 3:
                     return "Monte-Carlo";
             }
-        } else if (country_code.equals("MD")) {
+        } else if (countryCode.equals("MD")) {
             switch (region_code2) {
                 case 51:
                     return "Gagauzia";
@@ -4671,7 +4671,7 @@ public class regionName {
                 case 92:
                     return "Ungheni";
             }
-        } else if (country_code.equals("MG")) {
+        } else if (countryCode.equals("MG")) {
             switch (region_code2) {
                 case 1:
                     return "Antsiranana";
@@ -4686,7 +4686,7 @@ public class regionName {
                 case 6:
                     return "Toliara";
             }
-        } else if (country_code.equals("MK")) {
+        } else if (countryCode.equals("MK")) {
             switch (region_code2) {
                 case 1:
                     return "Aracinovo";
@@ -4971,7 +4971,7 @@ public class regionName {
                 case 1048:
                     return "Aerodrom";
             }
-        } else if (country_code.equals("ML")) {
+        } else if (countryCode.equals("ML")) {
             switch (region_code2) {
                 case 1:
                     return "Bamako";
@@ -4992,7 +4992,7 @@ public class regionName {
                 case 10:
                     return "Kidal";
             }
-        } else if (country_code.equals("MM")) {
+        } else if (countryCode.equals("MM")) {
             switch (region_code2) {
                 case 1:
                     return "Rakhine State";
@@ -5025,7 +5025,7 @@ public class regionName {
                 case 17:
                     return "Yangon";
             }
-        } else if (country_code.equals("MN")) {
+        } else if (countryCode.equals("MN")) {
             switch (region_code2) {
                 case 1:
                     return "Arhangay";
@@ -5076,14 +5076,14 @@ public class regionName {
                 case 25:
                     return "Orhon";
             }
-        } else if (country_code.equals("MO")) {
+        } else if (countryCode.equals("MO")) {
             switch (region_code2) {
                 case 1:
                     return "Ilhas";
                 case 2:
                     return "Macau";
             }
-        } else if (country_code.equals("MR")) {
+        } else if (countryCode.equals("MR")) {
             switch (region_code2) {
                 case 1:
                     return "Hodh Ech Chargui";
@@ -5110,7 +5110,7 @@ public class regionName {
                 case 12:
                     return "Inchiri";
             }
-        } else if (country_code.equals("MS")) {
+        } else if (countryCode.equals("MS")) {
             switch (region_code2) {
                 case 1:
                     return "Saint Anthony";
@@ -5119,7 +5119,7 @@ public class regionName {
                 case 3:
                     return "Saint Peter";
             }
-        } else if (country_code.equals("MU")) {
+        } else if (countryCode.equals("MU")) {
             switch (region_code2) {
                 case 12:
                     return "Black River";
@@ -5146,7 +5146,7 @@ public class regionName {
                 case 23:
                     return "Rodrigues";
             }
-        } else if (country_code.equals("MV")) {
+        } else if (countryCode.equals("MV")) {
             switch (region_code2) {
                 case 1:
                     return "Seenu";
@@ -5189,7 +5189,7 @@ public class regionName {
                 case 47:
                     return "Vaavu";
             }
-        } else if (country_code.equals("MW")) {
+        } else if (countryCode.equals("MW")) {
             switch (region_code2) {
                 case 2:
                     return "Chikwawa";
@@ -5246,7 +5246,7 @@ public class regionName {
                 case 30:
                     return "Phalombe";
             }
-        } else if (country_code.equals("MX")) {
+        } else if (countryCode.equals("MX")) {
             switch (region_code2) {
                 case 1:
                     return "Aguascalientes";
@@ -5313,7 +5313,7 @@ public class regionName {
                 case 32:
                     return "Zacatecas";
             }
-        } else if (country_code.equals("MY")) {
+        } else if (countryCode.equals("MY")) {
             switch (region_code2) {
                 case 1:
                     return "Johor";
@@ -5348,7 +5348,7 @@ public class regionName {
                 case 17:
                     return "Putrajaya";
             }
-        } else if (country_code.equals("MZ")) {
+        } else if (countryCode.equals("MZ")) {
             switch (region_code2) {
                 case 1:
                     return "Cabo Delgado";
@@ -5373,7 +5373,7 @@ public class regionName {
                 case 11:
                     return "Maputo";
             }
-        } else if (country_code.equals("NA")) {
+        } else if (countryCode.equals("NA")) {
             switch (region_code2) {
                 case 1:
                     return "Bethanien";
@@ -5452,7 +5452,7 @@ public class regionName {
                 case 39:
                     return "Otjozondjupa";
             }
-        } else if (country_code.equals("NE")) {
+        } else if (countryCode.equals("NE")) {
             switch (region_code2) {
                 case 1:
                     return "Agadez";
@@ -5471,7 +5471,7 @@ public class regionName {
                 case 8:
                     return "Niamey";
             }
-        } else if (country_code.equals("NG")) {
+        } else if (countryCode.equals("NG")) {
             switch (region_code2) {
                 case 5:
                     return "Lagos";
@@ -5548,7 +5548,7 @@ public class regionName {
                 case 57:
                     return "Zamfara";
             }
-        } else if (country_code.equals("NI")) {
+        } else if (countryCode.equals("NI")) {
             switch (region_code2) {
                 case 1:
                     return "Boaco";
@@ -5587,7 +5587,7 @@ public class regionName {
                 case 18:
                     return "Region Autonoma Atlantico Sur";
             }
-        } else if (country_code.equals("NL")) {
+        } else if (countryCode.equals("NL")) {
             switch (region_code2) {
                 case 1:
                     return "Drenthe";
@@ -5614,7 +5614,7 @@ public class regionName {
                 case 16:
                     return "Flevoland";
             }
-        } else if (country_code.equals("NO")) {
+        } else if (countryCode.equals("NO")) {
             switch (region_code2) {
                 case 1:
                     return "Akershus";
@@ -5655,7 +5655,7 @@ public class regionName {
                 case 20:
                     return "Vestfold";
             }
-        } else if (country_code.equals("NP")) {
+        } else if (countryCode.equals("NP")) {
             switch (region_code2) {
                 case 1:
                     return "Bagmati";
@@ -5686,7 +5686,7 @@ public class regionName {
                 case 14:
                     return "Seti";
             }
-        } else if (country_code.equals("NR")) {
+        } else if (countryCode.equals("NR")) {
             switch (region_code2) {
                 case 1:
                     return "Aiwo";
@@ -5717,7 +5717,7 @@ public class regionName {
                 case 14:
                     return "Yaren";
             }
-        } else if (country_code.equals("NZ")) {
+        } else if (countryCode.equals("NZ")) {
             switch (region_code2) {
                 case 10:
                     return "Chatham Islands";
@@ -5752,7 +5752,7 @@ public class regionName {
                 case 1092:
                     return "West Coast";
             }
-        } else if (country_code.equals("OM")) {
+        } else if (countryCode.equals("OM")) {
             switch (region_code2) {
                 case 1:
                     return "Ad Dakhiliyah";
@@ -5771,7 +5771,7 @@ public class regionName {
                 case 8:
                     return "Zufar";
             }
-        } else if (country_code.equals("PA")) {
+        } else if (countryCode.equals("PA")) {
             switch (region_code2) {
                 case 1:
                     return "Bocas del Toro";
@@ -5794,7 +5794,7 @@ public class regionName {
                 case 10:
                     return "Veraguas";
             }
-        } else if (country_code.equals("PE")) {
+        } else if (countryCode.equals("PE")) {
             switch (region_code2) {
                 case 1:
                     return "Amazonas";
@@ -5847,7 +5847,7 @@ public class regionName {
                 case 25:
                     return "Ucayali";
             }
-        } else if (country_code.equals("PG")) {
+        } else if (countryCode.equals("PG")) {
             switch (region_code2) {
                 case 1:
                     return "Central";
@@ -5890,7 +5890,7 @@ public class regionName {
                 case 20:
                     return "National Capital";
             }
-        } else if (country_code.equals("PH")) {
+        } else if (countryCode.equals("PH")) {
             switch (region_code2) {
                 case 1:
                     return "Abra";
@@ -6205,7 +6205,7 @@ public class regionName {
                 case 1478:
                     return "Zamboanga";
             }
-        } else if (country_code.equals("PK")) {
+        } else if (countryCode.equals("PK")) {
             switch (region_code2) {
                 case 1:
                     return "Federally Administered Tribal Areas";
@@ -6224,7 +6224,7 @@ public class regionName {
                 case 8:
                     return "Islamabad";
             }
-        } else if (country_code.equals("PL")) {
+        } else if (countryCode.equals("PL")) {
             switch (region_code2) {
                 case 72:
                     return "Dolnoslaskie";
@@ -6259,14 +6259,14 @@ public class regionName {
                 case 87:
                     return "Zachodniopomorskie";
             }
-        } else if (country_code.equals("PS")) {
+        } else if (countryCode.equals("PS")) {
             switch (region_code2) {
                 case 1131:
                     return "Gaza";
                 case 1798:
                     return "West Bank";
             }
-        } else if (country_code.equals("PT")) {
+        } else if (countryCode.equals("PT")) {
             switch (region_code2) {
                 case 2:
                     return "Aveiro";
@@ -6309,7 +6309,7 @@ public class regionName {
                 case 23:
                     return "Azores";
             }
-        } else if (country_code.equals("PY")) {
+        } else if (countryCode.equals("PY")) {
             switch (region_code2) {
                 case 1:
                     return "Alto Parana";
@@ -6348,7 +6348,7 @@ public class regionName {
                 case 24:
                     return "Boqueron";
             }
-        } else if (country_code.equals("QA")) {
+        } else if (countryCode.equals("QA")) {
             switch (region_code2) {
                 case 1:
                     return "Ad Dawhah";
@@ -6373,7 +6373,7 @@ public class regionName {
                 case 12:
                     return "Umm Sa'id";
             }
-        } else if (country_code.equals("RO")) {
+        } else if (countryCode.equals("RO")) {
             switch (region_code2) {
                 case 1:
                     return "Alba";
@@ -6460,14 +6460,14 @@ public class regionName {
                 case 43:
                     return "Ilfov";
             }
-        } else if (country_code.equals("RS")) {
+        } else if (countryCode.equals("RS")) {
             switch (region_code2) {
                 case 1:
                     return "Kosovo";
                 case 2:
                     return "Vojvodina";
             }
-        } else if (country_code.equals("RU")) {
+        } else if (countryCode.equals("RU")) {
             switch (region_code2) {
                 case 1:
                     return "Adygeya, Republic of";
@@ -6652,7 +6652,7 @@ public class regionName {
                 case 93:
                     return "Zabaykal'skiy Kray";
             }
-        } else if (country_code.equals("RW")) {
+        } else if (countryCode.equals("RW")) {
             switch (region_code2) {
                 case 1:
                     return "Butare";
@@ -6673,7 +6673,7 @@ public class regionName {
                 case 15:
                     return "Sud";
             }
-        } else if (country_code.equals("SA")) {
+        } else if (countryCode.equals("SA")) {
             switch (region_code2) {
                 case 2:
                     return "Al Bahah";
@@ -6702,7 +6702,7 @@ public class regionName {
                 case 20:
                     return "Al Jawf";
             }
-        } else if (country_code.equals("SB")) {
+        } else if (countryCode.equals("SB")) {
             switch (region_code2) {
                 case 3:
                     return "Malaita";
@@ -6723,7 +6723,7 @@ public class regionName {
                 case 13:
                     return "Rennell and Bellona";
             }
-        } else if (country_code.equals("SC")) {
+        } else if (countryCode.equals("SC")) {
             switch (region_code2) {
                 case 1:
                     return "Anse aux Pins";
@@ -6772,7 +6772,7 @@ public class regionName {
                 case 23:
                     return "Takamaka";
             }
-        } else if (country_code.equals("SD")) {
+        } else if (countryCode.equals("SD")) {
             switch (region_code2) {
                 case 27:
                     return "Al Wusta";
@@ -6807,7 +6807,7 @@ public class regionName {
                 case 55:
                     return "Northern Darfur";
             }
-        } else if (country_code.equals("SE")) {
+        } else if (countryCode.equals("SE")) {
             switch (region_code2) {
                 case 2:
                     return "Blekinge Lan";
@@ -6852,7 +6852,7 @@ public class regionName {
                 case 28:
                     return "Vastra Gotaland";
             }
-        } else if (country_code.equals("SH")) {
+        } else if (countryCode.equals("SH")) {
             switch (region_code2) {
                 case 1:
                     return "Ascension";
@@ -6861,7 +6861,7 @@ public class regionName {
                 case 3:
                     return "Tristan da Cunha";
             }
-        } else if (country_code.equals("SI")) {
+        } else if (countryCode.equals("SI")) {
             switch (region_code2) {
                 case 1:
                     return "Ajdovscina Commune";
@@ -7282,7 +7282,7 @@ public class regionName {
                 case 1483:
                     return "Sveti Jurij v Slovenskih Goricah";
             }
-        } else if (country_code.equals("SK")) {
+        } else if (countryCode.equals("SK")) {
             switch (region_code2) {
                 case 1:
                     return "Banska Bystrica";
@@ -7301,7 +7301,7 @@ public class regionName {
                 case 8:
                     return "Zilina";
             }
-        } else if (country_code.equals("SL")) {
+        } else if (countryCode.equals("SL")) {
             switch (region_code2) {
                 case 1:
                     return "Eastern";
@@ -7312,7 +7312,7 @@ public class regionName {
                 case 4:
                     return "Western Area";
             }
-        } else if (country_code.equals("SM")) {
+        } else if (countryCode.equals("SM")) {
             switch (region_code2) {
                 case 1:
                     return "Acquaviva";
@@ -7333,7 +7333,7 @@ public class regionName {
                 case 9:
                     return "Serravalle";
             }
-        } else if (country_code.equals("SN")) {
+        } else if (countryCode.equals("SN")) {
             switch (region_code2) {
                 case 1:
                     return "Dakar";
@@ -7358,7 +7358,7 @@ public class regionName {
                 case 15:
                     return "Matam";
             }
-        } else if (country_code.equals("SO")) {
+        } else if (countryCode.equals("SO")) {
             switch (region_code2) {
                 case 1:
                     return "Bakool";
@@ -7401,7 +7401,7 @@ public class regionName {
                 case 22:
                     return "Sool";
             }
-        } else if (country_code.equals("SR")) {
+        } else if (countryCode.equals("SR")) {
             switch (region_code2) {
                 case 10:
                     return "Brokopondo";
@@ -7424,7 +7424,7 @@ public class regionName {
                 case 19:
                     return "Wanica";
             }
-        } else if (country_code.equals("SS")) {
+        } else if (countryCode.equals("SS")) {
             switch (region_code2) {
                 case 1:
                     return "Central Equatoria";
@@ -7447,14 +7447,14 @@ public class regionName {
                 case 10:
                     return "Western Equatoria";
             }
-        } else if (country_code.equals("ST")) {
+        } else if (countryCode.equals("ST")) {
             switch (region_code2) {
                 case 1:
                     return "Principe";
                 case 2:
                     return "Sao Tome";
             }
-        } else if (country_code.equals("SV")) {
+        } else if (countryCode.equals("SV")) {
             switch (region_code2) {
                 case 1:
                     return "Ahuachapan";
@@ -7485,7 +7485,7 @@ public class regionName {
                 case 14:
                     return "Usulutan";
             }
-        } else if (country_code.equals("SY")) {
+        } else if (countryCode.equals("SY")) {
             switch (region_code2) {
                 case 1:
                     return "Al Hasakah";
@@ -7516,7 +7516,7 @@ public class regionName {
                 case 14:
                     return "Tartus";
             }
-        } else if (country_code.equals("SZ")) {
+        } else if (countryCode.equals("SZ")) {
             switch (region_code2) {
                 case 1:
                     return "Hhohho";
@@ -7529,7 +7529,7 @@ public class regionName {
                 case 5:
                     return "Praslin";
             }
-        } else if (country_code.equals("TD")) {
+        } else if (countryCode.equals("TD")) {
             switch (region_code2) {
                 case 1:
                     return "Batha";
@@ -7560,7 +7560,7 @@ public class regionName {
                 case 14:
                     return "Tandjile";
             }
-        } else if (country_code.equals("TG")) {
+        } else if (countryCode.equals("TG")) {
             switch (region_code2) {
                 case 22:
                     return "Centrale";
@@ -7573,7 +7573,7 @@ public class regionName {
                 case 26:
                     return "Savanes";
             }
-        } else if (country_code.equals("TH")) {
+        } else if (countryCode.equals("TH")) {
             switch (region_code2) {
                 case 1:
                     return "Mae Hong Son";
@@ -7736,7 +7736,7 @@ public class regionName {
                 case 81:
                     return "Bueng Kan";
             }
-        } else if (country_code.equals("TJ")) {
+        } else if (countryCode.equals("TJ")) {
             switch (region_code2) {
                 case 1:
                     return "Kuhistoni Badakhshon";
@@ -7749,12 +7749,12 @@ public class regionName {
                 case 5:
                     return "Nohiyahoi Tobei Jumhuri";
             }
-        } else if (country_code.equals("TL")) {
+        } else if (countryCode.equals("TL")) {
             switch (region_code2) {
                 case 6:
                     return "Dili";
             }
-        } else if (country_code.equals("TM")) {
+        } else if (countryCode.equals("TM")) {
             switch (region_code2) {
                 case 1:
                     return "Ahal";
@@ -7767,7 +7767,7 @@ public class regionName {
                 case 5:
                     return "Mary";
             }
-        } else if (country_code.equals("TN")) {
+        } else if (countryCode.equals("TN")) {
             switch (region_code2) {
                 case 2:
                     return "Kasserine";
@@ -7818,7 +7818,7 @@ public class regionName {
                 case 39:
                     return "Manouba";
             }
-        } else if (country_code.equals("TO")) {
+        } else if (countryCode.equals("TO")) {
             switch (region_code2) {
                 case 1:
                     return "Ha";
@@ -7827,7 +7827,7 @@ public class regionName {
                 case 3:
                     return "Vava";
             }
-        } else if (country_code.equals("TR")) {
+        } else if (countryCode.equals("TR")) {
             switch (region_code2) {
                 case 2:
                     return "Adiyaman";
@@ -7992,7 +7992,7 @@ public class regionName {
                 case 93:
                     return "Duzce";
             }
-        } else if (country_code.equals("TT")) {
+        } else if (countryCode.equals("TT")) {
             switch (region_code2) {
                 case 1:
                     return "Arima";
@@ -8019,7 +8019,7 @@ public class regionName {
                 case 12:
                     return "Victoria";
             }
-        } else if (country_code.equals("TW")) {
+        } else if (countryCode.equals("TW")) {
             switch (region_code2) {
                 case 1:
                     return "Fu-chien";
@@ -8030,7 +8030,7 @@ public class regionName {
                 case 4:
                     return "T'ai-wan";
             }
-        } else if (country_code.equals("TZ")) {
+        } else if (countryCode.equals("TZ")) {
             switch (region_code2) {
                 case 2:
                     return "Pwani";
@@ -8085,7 +8085,7 @@ public class regionName {
                 case 27:
                     return "Manyara";
             }
-        } else if (country_code.equals("UA")) {
+        } else if (countryCode.equals("UA")) {
             switch (region_code2) {
                 case 1:
                     return "Cherkas'ka Oblast'";
@@ -8142,7 +8142,7 @@ public class regionName {
                 case 27:
                     return "Zhytomyrs'ka Oblast'";
             }
-        } else if (country_code.equals("UG")) {
+        } else if (countryCode.equals("UG")) {
             switch (region_code2) {
                 case 26:
                     return "Apac";
@@ -8255,7 +8255,7 @@ public class regionName {
                 case 97:
                     return "Yumbe";
             }
-        } else if (country_code.equals("US")) {
+        } else if (countryCode.equals("US")) {
             switch (region_code2) {
                 case 848:
                     return "Armed Forces Americas";
@@ -8380,7 +8380,7 @@ public class regionName {
                 case 1818:
                     return "Wyoming";
             }
-        } else if (country_code.equals("UY")) {
+        } else if (countryCode.equals("UY")) {
             switch (region_code2) {
                 case 1:
                     return "Artigas";
@@ -8421,7 +8421,7 @@ public class regionName {
                 case 19:
                     return "Treinta y Tres";
             }
-        } else if (country_code.equals("UZ")) {
+        } else if (countryCode.equals("UZ")) {
             switch (region_code2) {
                 case 1:
                     return "Andijon";
@@ -8454,7 +8454,7 @@ public class regionName {
                 case 15:
                     return "Jizzax";
             }
-        } else if (country_code.equals("VC")) {
+        } else if (countryCode.equals("VC")) {
             switch (region_code2) {
                 case 1:
                     return "Charlotte";
@@ -8469,7 +8469,7 @@ public class regionName {
                 case 6:
                     return "Grenadines";
             }
-        } else if (country_code.equals("VE")) {
+        } else if (countryCode.equals("VE")) {
             switch (region_code2) {
                 case 1:
                     return "Amazonas";
@@ -8522,7 +8522,7 @@ public class regionName {
                 case 26:
                     return "Vargas";
             }
-        } else if (country_code.equals("VN")) {
+        } else if (countryCode.equals("VN")) {
             switch (region_code2) {
                 case 1:
                     return "An Giang";
@@ -8651,7 +8651,7 @@ public class regionName {
                 case 93:
                     return "Hau Giang";
             }
-        } else if (country_code.equals("VU")) {
+        } else if (countryCode.equals("VU")) {
             switch (region_code2) {
                 case 5:
                     return "Ambrym";
@@ -8682,7 +8682,7 @@ public class regionName {
                 case 18:
                     return "Shefa";
             }
-        } else if (country_code.equals("WS")) {
+        } else if (countryCode.equals("WS")) {
             switch (region_code2) {
                 case 2:
                     return "Aiga-i-le-Tai";
@@ -8705,7 +8705,7 @@ public class regionName {
                 case 11:
                     return "Vaisigano";
             }
-        } else if (country_code.equals("YE")) {
+        } else if (countryCode.equals("YE")) {
             switch (region_code2) {
                 case 1:
                     return "Abyan";
@@ -8758,7 +8758,7 @@ public class regionName {
                 case 25:
                     return "Taizz";
             }
-        } else if (country_code.equals("ZA")) {
+        } else if (countryCode.equals("ZA")) {
             switch (region_code2) {
                 case 1:
                     return "North-Western Province";
@@ -8781,7 +8781,7 @@ public class regionName {
                 case 11:
                     return "Western Cape";
             }
-        } else if (country_code.equals("ZM")) {
+        } else if (countryCode.equals("ZM")) {
             switch (region_code2) {
                 case 1:
                     return "Western";
@@ -8802,7 +8802,7 @@ public class regionName {
                 case 9:
                     return "Lusaka";
             }
-        } else if (country_code.equals("ZW")) {
+        } else if (countryCode.equals("ZW")) {
             switch (region_code2) {
                 case 1:
                     return "Manicaland";

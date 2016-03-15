@@ -37,7 +37,7 @@ public class Location {
 	private final static double RAD_CONVERT = PI / 180;
 
 	public double distance(Location loc) {
-		double delta_lat, delta_lon;
+		double deltaLat, deltaLon;
 		double temp;
 
 		float lat1 = latitude;
@@ -50,12 +50,12 @@ public class Location {
 		lat2 *= RAD_CONVERT;
 
 		// find the deltas
-		delta_lat = lat2 - lat1;
-		delta_lon = (lon2 - lon1) * RAD_CONVERT;
+		deltaLat = lat2 - lat1;
+		deltaLon = (lon2 - lon1) * RAD_CONVERT;
 
 		// Find the great circle distance
-		temp = Math.pow(Math.sin(delta_lat / 2), 2) + Math.cos(lat1)
-				* Math.cos(lat2) * Math.pow(Math.sin(delta_lon / 2), 2);
+		temp = Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(lat1)
+				* Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
 		return EARTH_DIAMETER
 				* Math.atan2(Math.sqrt(temp), Math.sqrt(1 - temp));
 	}
