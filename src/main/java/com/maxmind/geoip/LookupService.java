@@ -643,44 +643,44 @@ public class LookupService {
 
     public synchronized Region getRegion(long ipnum) {
         Region record = new Region();
-        int seek_region;
+        int seekRegion;
         if (databaseType == DatabaseInfo.REGION_EDITION_REV0) {
-            seek_region = seekCountry(ipnum) - STATE_BEGIN_REV0;
+            seekRegion = seekCountry(ipnum) - STATE_BEGIN_REV0;
             char[] ch = new char[2];
-            if (seek_region >= 1000) {
+            if (seekRegion >= 1000) {
                 record.countryCode = "US";
                 record.countryName = "United States";
-                ch[0] = (char) (((seek_region - 1000) / 26) + 65);
-                ch[1] = (char) (((seek_region - 1000) % 26) + 65);
+                ch[0] = (char) (((seekRegion - 1000) / 26) + 65);
+                ch[1] = (char) (((seekRegion - 1000) % 26) + 65);
                 record.region = new String(ch);
             } else {
-                record.countryCode = countryCode[seek_region];
-                record.countryName = countryName[seek_region];
+                record.countryCode = countryCode[seekRegion];
+                record.countryName = countryName[seekRegion];
                 record.region = "";
             }
         } else if (databaseType == DatabaseInfo.REGION_EDITION_REV1) {
-            seek_region = seekCountry(ipnum) - STATE_BEGIN_REV1;
+            seekRegion = seekCountry(ipnum) - STATE_BEGIN_REV1;
             char[] ch = new char[2];
-            if (seek_region < US_OFFSET) {
+            if (seekRegion < US_OFFSET) {
                 record.countryCode = "";
                 record.countryName = "";
                 record.region = "";
-            } else if (seek_region < CANADA_OFFSET) {
+            } else if (seekRegion < CANADA_OFFSET) {
                 record.countryCode = "US";
                 record.countryName = "United States";
-                ch[0] = (char) (((seek_region - US_OFFSET) / 26) + 65);
-                ch[1] = (char) (((seek_region - US_OFFSET) % 26) + 65);
+                ch[0] = (char) (((seekRegion - US_OFFSET) / 26) + 65);
+                ch[1] = (char) (((seekRegion - US_OFFSET) % 26) + 65);
                 record.region = new String(ch);
-            } else if (seek_region < WORLD_OFFSET) {
+            } else if (seekRegion < WORLD_OFFSET) {
                 record.countryCode = "CA";
                 record.countryName = "Canada";
-                ch[0] = (char) (((seek_region - CANADA_OFFSET) / 26) + 65);
-                ch[1] = (char) (((seek_region - CANADA_OFFSET) % 26) + 65);
+                ch[0] = (char) (((seekRegion - CANADA_OFFSET) / 26) + 65);
+                ch[1] = (char) (((seekRegion - CANADA_OFFSET) % 26) + 65);
                 record.region = new String(ch);
             } else {
-                record.countryCode = countryCode[(seek_region - WORLD_OFFSET)
+                record.countryCode = countryCode[(seekRegion - WORLD_OFFSET)
                         / FIPS_RANGE];
-                record.countryName = countryName[(seek_region - WORLD_OFFSET)
+                record.countryName = countryName[(seekRegion - WORLD_OFFSET)
                         / FIPS_RANGE];
                 record.region = "";
             }
@@ -689,22 +689,22 @@ public class LookupService {
     }
 
     public synchronized Location getLocationV6(InetAddress addr) {
-        int seek_country;
+        int seekCountry;
 
         try {
-            seek_country = seekCountryV6(addr);
-            return readCityRecord(seek_country);
+            seekCountry = seekCountryV6(addr);
+            return readCityRecord(seekCountry);
         } catch (IOException e) {
             throw new InvalidDatabaseException("Error while seting up segments", e);
         }
     }
 
     public synchronized Location getLocation(long ipnum) {
-        int seek_country;
+        int seekCountry;
 
         try {
-            seek_country = seekCountry(ipnum);
-            return readCityRecord(seek_country);
+            seekCountry = seekCountry(ipnum);
+            return readCityRecord(seekCountry);
         } catch (IOException e) {
             throw new InvalidDatabaseException("Error while seting up segments", e);
         }
@@ -732,9 +732,9 @@ public class LookupService {
         if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
             // get DMA code
             if ("US".equals(record.countryCode)) {
-                int metroarea_combo = readMetroAreaCombo(buffer);
-                record.metro_code = record.dma_code = metroarea_combo / 1000;
-                record.area_code = metroarea_combo % 1000;
+                int metroareaCombo = readMetroAreaCombo(buffer);
+                record.metro_code = record.dma_code = metroareaCombo / 1000;
+                record.area_code = metroareaCombo % 1000;
             }
         }
         return record;
@@ -881,8 +881,8 @@ public class LookupService {
 
             int bnum = 127 - depth;
             int idx = bnum >> 3;
-            int b_mask = 1 << (bnum & 7 ^ 7);
-            if ((v6vec[idx] & b_mask) > 0) {
+            int bMask = 1 << (bnum & 7 ^ 7);
+            if ((v6vec[idx] & bMask) > 0) {
                 if (x[1] >= databaseSegments[0]) {
                     last_netmask = 128 - depth;
                     return x[1];
