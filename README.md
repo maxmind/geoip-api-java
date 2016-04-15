@@ -34,6 +34,12 @@ The jar file will be in the `target` directory.
 ### Testing ###
     mvn test
 
+## IP Geolocation Usage ##
+
+IP geolocation is inherently imprecise. Locations are often near the center of
+the population. Any location provided by a GeoIP database or web service
+should not be used to identify a particular address or household.
+
 ## Memory Caching and Other Options ##
 
 The following options can be passed as the second parameter to the
