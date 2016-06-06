@@ -729,13 +729,11 @@ public class LookupService {
         record.latitude = readAngle(buffer);
         record.longitude = readAngle(buffer);
 
-        if (databaseType == DatabaseInfo.CITY_EDITION_REV1) {
-            // get DMA code
-            if ("US".equals(record.countryCode)) {
-                int metroareaCombo = readMetroAreaCombo(buffer);
-                record.metro_code = record.dma_code = metroareaCombo / 1000;
-                record.area_code = metroareaCombo % 1000;
-            }
+        // get DMA code
+        if (databaseType == DatabaseInfo.CITY_EDITION_REV1 && "US".equals(record.countryCode)) {
+            int metroareaCombo = readMetroAreaCombo(buffer);
+            record.metro_code = record.dma_code = metroareaCombo / 1000;
+            record.area_code = metroareaCombo % 1000;
         }
         return record;
     }
@@ -937,10 +935,10 @@ public class LookupService {
     private void readNode(byte[] buf, int[] x, int offset) {
         if ((dboptions & GEOIP_MEMORY_CACHE) == 1) {
             // read from memory
-            System.arraycopy(dbbuffer, (2 * recordLength * offset), buf, 0, 2 * recordLength);
+            System.arraycopy(dbbuffer, 2 * recordLength * offset, buf, 0, 2 * recordLength);
         } else if ((dboptions & GEOIP_INDEX_CACHE) != 0) {
             // read from index cache
-            System.arraycopy(index_cache, (2 * recordLength * offset), buf, 0, 2 * recordLength);
+            System.arraycopy(index_cache, 2 * recordLength * offset, buf, 0, 2 * recordLength);
         } else {
             // read from disk
             try {
