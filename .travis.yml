@@ -17,6 +17,15 @@ jdk:
 env:
   global:
     - secure: d72scMGybGfXPuGKwvFXOF+3fq9d/FV5CDN1uAD5GW1r+vV0dZkKnoG3ZZ7bwikOIei4Z5zQ1oVhnPhHOS2ReCxmui1uwcGJnwl1Pwpmq/zei2sNsqyPMGA3q0v87g8wr5G+l3cRPDMBlqtjjuYHfbvyXPbYf0qTJ9NDWybg40s=
+    - secure: a31E7Z7LbCoy4zVi/kQx44QoiyMwf1sQPYnGfjizZbiyUpVdBnkRo92dkcbHm44hApQPGGq8ZFXiIFlOKLyRAHAun6d+0bzanMMLPpXSXYomFVQENTXVvP+Obz9gvtevAAyN9T2YTL6r+omd4WPPKyDGOQpC+vcKbOIOc6rnq2U=
+before_install:
+  - sudo apt-get install -y nodejs
+  - npm install -g snyk
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - snyk test --org=maxmind
+after_success:
+  - snyk monitor --org=maxmind --project-name=maxmind/geoip-api-java
 notifications:
   email:
     on_failure: always
