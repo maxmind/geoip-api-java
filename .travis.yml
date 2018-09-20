@@ -25,7 +25,7 @@ install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - snyk test --org=maxmind
 after_success:
-  - snyk monitor --org=maxmind --project-name=maxmind/geoip-api-java
+  - "if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' && $TRAVIS_JDK_VERSION == 'openjdk8' ]]; then snyk monitor --org=maxmind --project-name=maxmind/geoip-api-java; fi"
 notifications:
   email:
     on_failure: always
