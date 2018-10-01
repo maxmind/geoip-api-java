@@ -13,3 +13,4 @@ target/
 .settings
 /GeoIP/
 geoip-test-databases.tar.gz
+/bin/
