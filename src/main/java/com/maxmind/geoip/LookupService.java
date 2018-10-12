@@ -771,7 +771,12 @@ public class LookupService {
     	 */
         private RandomAccessFile file;
         
-        private final ThreadLocal<CharsetDecoder> charsetDecoder = ThreadLocal.withInitial(() -> CHARSET.newDecoder());
+        private final ThreadLocal<CharsetDecoder> charsetDecoder = new ThreadLocal<CharsetDecoder>() {
+        	@Override 
+        	protected CharsetDecoder initialValue() {
+                return CHARSET.newDecoder();
+        	}
+        };
         
         public Database(int dboptions, RandomAccessFile file, DatabaseInfo databaseInfo, byte databaseType, 
         	int[] databaseSegments, int recordLength, byte[] dbbuffer, byte[] index_cache, long mtime) {
