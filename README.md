@@ -1,6 +1,6 @@
 # GeoIP Legacy Java API #
 
-[![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)  [![Known Vulnerabilities](https://snyk.io/test/github/maxmind/geoip-api-java/badge.svg)](https://snyk.io/test/github/maxmind/geoip-api-java)
+[![Build Status](https://travis-ci.org/maxmind/geoip-api-java.png?branch=master)](https://travis-ci.org/maxmind/geoip-api-java)
 
 ## Important Note ##
 
